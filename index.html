@@ -23,143 +23,116 @@ header {
     background: #00695c;
     color: white;
     text-align: center;
-    padding: 30px 15px;
+    padding: 35px 15px;
 }
 
 header h1 {
-    font-size: 38px;
+    font-size: 42px;
 }
 
 header p {
-    font-size: 20px;
-    margin-top: 8px;
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 nav {
     background: #004d40;
     text-align: center;
-    padding: 15px;
+    padding: 18px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
-    margin: 0 12px;
+    margin: 0 25px;
 }
 
 .hero {
-    padding: 70px 20px;
     text-align: center;
-    background: #c8e6c9;
+    padding: 100px 20px;
 }
 
 .hero h2 {
     color: #00695c;
     font-size: 42px;
+    margin-bottom: 35px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin: 20px auto;
-    max-width: 600px;
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: auto;
 }
 
-.hero button {
+.button {
+    display: inline-block;
     background: #00695c;
     color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-size: 18px;
+    padding: 18px 35px;
+    margin-top: 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .places {
-    padding: 45px 20px;
     text-align: center;
+    padding: 60px 20px;
+    background: white;
 }
 
-.places h2 {
+.places h2,
+.contact h2 {
     color: #00695c;
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 30px;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+.place-box {
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 600px;
+    background: #e0f2f1;
+    border-radius: 15px;
 }
 
-.card {
-    width: 280px;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card h3 {
+.place-box h3 {
     color: #00695c;
-    font-size: 24px;
-    margin: 15px;
+    font-size: 27px;
+    margin-bottom: 10px;
 }
 
-.card p {
-    padding: 0 15px;
-    margin-bottom: 15px;
-}
-
-.card button {
-    background: #00897b;
-    color: white;
-    border: none;
-    padding: 11px 20px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-weight: bold;
+.place-box p {
+    font-size: 19px;
 }
 
 .contact {
-    background: #004d40;
-    color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
+    background: #e8f5e9;
 }
 
-.contact h2 {
-    margin-bottom: 15px;
+.contact p {
+    font-size: 20px;
+    margin: 15px;
+}
+
+.contact a {
+    color: #00695c;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 footer {
-    background: #00332d;
+    background: #004d40;
     color: white;
     text-align: center;
-    padding: 18px;
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 30px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
+    padding: 25px;
+    font-size: 17px;
 }
 </style>
 </head>
@@ -172,12 +145,12 @@ footer {
 </header>
 
 <nav>
-    <a href="#">Home</a>
+    <a href="#home">Home</a>
     <a href="#places">Places</a>
     <a href="#contact">Contact</a>
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
     <h2>Explore Beautiful Kerala</h2>
 
     <p>
@@ -185,81 +158,53 @@ footer {
         forests and beautiful tourist destinations.
     </p>
 
-    <button onclick="location.href='#places'">
-        Explore Now
-    </button>
+    <a href="#places" class="button">Explore Now</a>
 </section>
 
 <section class="places" id="places">
-
     <h2>🌿 Popular Tourist Places</h2>
 
-    <div class="cards">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944">
-            <h3>🌴 Alleppey</h3>
-            <p>
-                Enjoy Kerala's beautiful backwaters
-                and houseboat journeys.
-            </p>
-            <button onclick="alert('Alleppey - Beautiful Backwaters of Kerala')">
-                View Details
-            </button>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e">
-            <h3>⛰️ Munnar</h3>
-            <p>
-                Explore green tea plantations,
-                mountains and cool weather.
-            </p>
-            <button onclick="alert('Munnar - Beautiful Hills and Tea Gardens')">
-                View Details
-            </button>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2">
-            <h3>🏖️ Kovalam</h3>
-            <p>
-                Relax on beautiful beaches and
-                enjoy the Arabian Sea.
-            </p>
-            <button onclick="alert('Kovalam - Famous Beach Destination')">
-                View Details
-            </button>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d">
-            <h3>🌳 Wayanad</h3>
-            <p>
-                Discover forests, waterfalls,
-                hills and wildlife.
-            </p>
-            <button onclick="alert('Wayanad - Hills, Forests and Waterfalls')">
-                View Details
-            </button>
-        </div>
-
+    <div class="place-box">
+        <h3>🏔️ Munnar</h3>
+        <p>Beautiful hills, tea plantations and cool climate.</p>
     </div>
 
+    <div class="place-box">
+        <h3>🚤 Alleppey</h3>
+        <p>Famous for backwaters and houseboat journeys.</p>
+    </div>
+
+    <div class="place-box">
+        <h3>🌳 Wayanad</h3>
+        <p>Wonderful forests, waterfalls and mountains.</p>
+    </div>
+
+    <div class="place-box">
+        <h3>🏖️ Kovalam</h3>
+        <p>Beautiful beaches and relaxing seaside views.</p>
+    </div>
 </section>
 
 <section class="contact" id="contact">
-
     <h2>📞 Contact Us</h2>
 
-    <p>Plan your Kerala trip with us.</p>
+    <p><strong>Name:</strong> Remya Madhu</p>
 
-    <p>📧 Email: kerala@example.com</p>
+    <p>
+        <strong>📍 Address:</strong><br>
+        Chendrathodi House,<br>
+        Cherucod PO,<br>
+        Vallappuzha, Kerala, India
+    </p>
 
+    <p>
+        <strong>📞 Phone:</strong>
+        <a href="tel:+917012296205">+91 70122 96205</a>
+    </p>
 </section>
 
 <footer>
-    <p>© 2026 Kerala Tourism | God's Own Country</p>
+    © 2026 Kerala Tourism | Remya Madhu
 </footer>
 
 </body>

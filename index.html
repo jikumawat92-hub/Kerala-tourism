@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kerala Tourism - God's Own Country</title>
+<title>Kerala Tourism | God's Own Country | Kerala Tour Packages</title>
+
+<meta name="description"
+content="Explore Kerala Tourism – God's Own Country. Discover Munnar, Wayanad, Alappuzha, Kovalam, Kerala backwaters, waterfalls, wildlife, culture and tour packages.">
+
+<meta name="keywords"
+content="Kerala Tourism, Kerala Tour Packages, Kerala Travel, Munnar, Wayanad, Alappuzha, Kovalam, Kerala Backwaters, Kerala Honeymoon Packages, Kerala Family Tours, God's Own Country">
+
+<meta name="author" content="Kerala Tourism">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://jikumawat92-hub.github.io/Kerala-tourism/">
+
+<meta property="og:title"
+content="Kerala Tourism | God's Own Country">
+
+<meta property="og:description"
+content="Explore the beauty of Kerala – Munnar, Wayanad, Alappuzha, Kovalam, backwaters, waterfalls, wildlife and Kerala tour packages.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url"
+content="https://jikumawat92-hub.github.io/Kerala-tourism/">
+
+<meta property="og:image"
+content="https://jikumawat92-hub.github.io/Kerala-tourism/kadhakali.%20jpj.jpeg">
+
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -25,52 +56,44 @@ body{
 }
 
 header{
-    background:linear-gradient(135deg,#00695c,#00897b);
+    background:#00695c;
     color:white;
     padding:20px;
     text-align:center;
-}
-
-header h1{
-    font-size:32px;
-    margin-bottom:5px;
-}
-
-header p{
-    font-size:17px;
-}
-
-nav{
-    background:#004d40;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:5px;
-    padding:10px;
     position:sticky;
     top:0;
     z-index:1000;
 }
 
+header h1{
+    font-size:30px;
+}
+
+header p{
+    margin-top:5px;
+}
+
+nav{
+    margin-top:15px;
+}
+
 nav a{
     color:white;
     text-decoration:none;
-    padding:10px 14px;
-    border-radius:6px;
+    margin:5px 8px;
     font-weight:bold;
+    display:inline-block;
 }
 
 nav a:hover{
-    background:#00796b;
+    color:#ffe082;
 }
 
 .hero{
-    min-height:430px;
+    min-height:500px;
     background:
-        linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.45)),
-        url("kadhakali.%20jpj.jpeg");
-    background-size:cover;
-    background-position:center;
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("kadhakali.%20jpj.jpeg") center/cover;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -80,33 +103,35 @@ nav a:hover{
 }
 
 .hero h2{
-    font-size:42px;
-    margin-bottom:10px;
+    font-size:45px;
+    margin-bottom:15px;
 }
 
 .hero p{
     font-size:20px;
-    margin-bottom:20px;
+    max-width:700px;
+    margin:auto;
 }
 
 .btn{
     display:inline-block;
-    background:#ff9800;
+    background:#00897b;
     color:white;
-    padding:12px 20px;
     border:none;
-    border-radius:7px;
+    padding:12px 20px;
+    border-radius:8px;
     text-decoration:none;
     font-weight:bold;
     cursor:pointer;
+    margin-top:15px;
 }
 
 .btn:hover{
-    background:#f57c00;
+    background:#004d40;
 }
 
 section{
-    padding:45px 20px;
+    padding:55px 20px;
     max-width:1200px;
     margin:auto;
 }
@@ -114,30 +139,33 @@ section{
 section h2{
     text-align:center;
     color:#00695c;
-    margin-bottom:25px;
-    font-size:30px;
+    margin-bottom:30px;
+    font-size:32px;
 }
 
-.about-box{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,.1);
+.about{
     text-align:center;
+    max-width:900px;
+    margin:auto;
 }
 
-.trip-types{
+.about p{
+    margin-bottom:15px;
+}
+
+.features{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:15px;
     margin-top:25px;
 }
 
-.trip{
-    background:#e0f2f1;
-    padding:18px;
-    border-radius:10px;
-    font-weight:bold;
+.feature{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
 
 .cards{
@@ -148,15 +176,14 @@ section h2{
 
 .card{
     background:white;
-    border-radius:12px;
+    border-radius:14px;
     overflow:hidden;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
 .card img{
     width:100%;
-    height:190px;
+    height:210px;
     object-fit:cover;
 }
 
@@ -170,111 +197,97 @@ section h2{
 }
 
 .card p{
-    margin-bottom:12px;
+    margin-bottom:10px;
+}
+
+.activities{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
 }
 
 .activity{
     background:white;
     padding:20px;
-    border-radius:10px;
+    border-radius:12px;
     box-shadow:0 3px 10px rgba(0,0,0,.1);
     text-align:center;
 }
 
-.activity h3{
-    color:#00695c;
-    margin-bottom:8px;
-}
-
-.activity-grid{
+.packages{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
 }
 
 .package{
     background:white;
     padding:25px;
-    border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
-    text-align:center;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
 .package h3{
     color:#00695c;
-    margin-bottom:10px;
 }
 
 .price{
-    font-size:24px;
-    color:#e65100;
+    font-size:25px;
     font-weight:bold;
-    margin:15px 0;
+    color:#e65100;
+    margin:10px 0;
 }
 
-.booking{
-    background:#e8f5e9;
-    border-radius:12px;
-    padding:25px;
-    max-width:700px;
+.booking-box{
+    max-width:650px;
     margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
 }
 
-.booking input,
-.booking select{
+.booking-box input,
+.booking-box select,
+.booking-box textarea{
     width:100%;
     padding:13px;
-    margin:8px 0 15px;
-    border:1px solid #bbb;
-    border-radius:7px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
     font-size:16px;
 }
 
-.booking label{
-    font-weight:bold;
-}
-
-.booking button{
+.booking-box button{
     width:100%;
-    font-size:17px;
 }
 
 .reviews{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:18px;
+    gap:20px;
 }
 
 .review{
     background:white;
     padding:20px;
-    border-radius:10px;
+    border-radius:12px;
     box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
 
 .stars{
-    color:#ff9800;
+    color:#f9a825;
     font-size:22px;
     margin-bottom:8px;
 }
 
-.review h4{
-    color:#00695c;
-    margin-top:10px;
-}
-
 .review-form{
-    background:#e8f5e9;
-    padding:25px;
-    border-radius:12px;
     max-width:650px;
-    margin:30px auto 20px;
-}
-
-.review-form h3{
-    text-align:center;
-    color:#00695c;
-    margin-bottom:15px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
 }
 
 .review-form input,
@@ -282,606 +295,764 @@ section h2{
 .review-form textarea{
     width:100%;
     padding:13px;
-    margin:7px 0 14px;
-    border:1px solid #bbb;
-    border-radius:7px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
     font-size:16px;
-    font-family:Arial,sans-serif;
 }
 
-.review-form textarea{
-    resize:vertical;
-}
-
-.review-form button{
-    width:100%;
-    font-size:17px;
-}
-
-#newReviews{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:18px;
-    margin-top:20px;
-}
-
-.map-box{
-    background:white;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
-}
-
-.map-box iframe{
+.map{
     width:100%;
     height:350px;
     border:0;
-    border-radius:8px;
+    border-radius:12px;
 }
 
 .contact{
-    background:#004d40;
-    color:white;
     text-align:center;
-    border-radius:12px;
-    padding:30px;
-}
-
-.contact h2{
-    color:white;
-}
-
-.contact p{
-    margin:7px 0;
+    background:#e0f2f1;
+    border-radius:15px;
 }
 
 footer{
-    background:#00251a;
+    background:#004d40;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
     margin-top:30px;
 }
 
 @media(max-width:600px){
 
     header h1{
-        font-size:26px;
+        font-size:24px;
+    }
+
+    nav a{
+        font-size:14px;
+        margin:4px;
     }
 
     .hero{
-        min-height:360px;
+        min-height:430px;
     }
 
     .hero h2{
-        font-size:30px;
+        font-size:32px;
     }
 
     .hero p{
         font-size:17px;
     }
 
-    nav a{
-        padding:8px 9px;
-        font-size:14px;
-    }
-
-    section{
-        padding:35px 15px;
-    }
 }
+
 </style>
+
+<!-- Google-friendly structured information -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TouristDestination",
+  "name":"Kerala Tourism",
+  "description":"Kerala tourism destination and tour packages covering Munnar, Wayanad, Alappuzha, Kovalam and other attractions.",
+  "url":"https://jikumawat92-hub.github.io/Kerala-tourism/",
+  "touristType":[
+    "Couples",
+    "Families",
+    "Friends",
+    "Groups",
+    "Honeymoon Travelers"
+  ]
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
-    <h1>🌴 Kerala Tourism</h1>
-    <p>God's Own Country</p>
-</header>
+
+<h1>🌴 Kerala Tourism</h1>
+
+<p>God's Own Country</p>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#places">Places</a>
-    <a href="packages.html">Packages</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="#activities">Activities</a>
-    <a href="#booking">Booking</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#map">Map</a>
-    <a href="#contact">Contact</a>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#places">Places</a>
+<a href="packages.html">Packages</a>
+<a href="gallery.html">Gallery</a>
+<a href="#activities">Activities</a>
+<a href="#booking">Booking</a>
+<a href="#reviews">Reviews</a>
+<a href="#map">Map</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
-<section id="home" class="hero">
-    <div>
-        <h2>Explore Beautiful Kerala</h2>
-        <p>Nature • Culture • Adventure • Relaxation</p>
+</header>
 
-        <a class="btn"
-           href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20would%20like%20to%20know%20about%20Kerala%20tour%20packages."
-           target="_blank">
-           📱 Enquire on WhatsApp
-        </a>
-    </div>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h2>Explore Kerala – God's Own Country</h2>
+
+<p>
+Discover the peaceful backwaters, misty mountains,
+beautiful beaches, waterfalls, wildlife and rich culture of Kerala.
+</p>
+
+<a class="btn" href="#booking">Book Your Kerala Trip</a>
+
+</div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
 
-    <h2>🌴 About Kerala</h2>
+<h2>About Kerala Tourism</h2>
 
-    <div class="about-box">
+<div class="about">
 
-        <p>
-            Kerala is not just a place to visit...
-            it is an experience to remember!
-        </p>
+<p>
+Kerala is not just a place to visit – it is an experience to remember!
+</p>
 
-        <p>
-            Discover misty mountains, beautiful backwaters,
-            peaceful beaches, exciting adventures, traditional arts,
-            local food and the natural beauty of God's Own Country.
-        </p>
+<p>
+Enjoy misty mountains, peaceful backwaters, beautiful beaches,
+adventure activities, traditional arts, local food and the natural beauty of Kerala.
+</p>
 
-        <div class="trip-types">
+<div class="features">
 
-            <div class="trip">💑 Couple Trips</div>
-            <div class="trip">👨‍👩‍👧 Family Trips</div>
-            <div class="trip">👬 Friends Trips</div>
-            <div class="trip">👨‍👩‍👧‍👦 Group Tours</div>
-            <div class="trip">💍 Honeymoon Trips</div>
+<div class="feature">
+<h3>❤️ Couple Trips</h3>
+<p>Beautiful destinations for couples.</p>
+</div>
 
-        </div>
+<div class="feature">
+<h3>👨‍👩‍👧 Family Trips</h3>
+<p>Comfortable Kerala family holidays.</p>
+</div>
 
-        <br>
+<div class="feature">
+<h3>👫 Friends Trips</h3>
+<p>Fun and memorable adventures.</p>
+</div>
 
-        <a class="btn"
-           href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20want%20to%20plan%20a%20Kerala%20trip."
-           target="_blank">
-           Plan My Trip
-        </a>
+<div class="feature">
+<h3>👥 Group Tours</h3>
+<p>Travel together and explore Kerala.</p>
+</div>
 
-    </div>
+<div class="feature">
+<h3>💍 Honeymoon Trips</h3>
+<p>Romantic Kerala experiences.</p>
+</div>
+
+</div>
+
+<br>
+
+<a class="btn"
+href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism,%20I%20would%20like%20to%20know%20about%20Kerala%20tour%20packages."
+target="_blank">
+
+📱 WhatsApp Enquiry
+
+</a>
+
+</div>
 
 </section>
+
+
+<!-- PLACES -->
 
 <section id="places">
 
-    <h2>🏞️ Tourist Places</h2>
+<h2>Popular Tourist Places in Kerala</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <img src="munnar%20neela%20kurinji.%20jpj.jpeg"
-                 alt="Munnar">
-            <div class="card-content">
-                <h3>🌿 Munnar</h3>
-                <p>Tea gardens, mountains and beautiful nature.</p>
-                <a class="btn"
-                   href="https://www.google.com/maps/search/?api=1&query=Munnar+Kerala"
-                   target="_blank">
-                   📍 View Map
-                </a>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="wayanad.%20jpj.jpeg"
-                 alt="Wayanad">
-            <div class="card-content">
-                <h3>🌄 Wayanad</h3>
-                <p>Forests, waterfalls, wildlife and adventure.</p>
-                <a class="btn"
-                   href="https://www.google.com/maps/search/?api=1&query=Wayanad+Kerala"
-                   target="_blank">
-                   📍 View Map
-                </a>
-            </div>
-        </div>
+<div class="card">
 
-        <div class="card">
-            <img src="backwaters%20jpj.jpeg"
-                 alt="Alappuzha Backwaters">
-            <div class="card-content">
-                <h3>🚤 Alappuzha</h3>
-                <p>Beautiful backwaters and houseboat experiences.</p>
-                <a class="btn"
-                   href="https://www.google.com/maps/search/?api=1&query=Alappuzha+Kerala"
-                   target="_blank">
-                   📍 View Map
-                </a>
-            </div>
-        </div>
+<img src="munnar%20neela%20kurinji.%20jpj.jpeg"
+alt="Munnar Kerala Tourism">
 
-        <div class="card">
-            <img src="kovalam%20jpj.%201.jpeg"
-                 alt="Kovalam">
-            <div class="card-content">
-                <h3>🏖️ Kovalam</h3>
-                <p>Golden beaches and peaceful coastal views.</p>
-                <a class="btn"
-                   href="https://www.google.com/maps/search/?api=1&query=Kovalam+Kerala"
-                   target="_blank">
-                   📍 View Map
-                </a>
-            </div>
-        </div>
+<div class="card-content">
 
-        <div class="card">
-            <img src="water%20fall's%20jpj.jpeg"
-                 alt="Waterfalls">
-            <div class="card-content">
-                <h3>💦 Waterfalls</h3>
-                <p>Enjoy the beauty of Kerala's waterfalls.</p>
-                <a class="btn"
-                   href="https://www.google.com/maps/search/?api=1&query=Kerala+waterfalls"
-                   target="_blank">
-                   📍 View Map
-                </a>
-            </div>
-        </div>
+<h3>🌿 Munnar</h3>
 
-        <div class="card">
-            <img src="kadhakali.%20jpj.jpeg"
-                 alt="Kathakali">
-            <div class="card-content">
-                <h3>🎭 Kathakali</h3>
-                <p>Experience Kerala's traditional performing arts.</p>
-                <a class="btn"
-                   href="https://www.google.com/maps/search/?api=1&query=Kathakali+Kerala"
-                   target="_blank">
-                   📍 View Map
-                </a>
-            </div>
-        </div>
+<p>
+Misty mountains, tea plantations and beautiful valleys.
+</p>
 
-    </div>
+<a class="btn"
+href="https://www.google.com/maps/search/?api=1&query=Munnar+Kerala"
+target="_blank">
+
+📍 View Map
+
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="wayanad.%20jpj.jpeg"
+alt="Wayanad Kerala Tourism">
+
+<div class="card-content">
+
+<h3>🌳 Wayanad</h3>
+
+<p>
+Explore forests, waterfalls, wildlife and mountain landscapes.
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/?api=1&query=Wayanad+Kerala"
+target="_blank">
+
+📍 View Map
+
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="backwaters%20jpj.jpeg"
+alt="Alappuzha Kerala Backwaters">
+
+<div class="card-content">
+
+<h3>🚤 Alappuzha</h3>
+
+<p>
+Enjoy Kerala's famous backwaters and traditional houseboats.
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/?api=1&query=Alappuzha+Kerala"
+target="_blank">
+
+📍 View Map
+
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="kovalam%20jpj.%201.jpeg"
+alt="Kovalam Beach Kerala">
+
+<div class="card-content">
+
+<h3>🏖️ Kovalam</h3>
+
+<p>
+Relax on beautiful beaches and enjoy the Arabian Sea.
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/?api=1&query=Kovalam+Kerala"
+target="_blank">
+
+📍 View Map
+
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="water%20fall's%20jpj.jpeg"
+alt="Kerala Waterfalls">
+
+<div class="card-content">
+
+<h3>💦 Kerala Waterfalls</h3>
+
+<p>
+Experience the natural beauty of Kerala's waterfalls.
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/?api=1&query=Kerala+Waterfalls"
+target="_blank">
+
+📍 View Map
+
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="kadhakali.%20jpj.jpeg"
+alt="Kathakali Kerala Traditional Art">
+
+<div class="card-content">
+
+<h3>🎭 Kathakali</h3>
+
+<p>
+Experience Kerala's traditional art, culture and performances.
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/?api=1&query=Kathakali+Kerala"
+target="_blank">
+
+📍 View Map
+
+</a>
+
+</div>
+</div>
+
+</div>
 
 </section>
+
+
+<!-- ACTIVITIES -->
 
 <section id="activities">
 
-    <h2>🎯 Activities</h2>
+<h2>Kerala Activities & Experiences</h2>
 
-    <div class="activity-grid">
+<div class="activities">
 
-        <div class="activity">
-            <h3>🚤 Houseboat & Backwater Rides</h3>
-            <p>Relax and enjoy Kerala's peaceful backwaters.</p>
-        </div>
+<div class="activity">🚤<h3>Houseboat & Backwater Rides</h3></div>
 
-        <div class="activity">
-            <h3>🏔️ Adventure Activities</h3>
-            <p>Enjoy exciting outdoor adventures.</p>
-        </div>
+<div class="activity">🏔️<h3>Adventure Activities</h3></div>
 
-        <div class="activity">
-            <h3>🚙 Jeep Safari</h3>
-            <p>Explore mountains, forests and wildlife areas.</p>
-        </div>
+<div class="activity">🚙<h3>Jeep Safari</h3></div>
 
-        <div class="activity">
-            <h3>🌊 Water Activities</h3>
-            <p>Enjoy fun activities around Kerala's waters.</p>
-        </div>
+<div class="activity">🌊<h3>Water Activities</h3></div>
 
-        <div class="activity">
-            <h3>⛺ Camping</h3>
-            <p>Enjoy peaceful nights surrounded by nature.</p>
-        </div>
+<div class="activity">⛺<h3>Camping</h3></div>
 
-        <div class="activity">
-            <h3>🥾 Trekking</h3>
-            <p>Explore Kerala's beautiful hills and forests.</p>
-        </div>
+<div class="activity">🥾<h3>Trekking</h3></div>
 
-        <div class="activity">
-            <h3>🐘 Wildlife Experiences</h3>
-            <p>Discover Kerala's wildlife and natural beauty.</p>
-        </div>
+<div class="activity">🐘<h3>Wildlife Experiences</h3></div>
 
-        <div class="activity">
-            <h3>🏖️ Beach Activities</h3>
-            <p>Relax and enjoy Kerala's beautiful beaches.</p>
-        </div>
+<div class="activity">🏖️<h3>Beach Activities</h3></div>
 
-        <div class="activity">
-            <h3>🌿 Nature Experiences</h3>
-            <p>Experience the peaceful side of Kerala.</p>
-        </div>
+<div class="activity">🌿<h3>Nature Experiences</h3></div>
 
-        <div class="activity">
-            <h3>🎭 Traditional Kerala Arts & Culture</h3>
-            <p>Discover Kathakali and Kerala's cultural traditions.</p>
-        </div>
+<div class="activity">🎭<h3>Traditional Kerala Arts & Culture</h3></div>
 
-        <div class="activity">
-            <h3>🍛 Kerala Food Experiences</h3>
-            <p>Taste traditional Kerala cuisine.</p>
-        </div>
+<div class="activity">🍛<h3>Kerala Food Experiences</h3></div>
 
-        <div class="activity">
-            <h3>🏡 Village Experiences</h3>
-            <p>Experience authentic Kerala village life.</p>
-        </div>
+<div class="activity">🏡<h3>Village Experiences</h3></div>
 
-    </div>
+</div>
 
-    <br>
+<div style="text-align:center">
 
-    <div style="text-align:center;">
-        <a class="btn"
-           href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20want%20to%20know%20about%20activities."
-           target="_blank">
-           📱 Ask About Activities
-        </a>
-    </div>
+<a class="btn"
+href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism,%20I%20want%20to%20know%20about%20Kerala%20activities."
+target="_blank">
+
+📱 Ask About Activities
+
+</a>
+
+</div>
 
 </section>
 
-<section id="packages">
 
-    <h2>📦 Popular Tour Packages</h2>
+<!-- PACKAGES -->
 
-    <div class="cards">
+<section>
 
-        <div class="package">
-            <h3>Cochin – Munnar – Thekkady – Alappuzha</h3>
-            <p>4 Days / 3 Nights</p>
-            <div class="price">₹9,999 / Person</div>
+<h2>Kerala Tour Packages</h2>
 
-            <a class="btn"
-               href="https://wa.me/917012296205?text=I%20am%20interested%20in%20the%20Cochin%20Munnar%20Thekkady%20Alappuzha%20package."
-               target="_blank">
-               Enquire Now
-            </a>
-        </div>
+<div class="packages">
 
-        <div class="package">
-            <h3>Munnar – Thekkady – Kovalam</h3>
-            <p>4 Days / 3 Nights</p>
-            <div class="price">₹10,999 / Person</div>
 
-            <a class="btn"
-               href="https://wa.me/917012296205?text=I%20am%20interested%20in%20the%20Munnar%20Thekkady%20Kovalam%20package."
-               target="_blank">
-               Enquire Now
-            </a>
-        </div>
+<div class="package">
 
-        <div class="package">
-            <h3>Wayanad – Cochin – Munnar – Thekkady – Kovalam</h3>
-            <p>6 Days / 5 Nights</p>
-            <div class="price">₹15,999 / Person</div>
+<h3>🌴 Cochin – Munnar – Thekkady – Alappuzha</h3>
 
-            <a class="btn"
-               href="https://wa.me/917012296205?text=I%20am%20interested%20in%20the%206%20day%20Kerala%20package."
-               target="_blank">
-               Enquire Now
-            </a>
-        </div>
+<p>4 Days / 3 Nights</p>
 
-    </div>
+<div class="price">₹9,999 / Person</div>
 
-    <br>
+<p>
+A beautiful Kerala journey covering mountains,
+wildlife and backwaters.
+</p>
 
-    <div style="text-align:center;">
-        <a class="btn" href="packages.html">
-            📦 View All Packages
-        </a>
-    </div>
+<a class="btn" href="#booking">Book Now</a>
+
+</div>
+
+
+<div class="package">
+
+<h3>🌿 Munnar – Thekkady – Kovalam</h3>
+
+<p>4 Days / 3 Nights</p>
+
+<div class="price">₹10,999 / Person</div>
+
+<p>
+Explore hills, wildlife and the beautiful beaches of Kerala.
+</p>
+
+<a class="btn" href="#booking">Book Now</a>
+
+</div>
+
+
+<div class="package">
+
+<h3>🌴 Wayanad – Cochin – Munnar – Thekkady – Kovalam</h3>
+
+<p>6 Days / 5 Nights</p>
+
+<div class="price">₹15,999 / Person</div>
+
+<p>
+A complete Kerala experience covering major destinations.
+</p>
+
+<a class="btn" href="#booking">Book Now</a>
+
+</div>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+
+<a class="btn" href="packages.html">
+View All Packages
+</a>
+
+</div>
 
 </section>
+
+
+<!-- BOOKING -->
 
 <section id="booking">
 
-    <h2>📝 Book Your Kerala Trip</h2>
+<h2>Book Your Kerala Tour</h2>
 
-    <div class="booking">
+<div class="booking-box">
 
-        <label>Your Name</label>
-        <input type="text" id="name" placeholder="Enter your name">
+<input
+type="text"
+id="name"
+placeholder="Your Name">
 
-        <label>Phone Number</label>
-        <input type="tel" id="phone" placeholder="Enter your phone number">
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number">
 
-        <label>Select Package</label>
+<select id="package">
 
-        <select id="package">
-            <option value="">Select Package</option>
-            <option value="Cochin - Munnar - Thekkady - Alappuzha">
-                Cochin - Munnar - Thekkady - Alappuzha
-            </option>
-            <option value="Munnar - Thekkady - Kovalam">
-                Munnar - Thekkady - Kovalam
-            </option>
-            <option value="Wayanad - Cochin - Munnar - Thekkady - Kovalam">
-                Wayanad - Cochin - Munnar - Thekkady - Kovalam
-            </option>
-        </select>
+<option value="">Select Package</option>
 
-        <label>Travel Date</label>
-        <input type="date" id="date">
+<option>
+Cochin – Munnar – Thekkady – Alappuzha
+</option>
 
-        <label>Number of People</label>
-        <input type="number" id="people" min="1" placeholder="Number of people">
+<option>
+Munnar – Thekkady – Kovalam
+</option>
 
-        <button class="btn" onclick="sendBooking()">
-            📱 Send Booking on WhatsApp
-        </button>
+<option>
+Wayanad – Cochin – Munnar – Thekkady – Kovalam
+</option>
 
-    </div>
+</select>
+
+<input
+type="date"
+id="date">
+
+<input
+type="number"
+id="people"
+placeholder="Number of People"
+min="1">
+
+<button class="btn" onclick="sendBooking()">
+
+📱 Send Booking on WhatsApp
+
+</button>
+
+</div>
 
 </section>
+
+
+<!-- REVIEWS -->
 
 <section id="reviews">
 
-    <h2>⭐ Customer Reviews</h2>
+<h2>Traveler Reviews</h2>
 
-    <div class="reviews">
+<div class="reviews">
 
-        <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>
-                "Beautiful Kerala experience. The trip was very enjoyable."
-            </p>
-            <h4>— Arun</h4>
-        </div>
+<div class="review">
 
-        <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>
-                "Amazing places, beautiful nature and great memories."
-            </p>
-            <h4>— Priya</h4>
-        </div>
+<div class="stars">★★★★★</div>
 
-        <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>
-                "Kerala was wonderful. We really enjoyed our family trip."
-            </p>
-            <h4>— Rahul</h4>
-        </div>
+<p>
+"Kerala was beautiful and the trip was memorable."
+</p>
 
-    </div>
+<h4>— Arun</h4>
 
-    <div class="review-form">
+</div>
 
-        <h3>✍️ Write a Review</h3>
 
-        <input
-            type="text"
-            id="reviewName"
-            placeholder="Your Name">
+<div class="review">
 
-        <select id="reviewRating">
-            <option value="">Select Rating</option>
-            <option value="5">★★★★★ 5 Stars</option>
-            <option value="4">★★★★☆ 4 Stars</option>
-            <option value="3">★★★☆☆ 3 Stars</option>
-            <option value="2">★★☆☆☆ 2 Stars</option>
-            <option value="1">★☆☆☆☆ 1 Star</option>
-        </select>
+<div class="stars">★★★★★</div>
 
-        <textarea
-            id="reviewText"
-            rows="4"
-            placeholder="Write your experience..."></textarea>
+<p>
+"Beautiful places, peaceful backwaters and great experience."
+</p>
 
-        <button class="btn" onclick="submitReview()">
-            ⭐ Submit Review
-        </button>
+<h4>— Anjali</h4>
 
-    </div>
+</div>
 
-    <div id="newReviews"></div>
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"We enjoyed our Kerala trip very much."
+</p>
+
+<h4>— Rahul</h4>
+
+</div>
+
+</div>
+
+
+<!-- REVIEW FORM -->
+
+<div class="review-form">
+
+<h3>✍️ Write a Review</h3>
+
+<input
+type="text"
+id="reviewName"
+placeholder="Your Name">
+
+<select id="reviewRating">
+
+<option value="">Select Rating</option>
+
+<option value="5">★★★★★ 5 Stars</option>
+
+<option value="4">★★★★☆ 4 Stars</option>
+
+<option value="3">★★★☆☆ 3 Stars</option>
+
+<option value="2">★★☆☆☆ 2 Stars</option>
+
+<option value="1">★☆☆☆☆ 1 Star</option>
+
+</select>
+
+<textarea
+id="reviewText"
+placeholder="Write your experience..."
+rows="4"></textarea>
+
+<button class="btn" onclick="submitReview()">
+
+⭐ Submit Review
+
+</button>
+
+</div>
+
+<div id="newReviews"></div>
 
 </section>
+
+
+<!-- MAP -->
 
 <section id="map">
 
-    <h2>🗺️ Kerala Map</h2>
+<h2>Kerala Tourist Map</h2>
 
-    <div class="map-box">
-
-        <iframe
-            src="https://www.google.com/maps?q=Munnar,Kerala&output=embed"
-            loading="lazy">
-        </iframe>
-
-    </div>
+<iframe
+class="map"
+src="https://www.google.com/maps?q=Munnar,Kerala&output=embed"
+loading="lazy">
+</iframe>
 
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
 
-    <div class="contact">
+<div class="contact">
 
-        <h2>📞 Contact Kerala Tourism</h2>
+<h2>Contact Kerala Tourism</h2>
 
-        <p><strong>Kerala Tourism</strong></p>
+<h3>🌴 Kerala Tourism</h3>
 
-        <p>📍 Cherucode PO, Vallappuzha</p>
+<p>
+<strong>Office:</strong><br>
+Cherucode PO, Vallappuzha,<br>
+Palakkad, Kerala, India
+</p>
 
-        <p>Palakkad, Kerala, India</p>
+<p>
+<strong>📞 Phone:</strong><br>
++91 70122 96205
+</p>
 
-        <p>📱 +91 70122 96205</p>
+<a class="btn"
+href="https://wa.me/917012296205"
+target="_blank">
 
-        <br>
+📱 Contact on WhatsApp
 
-        <a class="btn"
-           href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism"
-           target="_blank">
-           💬 WhatsApp Us
-        </a>
+</a>
 
-    </div>
+</div>
 
 </section>
 
+
 <footer>
 
-    <p>© 2026 Kerala Tourism. All Rights Reserved.</p>
+<p>© 2026 Kerala Tourism | God's Own Country</p>
+
+<p>Explore Kerala • Travel Kerala • Experience Kerala</p>
 
 </footer>
+
 
 <script>
 
 function sendBooking(){
 
     const name =
-        document.getElementById("name").value.trim();
+    document.getElementById("name").value.trim();
 
     const phone =
-        document.getElementById("phone").value.trim();
+    document.getElementById("phone").value.trim();
 
     const packageName =
-        document.getElementById("package").value;
+    document.getElementById("package").value;
 
     const date =
-        document.getElementById("date").value;
+    document.getElementById("date").value;
 
     const people =
-        document.getElementById("people").value;
+    document.getElementById("people").value;
 
-    if(!name || !phone || !packageName || !date || !people){
+
+    if(
+        !name ||
+        !phone ||
+        !packageName ||
+        !date ||
+        !people
+    ){
 
         alert("Please fill all booking details.");
 
         return;
     }
 
-    const message =
-        "🌴 Kerala Tour Booking\n\n" +
-        "👤 Name: " + name + "\n" +
-        "📞 Phone: " + phone + "\n" +
-        "📦 Package: " + packageName + "\n" +
-        "📅 Date: " + date + "\n" +
-        "👥 People: " + people;
 
-    const whatsappNumber = "917012296205";
+    const message =
+
+    "🌴 Kerala Tour Booking\n\n" +
+
+    "👤 Name: " + name + "\n" +
+
+    "📞 Phone: " + phone + "\n" +
+
+    "📦 Package: " + packageName + "\n" +
+
+    "📅 Date: " + date + "\n" +
+
+    "👥 People: " + people;
+
+
+    const whatsappNumber =
+    "917012296205";
+
 
     window.open(
+
         "https://wa.me/" +
+
         whatsappNumber +
+
         "?text=" +
+
         encodeURIComponent(message),
+
         "_blank"
+
     );
+
 }
 
 
 function submitReview(){
 
     const name =
-        document.getElementById("reviewName").value.trim();
+    document.getElementById("reviewName").value.trim();
 
     const rating =
-        document.getElementById("reviewRating").value;
+    document.getElementById("reviewRating").value;
 
     const review =
-        document.getElementById("reviewText").value.trim();
+    document.getElementById("reviewText").value.trim();
+
 
     if(!name || !rating || !review){
 
@@ -890,43 +1061,57 @@ function submitReview(){
         return;
     }
 
+
     const stars =
-        "★".repeat(Number(rating)) +
-        "☆".repeat(5 - Number(rating));
+
+    "★".repeat(Number(rating)) +
+
+    "☆".repeat(5 - Number(rating));
+
 
     const reviewBox =
-        document.createElement("div");
+    document.createElement("div");
 
-    reviewBox.className = "review";
+    reviewBox.className =
+    "review";
 
-    const safeName =
-        name
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;");
-
-    const safeReview =
-        review
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;");
 
     reviewBox.innerHTML =
-        '<div class="stars">' +
-        stars +
-        '</div>' +
-        '<p>"' +
-        safeReview +
-        '"</p>' +
-        '<h4>— ' +
-        safeName +
-        '</h4>';
+
+    '<div class="stars">' +
+
+    stars +
+
+    '</div>' +
+
+    '<p>"' +
+
+    review
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;") +
+
+    '"</p>' +
+
+    '<h4>— ' +
+
+    name
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;") +
+
+    '</h4>';
+
 
     document
-        .getElementById("newReviews")
-        .appendChild(reviewBox);
+    .getElementById("newReviews")
+    .appendChild(reviewBox);
+
 
     document.getElementById("reviewName").value = "";
+
     document.getElementById("reviewRating").value = "";
+
     document.getElementById("reviewText").value = "";
+
 
     alert("Thank you! Your review has been added.");
 
@@ -934,5 +1119,6 @@ function submitReview(){
 
 </script>
 
+
 </body>
-    </html>
+</html>

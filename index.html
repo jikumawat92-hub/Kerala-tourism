@@ -20,46 +20,36 @@ body {
 }
 
 header {
-    background: #006b4f;
+    background: #00695c;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 35px 15px;
 }
 
 header h1 {
-    font-size: 42px;
-    margin-bottom: 8px;
+    font-size: 30px;
 }
 
 header p {
-    font-size: 20px;
+    margin-top: 5px;
 }
 
 nav {
-    background: #004d3a;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    background: #004d40;
+    padding: 12px;
+    text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 20px 25px;
-    font-size: 18px;
+    margin: 0 12px;
     font-weight: bold;
 }
 
-nav a:hover {
-    background: #008060;
-}
-
 .hero {
-    position: relative;
-    min-height: 520px;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url("file_0000000001948211a2497d786b6d3cbd.png");
+    min-height: 300px;
+    background-image: url("kathakali.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -70,143 +60,147 @@ nav a:hover {
     padding: 30px;
 }
 
-.hero-content {
-    max-width: 800px;
+.hero-box {
+    background: rgba(0,0,0,0.55);
+    padding: 25px;
+    border-radius: 15px;
 }
 
 .hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px #000;
-}
-
-.hero p {
-    font-size: 22px;
-    line-height: 1.6;
-    text-shadow: 1px 1px 4px #000;
+    font-size: 35px;
+    margin-bottom: 10px;
 }
 
 section {
-    padding: 55px 20px;
+    padding: 35px 20px;
     max-width: 1100px;
     margin: auto;
 }
 
 section h2 {
     text-align: center;
-    color: #006b4f;
-    font-size: 35px;
-    margin-bottom: 35px;
+    color: #00695c;
+    margin-bottom: 25px;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
 }
 
 .card {
     background: white;
     border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
 }
 
 .card h3 {
-    color: #006b4f;
-    margin-bottom: 12px;
-    font-size: 24px;
+    color: #00695c;
+    margin-bottom: 10px;
 }
 
 .card p {
-    line-height: 1.6;
+    line-height: 1.5;
+}
+
+.card button {
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #00695c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.details {
+    display: none;
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.details img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.details h3 {
+    color: #00695c;
+    margin-bottom: 10px;
+}
+
+.details p {
+    line-height: 1.7;
+}
+
+.packages {
+    background: #e0f2f1;
+    border-radius: 15px;
 }
 
 .package {
     background: white;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 10px;
 }
 
-.package h3 {
-    color: #006b4f;
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-
-.contact-box {
-    background: white;
-    max-width: 650px;
-    margin: auto;
-    padding: 35px 20px;
-    border-radius: 18px;
+.contact {
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-}
-
-.contact-box h3 {
-    font-size: 28px;
-    color: #006b4f;
-    margin-bottom: 20px;
-}
-
-.contact-box p {
-    font-size: 19px;
-    line-height: 1.8;
+    background: white;
+    border-radius: 15px;
 }
 
 .whatsapp {
     display: inline-block;
-    margin-top: 25px;
-    background: #20b957;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #25D366;
     color: white;
     text-decoration: none;
-    padding: 15px 28px;
-    border-radius: 10px;
-    font-size: 18px;
+    border-radius: 8px;
     font-weight: bold;
 }
 
-.whatsapp:hover {
-    background: #168c43;
-}
-
 footer {
-    background: #004d3a;
+    background: #004d40;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     margin-top: 30px;
 }
 
 @media (max-width: 600px) {
-
-    header h1 {
-        font-size: 32px;
+    .hero h2 {
+        font-size: 26px;
     }
 
     nav a {
-        padding: 15px 12px;
-        font-size: 16px;
-    }
-
-    .hero {
-        min-height: 480px;
-    }
-
-    .hero h2 {
-        font-size: 34px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    section h2 {
-        font-size: 29px;
+        display: inline-block;
+        margin: 5px;
     }
 }
 </style>
@@ -227,135 +221,295 @@ footer {
 </nav>
 
 <div class="hero" id="home">
-    <div class="hero-content">
-        <h2>Discover the Beauty of Kerala</h2>
-        <p>
-            Explore green mountains, peaceful backwaters,
-            beautiful beaches, Kathakali and unforgettable
-            Chundan Vallam experiences.
-        </p>
+    <div class="hero-box">
+        <h2>Welcome to Kerala</h2>
+        <p>Explore the beauty, culture and traditions of Kerala</p>
     </div>
 </div>
 
 <section id="places">
-    <h2>Popular Destinations</h2>
 
-    <div class="cards">
+<h2>Popular Destinations</h2>
 
-        <div class="card">
-            <h3>🌴 Alleppey</h3>
+<div class="cards">
+
+    <!-- MUNNAR -->
+    <div class="card">
+        <img src="munnar.jpg" alt="Munnar">
+
+        <div class="card-content">
+            <h3>🌿 Munnar</h3>
+
             <p>
-                Experience Kerala's beautiful backwaters
-                and traditional houseboats.
+                Beautiful hills, tea plantations and cool weather.
             </p>
+
+            <button onclick="showDetails('munnar')">
+                View Details
+            </button>
         </div>
-
-        <div class="card">
-            <h3>⛰️ Munnar</h3>
-            <p>
-                Enjoy green tea plantations, mountains
-                and cool weather.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🏖️ Kovalam</h3>
-            <p>
-                Relax at the beautiful beaches of
-                Kerala.
-            </p>
-        </div>
-
-        <div class="card">
-    <a href="details.html?place=kathakali">
-
-        <h3>🎭 Kathakali</h3>
-
-        <p>
-            Experience Kerala's traditional
-            classical dance and culture.
-        </p>
-
-    </a>
-</div>
-        <div class="card">
-            <h3>🛶 Chundan Vallam</h3>
-            <p>
-                Experience the famous traditional
-                Kerala snake boat races.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🌿 Wayanad</h3>
-            <p>
-                Discover forests, waterfalls,
-                mountains and nature.
-            </p>
-        </div>
-
     </div>
+
+
+    <!-- KOVALAM -->
+    <div class="card">
+        <img src="kovalam.jpg" alt="Kovalam">
+
+        <div class="card-content">
+            <h3>🏖️ Kovalam</h3>
+
+            <p>
+                Famous for beautiful beaches and peaceful sunsets.
+            </p>
+
+            <button onclick="showDetails('kovalam')">
+                View Details
+            </button>
+        </div>
+    </div>
+
+
+    <!-- WAYANAD -->
+    <div class="card">
+        <img src="wayanad.jpg" alt="Wayanad">
+
+        <div class="card-content">
+            <h3>🌄 Wayanad</h3>
+
+            <p>
+                Green mountains, waterfalls, forests and wildlife.
+            </p>
+
+            <button onclick="showDetails('wayanad')">
+                View Details
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ALLEPPEY -->
+    <div class="card">
+        <img src="munnar2.jpg" alt="Alleppey">
+
+        <div class="card-content">
+            <h3>🚤 Alleppey</h3>
+
+            <p>
+                Famous for Kerala backwaters and houseboat journeys.
+            </p>
+
+            <button onclick="showDetails('alleppey')">
+                View Details
+            </button>
+        </div>
+    </div>
+
+
+    <!-- CHUNDAN VALLAM -->
+    <div class="card">
+        <img src="kathakali.png" alt="Chundan Vallam">
+
+        <div class="card-content">
+            <h3>🚣 Chundan Vallam</h3>
+
+            <p>
+                Traditional Kerala snake boat and exciting boat races.
+            </p>
+
+            <button onclick="showDetails('vallam')">
+                View Details
+            </button>
+        </div>
+    </div>
+
+
+    <!-- KATHAKALI -->
+    <div class="card">
+        <img src="kathakali.png" alt="Kathakali">
+
+        <div class="card-content">
+            <h3>🎭 Kathakali</h3>
+
+            <p>
+                Experience Kerala's traditional classical dance and culture.
+            </p>
+
+            <button onclick="showDetails('kathakali')">
+                View Details
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- DETAILS -->
+
+<div id="details" class="details">
+
+    <img id="detailImage" src="" alt="">
+
+    <h3 id="detailTitle"></h3>
+
+    <p id="detailText"></p>
+
+</div>
+
 </section>
+
 
 <section id="packages">
-    <h2>Tour Packages</h2>
+
+<h2>Tour Packages</h2>
+
+<div class="packages">
 
     <div class="package">
-        <h3>🌴 Kerala Backwater Package</h3>
-        <p>
-            Explore Alleppey backwaters, houseboats
-            and beautiful village life.
-        </p>
+        <h3>🌴 Kerala 3 Days Package</h3>
+        <p>Munnar • Alleppey • Kovalam</p>
     </div>
 
     <div class="package">
-        <h3>⛰️ Munnar & Wayanad Package</h3>
-        <p>
-            Enjoy mountains, tea plantations,
-            waterfalls and nature.
-        </p>
+        <h3>🌿 Kerala Nature Package</h3>
+        <p>Munnar • Wayanad • Alleppey</p>
     </div>
 
     <div class="package">
-        <h3>🌴 Complete Kerala Tour</h3>
-        <p>
-            Explore beaches, backwaters, mountains,
-            culture and famous tourist destinations.
-        </p>
+        <h3>🏖️ Kerala Beach Package</h3>
+        <p>Kovalam • Kerala Beaches • Backwaters</p>
     </div>
+
+</div>
 
 </section>
+
 
 <section id="contact">
-    <h2>Contact Us</h2>
 
-    <div class="contact-box">
+<div class="contact">
 
-        <h3>Office</h3>
+<h2>Contact Us</h2>
 
-        <p>
-            <strong>Kerala Tourism</strong><br>
-            Cherucode PO, Vallappuzha<br>
-            Palakkad, Kerala, India
-        </p>
+<p><strong>Kerala Tourism</strong></p>
 
-        <p style="margin-top:15px;">
-            📞 +91 70122 96205
-        </p>
+<p>Cherucode PO, Vallappuzha</p>
 
-        <a
-            class="whatsapp"
-            href="https://wa.me/917012296205"
-            target="_blank">
-            WhatsApp Contact
-        </a>
+<p>Palakkad, Kerala, India</p>
 
-    </div>
+<p>📞 +91 70122 96205</p>
+
+<a class="whatsapp"
+   href="https://wa.me/917012296205"
+   target="_blank">
+   WhatsApp Us
+</a>
+
+</div>
+
 </section>
 
+
 <footer>
-    <p>© 2026 Kerala Tourism. All Rights Reserved.</p>
+    <p>© 2026 Kerala Tourism</p>
 </footer>
+
+
+<script>
+
+function showDetails(place) {
+
+    const details = document.getElementById("details");
+    const title = document.getElementById("detailTitle");
+    const text = document.getElementById("detailText");
+    const image = document.getElementById("detailImage");
+
+    details.style.display = "block";
+
+    if (place === "munnar") {
+
+        title.innerHTML = "🌿 Munnar";
+
+        image.src = "munnar.jpg";
+
+        text.innerHTML =
+        "Munnar is one of Kerala's most beautiful hill stations. " +
+        "It is famous for tea plantations, green mountains, waterfalls " +
+        "and cool weather. Visitors can enjoy tea gardens, viewpoints " +
+        "and the beautiful natural scenery.";
+
+    }
+
+    else if (place === "kovalam") {
+
+        title.innerHTML = "🏖️ Kovalam";
+
+        image.src = "kovalam.jpg";
+
+        text.innerHTML =
+        "Kovalam is a famous beach destination in Kerala. " +
+        "It is known for its beautiful coastline, palm trees, " +
+        "sunsets and relaxing atmosphere.";
+
+    }
+
+    else if (place === "wayanad") {
+
+        title.innerHTML = "🌄 Wayanad";
+
+        image.src = "wayanad.jpg";
+
+        text.innerHTML =
+        "Wayanad is a beautiful green region of Kerala. " +
+        "It is famous for mountains, forests, waterfalls, caves " +
+        "and wildlife.";
+
+    }
+
+    else if (place === "alleppey") {
+
+        title.innerHTML = "🚤 Alleppey";
+
+        image.src = "munnar2.jpg";
+
+        text.innerHTML =
+        "Alleppey, also known as Alappuzha, is famous for its " +
+        "beautiful backwaters and houseboats. Visitors can enjoy " +
+        "peaceful boat journeys through Kerala's waterways.";
+
+    }
+
+    else if (place === "vallam") {
+
+        title.innerHTML = "🚣 Chundan Vallam";
+
+        image.src = "kathakali.png";
+
+        text.innerHTML =
+        "Chundan Vallam is the traditional long snake boat of Kerala. " +
+        "Kerala is famous for exciting traditional boat races where " +
+        "many rowers paddle together in rhythm.";
+
+    }
+
+    else if (place === "kathakali") {
+
+        title.innerHTML = "🎭 Kathakali";
+
+        image.src = "kathakali.png";
+
+        text.innerHTML =
+        "Kathakali is one of Kerala's famous classical dance traditions. " +
+        "It is known for colourful costumes, detailed makeup, expressive " +
+        "facial movements and traditional storytelling.";
+
+    }
+
+    details.scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+</script>
 
 </body>
 </html>

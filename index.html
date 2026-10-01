@@ -23,17 +23,26 @@ content="Explore Kerala Tourism and discover Munnar, Wayanad, Alappuzha, Kovalam
 <meta name="keywords"
 content="Kerala Tourism, Kerala tour packages, Kerala travel, Munnar tourism, Wayanad tourism, Alappuzha tourism, Alleppey tourism, Kovalam tourism, Kerala backwaters, Kerala waterfalls, Kathakali, Kerala holiday packages, Kerala trip">
 
+<!-- Open Graph / Facebook / WhatsApp -->
 <meta property="og:title"
 content="Kerala Tourism | God's Own Country">
 
 <meta property="og:description"
 content="Discover Munnar, Wayanad, Alappuzha, Kovalam, Kerala backwaters, beaches, waterfalls and Kerala tour packages.">
 
-<meta property="og:type" content="website">
+<meta property="og:type"
+content="website">
 
 <meta property="og:site_name"
 content="Kerala Tourism">
 
+<meta property="og:image"
+content="./kerala-hero%20jog.png">
+
+<meta property="og:locale"
+content="en_IN">
+
+<!-- Twitter -->
 <meta name="twitter:card"
 content="summary_large_image">
 
@@ -42,6 +51,12 @@ content="Kerala Tourism | God's Own Country">
 
 <meta name="twitter:description"
 content="Explore beautiful Kerala destinations, tour packages and travel experiences.">
+
+<meta name="twitter:image"
+content="./kerala-hero%20jog.png">
+
+<meta name="theme-color"
+content="#004a40">
 
 
 <!-- Google / Search Engine Structured Data -->
@@ -58,6 +73,7 @@ content="Explore beautiful Kerala destinations, tour packages and travel experie
     "streetAddress": "Kerala Tourism",
     "addressLocality": "Cherucode PO, Vallappuzha",
     "addressRegion": "Kerala",
+    "postalCode": "",
     "addressCountry": "IN"
   },
   "areaServed": {
@@ -1730,7 +1746,6 @@ God's Own Country
 
 <div class="hero-bottom">
 
-
 <h1 class="seo-hero-title">
 Kerala Tourism – Explore God's Own Country
 </h1>
@@ -1739,7 +1754,6 @@ Kerala Tourism – Explore God's Own Country
 Discover Munnar, Wayanad, Alappuzha, Kovalam,
 Kerala backwaters, beaches, waterfalls and cultural experiences.
 </p>
-
 
 <div class="hero-buttons">
 
@@ -1750,6 +1764,7 @@ Kerala backwaters, beaches, waterfalls and cultural experiences.
 <a
 href="https://wa.me/917012296205"
 target="_blank"
+rel="noopener"
 class="btn green">
 
 💬 Chat on WhatsApp
@@ -1845,7 +1860,6 @@ Explore some of the most beautiful destinations in Kerala.
 
 <div class="place-grid">
 
-
 <div class="place" onclick="openDestination('munnar')">
 
 <img
@@ -1923,7 +1937,6 @@ Kathakali
 
 </div>
 
-
 </div>
 
 </section>
@@ -1940,9 +1953,11 @@ onclick="closeOutside(event)">
 
 <button
 class="close-modal"
-onclick="closeDestination()">
+onclick="closeDestination()"
+aria-label="Close destination details">
 
 ×
+
 </button>
 
 
@@ -1957,7 +1972,6 @@ alt="Kerala Destination">
 id="destinationContent"
 class="destination-content">
 </div>
-
 
 </div>
 
@@ -2108,9 +2122,11 @@ onclick="closeGroupOutside(event)">
 
 <button
 class="group-modal-close"
-onclick="closeGroupTrip()">
+onclick="closeGroupTrip()"
+aria-label="Close group trip details">
 
 ×
+
 </button>
 
 
@@ -2390,6 +2406,7 @@ Just bring yourself, your smile and your sense of adventure.
 <a
 href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20am%20interested%20in%20joining%20the%20Munnar%203-Day%20Group%20Adventure.%20Please%20share%20the%20details."
 target="_blank"
+rel="noopener"
 class="btn green">
 
 💬 JOIN THIS GROUP TRIP
@@ -3049,6 +3066,7 @@ We can discuss suitable transportation options with you.
 <a
 href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20need%20a%20taxi%20for%20my%20Kerala%20trip.%20Please%20share%20the%20available%20options."
 target="_blank"
+rel="noopener"
 class="btn yellow">
 
 💬 Taxi Enquiry
@@ -3149,7 +3167,8 @@ Explore Kerala destinations.
 
 <iframe
 src="https://www.google.com/maps?q=Munnar,Kerala,India&output=embed"
-loading="lazy">
+loading="lazy"
+title="Google Map showing Munnar Kerala">
 </iframe>
 
 </div>
@@ -3195,6 +3214,7 @@ Palakkad, Kerala, India
 <a
 href="https://wa.me/917012296205"
 target="_blank"
+rel="noopener"
 class="whatsapp">
 
 💬 WhatsApp Us
@@ -3662,6 +3682,7 @@ class="btn yellow">
 <a
 href="https://wa.me/917012296205?text=${encodeURIComponent("Hello Kerala Tourism, I would like to enquire about a trip to " + data.title + ".")}"
 target="_blank"
+rel="noopener"
 class="btn green">
 
 💬 WhatsApp Enquiry

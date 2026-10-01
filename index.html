@@ -26,8 +26,6 @@ body{
     line-height:1.6;
 }
 
-/* HEADER */
-
 header{
     background:#087f5b;
     color:white;
@@ -42,8 +40,6 @@ header h1{
 header p{
     font-size:18px;
 }
-
-/* NAV */
 
 nav{
     background:#056b4c;
@@ -69,9 +65,21 @@ nav a:hover{
     background:#0aa36f;
 }
 
-/* HERO */
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#087f5b;
+    font-size:30px;
+    margin-bottom:30px;
+}
 
 .hero{
+    max-width:none;
     min-height:430px;
 
     background-image:
@@ -100,23 +108,6 @@ nav a:hover{
 .hero p{
     font-size:20px;
 }
-
-/* COMMON */
-
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px;
-}
-
-.section-title{
-    text-align:center;
-    color:#087f5b;
-    font-size:30px;
-    margin-bottom:30px;
-}
-
-/* BUTTON */
 
 .btn{
     display:inline-block;
@@ -350,7 +341,6 @@ footer{
 
 <body>
 
-
 <!-- HEADER -->
 
 <header>
@@ -414,30 +404,31 @@ footer{
 
 <div class="about">
 
-<h3>“കേരളം കാണാൻ മാത്രമല്ല… അനുഭവിക്കാനാണ്!”</h3>
+<h3>“Kerala is not just a place to visit… it is an experience to remember!”</h3>
 
 <p>
-മലനിരകളിലെ മഞ്ഞും 🌄, കായലിലെ houseboat യാത്രയും 🚤,
-കടൽത്തീരത്തിന്റെ സൗന്ദര്യവും 🏖️, കാടിന്റെ സാഹസികതയും 🌳,
-കേരളത്തിന്റെ തനത് ഭക്ഷണവും 🍛, കലകളും 🎭 —
-എല്ലാം ഒരുമിച്ച് അനുഭവിക്കാൻ നിങ്ങളുടെ യാത്ര ഞങ്ങളോടൊപ്പം പ്ലാൻ ചെയ്യാം.
+Discover the beauty of Kerala with its misty mountains,
+peaceful backwaters, beautiful beaches, exciting adventures,
+rich culture, traditional arts and delicious local food.
 </p>
 
 <p>
-Couple Trip, Family Trip, Friends Trip, Group Tour,
-Honeymoon Trip എന്നിവയ്ക്കനുസരിച്ച് യാത്രാ plans ഒരുക്കാം.
+We can help you plan
+<strong>Couple Trips, Family Trips, Friends Trips,
+Group Tours and Honeymoon Trips</strong>
+according to your interests and budget.
 </p>
 
 <p>
 <strong>
-“നിങ്ങൾക്ക് പോകണം എന്ന് തോന്നുന്ന സ്ഥലം പറയൂ…
-യാത്ര എങ്ങനെ മനോഹരമാക്കാം എന്ന് നമുക്ക് സംസാരിക്കാം.”
+Tell us where you want to go, and let's make your Kerala journey memorable!
 </strong>
 </p>
 
 <p>
-📱 <strong>ഒരു enquiry message അയക്കൂ —
-നിങ്ങളുടെ dream Kerala trip കുറിച്ച് ചോദിച്ചറിയാം!</strong>
+📱 <strong>
+Send us an enquiry — even if you are just curious about your dream Kerala trip.
+</strong>
 </p>
 
 <a
@@ -602,7 +593,7 @@ View Map
 
 <div class="activities">
 
-<div class="activity">🚤 Houseboat & Backwater Ride</div>
+<div class="activity">🚤 Houseboat & Backwater Rides</div>
 
 <div class="activity">🪂 Adventure Activities</div>
 
@@ -620,7 +611,7 @@ View Map
 
 <div class="activity">🌿 Nature Experiences</div>
 
-<div class="activity">🎭 Kerala Traditional Arts</div>
+<div class="activity">🎭 Traditional Kerala Arts & Culture</div>
 
 <div class="activity">🍛 Kerala Food Experiences</div>
 
@@ -822,8 +813,7 @@ allowfullscreen>
 
 <p style="text-align:center;margin-top:15px;">
 
-Munnar, Wayanad, Alappuzha, Thekkady, Kovalam
-എന്നിവയുടെ map location മുകളിൽ ഉള്ള View Map buttons വഴി കാണാം.
+Use the View Map buttons above to explore individual tourist destinations.
 
 </p>
 
@@ -883,7 +873,7 @@ href="tel:+917012296205">
 </footer>
 
 
-<!-- WHATSAPP BOOKING SCRIPT -->
+<!-- WHATSAPP BOOKING -->
 
 <script>
 
@@ -935,11 +925,8 @@ function sendBooking(){
     window.open(
 
         "https://wa.me/" +
-
         whatsappNumber +
-
         "?text=" +
-
         encodeURIComponent(message),
 
         "_blank"
@@ -950,7 +937,5 @@ function sendBooking(){
 
 </script>
 
-
 </body>
-
     </html>

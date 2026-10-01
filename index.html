@@ -4,12 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kerala Tourism | God's Own Country</title>
-
-<meta name="description" content="Explore Kerala Tourism with Munnar, Alleppey, Wayanad and Kovalam tour packages.">
-<meta name="keywords" content="Kerala Tourism, Munnar, Alleppey, Wayanad, Kovalam, Kerala Tour Packages">
-<meta name="author" content="Remya Madhu">
-<meta name="robots" content="index, follow">
+<title>Kerala Tourism</title>
 
 <style>
 * {
@@ -18,189 +13,200 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, sans-serif;
     background: #f1f8f5;
     color: #222;
-    line-height: 1.6;
 }
 
 header {
-    background: #087f5b;
+    background: #006b4f;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 35px 15px;
 }
 
 header h1 {
-    font-size: 30px;
+    font-size: 42px;
+    margin-bottom: 8px;
 }
 
 header p {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 nav {
-    background: #055c42;
-    padding: 12px;
-    text-align: center;
+    background: #004d3a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    padding: 20px 25px;
+    font-size: 18px;
     font-weight: bold;
 }
 
+nav a:hover {
+    background: #008060;
+}
+
 .hero {
-    background: linear-gradient(135deg, #0b8f68, #064e3b);
-    color: white;
+    position: relative;
+    min-height: 520px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("file_0000000001948211a2497d786b6d3cbd.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 60px 20px;
+    color: white;
+    padding: 30px;
+}
+
+.hero-content {
+    max-width: 800px;
 }
 
 .hero h2 {
-    font-size: 35px;
-    margin-bottom: 10px;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px #000;
 }
 
 section {
-    padding: 40px 20px;
+    padding: 55px 20px;
     max-width: 1100px;
     margin: auto;
 }
 
 section h2 {
     text-align: center;
-    color: #087f5b;
-    margin-bottom: 25px;
-    font-size: 28px;
+    color: #006b4f;
+    font-size: 35px;
+    margin-bottom: 35px;
 }
 
-.places {
+.cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
 }
 
 .card {
     background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-}
-
-.card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-}
-
-.card-content {
-    padding: 20px;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
 }
 
 .card h3 {
-    color: #087f5b;
-    margin-bottom: 8px;
-    font-size: 23px;
+    color: #006b4f;
+    margin-bottom: 12px;
+    font-size: 24px;
 }
 
-.packages {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.card p {
+    line-height: 1.6;
 }
 
 .package {
     background: white;
+    border-radius: 15px;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
 }
 
 .package h3 {
-    color: #087f5b;
+    color: #006b4f;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
-.price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e67e22;
-    margin: 12px 0;
+.contact-box {
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 35px 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
 }
 
-.package ul {
-    padding-left: 20px;
+.contact-box h3 {
+    font-size: 28px;
+    color: #006b4f;
+    margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    background: #087f5b;
-    color: white;
-    text-decoration: none;
-    padding: 11px 18px;
-    border-radius: 7px;
-    margin-top: 15px;
-    font-weight: bold;
+.contact-box p {
+    font-size: 19px;
+    line-height: 1.8;
 }
 
 .whatsapp {
-    background: #25D366;
+    display: inline-block;
+    margin-top: 25px;
+    background: #20b957;
+    color: white;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.contact {
-    background: white;
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-}
-
-.contact p {
-    margin: 8px 0;
+.whatsapp:hover {
+    background: #168c43;
 }
 
 footer {
-    background: #055c42;
+    background: #004d3a;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     margin-top: 30px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+
     header h1 {
-        font-size: 25px;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .places,
-    .packages {
-        grid-template-columns: 1fr;
+        font-size: 32px;
     }
 
     nav a {
-        display: inline-block;
-        margin: 5px 7px;
+        padding: 15px 12px;
+        font-size: 16px;
     }
 
-    .card img {
-        height: 220px;
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 29px;
     }
 }
 </style>
@@ -221,61 +227,67 @@ footer {
 </nav>
 
 <div class="hero" id="home">
-    <h2>Discover the Beauty of Kerala</h2>
-    <p>Explore green mountains, peaceful backwaters, beautiful beaches and unforgettable experiences.</p>
+    <div class="hero-content">
+        <h2>Discover the Beauty of Kerala</h2>
+        <p>
+            Explore green mountains, peaceful backwaters,
+            beautiful beaches, Kathakali and unforgettable
+            Chundan Vallam experiences.
+        </p>
+    </div>
 </div>
 
 <section id="places">
     <h2>Popular Destinations</h2>
 
-    <div class="places">
+    <div class="cards">
 
         <div class="card">
-            <img src="pexels-jebakumar-samuel-728757187-29023410.jpg" alt="Munnar Tea Plantation">
-            <div class="card-content">
-                <h3>🌄 Munnar</h3>
-                <p>
-                    Munnar welcomes you with misty mountains, endless tea plantations
-                    and a cool refreshing breeze. It is the perfect place to escape
-                    from busy city life and create beautiful memories.
-                </p>
-            </div>
+            <h3>🌴 Alleppey</h3>
+            <p>
+                Experience Kerala's beautiful backwaters
+                and traditional houseboats.
+            </p>
         </div>
 
         <div class="card">
-            <img src="pexels-mohit-khare-3592184-5374224.jpg" alt="Alleppey Backwaters">
-            <div class="card-content">
-                <h3>🚤 Alleppey</h3>
-                <p>
-                    Enjoy the peaceful beauty of Kerala's backwaters. Relax on a
-                    traditional houseboat, watch the green landscapes and enjoy
-                    beautiful sunsets over calm waters.
-                </p>
-            </div>
+            <h3>⛰️ Munnar</h3>
+            <p>
+                Enjoy green tea plantations, mountains
+                and cool weather.
+            </p>
         </div>
 
         <div class="card">
-            <img src="pexels-abhinav-k-327512131-14212118.jpg" alt="Wayanad Mountains">
-            <div class="card-content">
-                <h3>🌿 Wayanad</h3>
-                <p>
-                    Wayanad is a paradise of green mountains, forests and waterfalls.
-                    Nature lovers and adventure seekers can enjoy the peaceful
-                    surroundings and refreshing atmosphere.
-                </p>
-            </div>
+            <h3>🏖️ Kovalam</h3>
+            <p>
+                Relax at the beautiful beaches of
+                Kerala.
+            </p>
         </div>
 
         <div class="card">
-            <img src="pexels-aravind-p-s-1808524778-34014744.jpg" alt="Kovalam Beach">
-            <div class="card-content">
-                <h3>🌊 Kovalam</h3>
-                <p>
-                    Feel the sea breeze, listen to the waves and enjoy a beautiful
-                    sunset at Kovalam. Its beaches and Arabian Sea views make it a
-                    wonderful place to relax.
-                </p>
-            </div>
+            <h3>🎭 Kathakali</h3>
+            <p>
+                Experience Kerala's traditional
+                classical dance and culture.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🛶 Chundan Vallam</h3>
+            <p>
+                Experience the famous traditional
+                Kerala snake boat races.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌿 Wayanad</h3>
+            <p>
+                Discover forests, waterfalls,
+                mountains and nature.
+            </p>
         </div>
 
     </div>
@@ -284,99 +296,61 @@ footer {
 <section id="packages">
     <h2>Tour Packages</h2>
 
-    <div class="packages">
-
-        <div class="package">
-            <h3>Kerala 3 Days Tour</h3>
-            <div class="price">₹6,999</div>
-            <ul>
-                <li>Travel</li>
-                <li>Hotel</li>
-                <li>Sightseeing</li>
-                <li>Tea Plantation Visit</li>
-                <li>Boating</li>
-            </ul>
-            <a class="btn whatsapp"
-               href="https://wa.me/917012296205?text=Hello%2C%20I%20am%20interested%20in%20Kerala%203%20Days%20Tour">
-               WhatsApp Booking
-            </a>
-        </div>
-
-        <div class="package">
-            <h3>Munnar & Alleppey Tour</h3>
-            <div class="price">₹9,999</div>
-            <ul>
-                <li>Travel</li>
-                <li>Hotel</li>
-                <li>Munnar Sightseeing</li>
-                <li>Tea Plantation</li>
-                <li>Alleppey Sightseeing</li>
-                <li>Houseboat Extra</li>
-                <li>Food</li>
-            </ul>
-            <a class="btn whatsapp"
-               href="https://wa.me/917012296205?text=Hello%2C%20I%20am%20interested%20in%20Munnar%20and%20Alleppey%20Tour">
-               WhatsApp Booking
-            </a>
-        </div>
-
-        <div class="package">
-            <h3>Kerala 5 Days Tour</h3>
-            <div class="price">₹15,000</div>
-            <ul>
-                <li>Travel</li>
-                <li>Hotel</li>
-                <li>Tourist Places</li>
-                <li>Boating</li>
-                <li>Adventure</li>
-                <li>Plantation Visit</li>
-                <li>Sightseeing</li>
-            </ul>
-            <a class="btn whatsapp"
-               href="https://wa.me/917012296205?text=Hello%2C%20I%20am%20interested%20in%20Kerala%205%20Days%20Tour">
-               WhatsApp Booking
-            </a>
-        </div>
-
+    <div class="package">
+        <h3>🌴 Kerala Backwater Package</h3>
+        <p>
+            Explore Alleppey backwaters, houseboats
+            and beautiful village life.
+        </p>
     </div>
+
+    <div class="package">
+        <h3>⛰️ Munnar & Wayanad Package</h3>
+        <p>
+            Enjoy mountains, tea plantations,
+            waterfalls and nature.
+        </p>
+    </div>
+
+    <div class="package">
+        <h3>🌴 Complete Kerala Tour</h3>
+        <p>
+            Explore beaches, backwaters, mountains,
+            culture and famous tourist destinations.
+        </p>
+    </div>
+
 </section>
 
 <section id="contact">
     <h2>Contact Us</h2>
 
-    <div class="contact">
-        
+    <div class="contact-box">
+
+        <h3>Office</h3>
 
         <p>
-            <div class="contact">
-    <h3>Office</h3>
-
-    <p>
-        <strong>Kerala Tourism</strong><br>
-        Cherucode PO, Vallappuzha<br>
-        Palakkad, Kerala, India
-    </p>
-
-    <p>📞 +91 70122 96205</p>
-
-    <a class="btn whatsapp"
-       href="https://wa.me/917012296205">
-       WhatsApp Contact
-    </a>
-</div>
+            <strong>Kerala Tourism</strong><br>
+            Cherucode PO, Vallappuzha<br>
+            Palakkad, Kerala, India
         </p>
 
-        <p>📞 +91 70122 96205</p>
+        <p style="margin-top:15px;">
+            📞 +91 70122 96205
+        </p>
 
-        <a class="btn whatsapp"
-           href="https://wa.me/917012296205?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Kerala%20Tourism">
-           WhatsApp Contact
+        <a
+            class="whatsapp"
+            href="https://wa.me/917012296205"
+            target="_blank">
+            WhatsApp Contact
         </a>
+
     </div>
 </section>
 
 <footer>
-    © 2026 Kerala Tourism | Remya Madhu
+    <p>© 2026 Kerala Tourism. All Rights Reserved.</p>
 </footer>
 
 </body>

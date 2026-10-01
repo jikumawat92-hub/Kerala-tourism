@@ -510,6 +510,34 @@ function showDetails(place) {
 }
 
 </script>
+function sendBooking() {
 
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const packageName = document.getElementById("package").value;
+    const date = document.getElementById("date").value;
+    const people = document.getElementById("people").value;
+
+    if (!name || !phone || !packageName || !date || !people) {
+        alert("Please fill all booking details.");
+        return;
+    }
+
+    const message =
+        "🌴 Kerala Tour Booking\n\n" +
+        "👤 Name: " + name + "\n" +
+        "📞 Phone: " + phone + "\n" +
+        "📦 Package: " + packageName + "\n" +
+        "📅 Date: " + date + "\n" +
+        "👥 People: " + people;
+
+    const whatsappNumber = "917012296205;
+
+    window.open(
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+}
 </body>
 </html>

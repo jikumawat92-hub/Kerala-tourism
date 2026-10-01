@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>More Destinations & Custom Tour Packages | Kerala Tourism</title>
+
+<meta name="description" content="Explore Vagamon, Gavi, Guruvayur, Thiruvananthapuram, Fort Kochi, Mattancherry, Ooty, Kodaikanal, Madurai and Rameshwaram. Create your own customised Kerala and South India tour package.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f1f8f5;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#00695c,#00897b,#2e7d32);
+    color:white;
+    padding:20px 15px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.tagline{
+    font-size:15px;
+    margin-top:3px;
+}
+
+nav{
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:9px 13px;
+    border-radius:20px;
+    background:rgba(255,255,255,.13);
+    font-size:14px;
+}
+
+nav a:hover{
+    background:white;
+    color:#00695c;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,70,60,.68),rgba(0,70,60,.68)),
+    url("Vagamon_Kerala.jpeg") center/cover;
+
+    min-height:360px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+    padding:35px 15px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:44px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:19px;
+    margin-bottom:22px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#ffca28;
+    color:#222;
+    padding:13px 24px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* GENERAL */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 15px;
+}
+
+.section-title{
+    text-align:center;
+    color:#00695c;
+    font-size:31px;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#555;
+    max-width:850px;
+    margin:0 auto 35px;
+}
+
+/* DESTINATION GRID */
+
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 22px rgba(0,0,0,.17);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card h3{
+    color:#00695c;
+    font-size:24px;
+    margin-bottom:3px;
+}
+
+.location{
+    color:#777;
+    font-size:14px;
+    margin-bottom:13px;
+}
+
+.description{
+    color:#444;
+    margin-bottom:15px;
+}
+
+.highlights{
+    background:#f1f8f5;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:17px;
+}
+
+.highlights strong{
+    color:#00695c;
+}
+
+.highlights ul{
+    margin-top:7px;
+    padding-left:20px;
+}
+
+.select-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:#e8f5e9;
+
+    padding:12px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+}
+
+.select-box input{
+    width:21px;
+    height:21px;
+    accent-color:#00897b;
+}
+
+.select-box label{
+    font-weight:bold;
+    color:#00695c;
+    cursor:pointer;
+}
+
+/* CUSTOM PACKAGE */
+
+.package-section{
+    background:linear-gradient(135deg,#e0f2f1,#f1f8e9);
+    padding:50px 15px;
+}
+
+.package-box{
+    max-width:1000px;
+    margin:auto;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:32px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.13);
+}
+
+.package-box h2{
+    text-align:center;
+    color:#00695c;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.package-info{
+    text-align:center;
+    color:#555;
+    margin-bottom:28px;
+}
+
+.selected-box{
+    background:#e8f5e9;
+
+    border-left:5px solid #00897b;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin-bottom:25px;
+}
+
+.selected-box strong{
+    color:#00695c;
+}
+
+#selectedPlaces{
+    margin-top:7px;
+    color:#333;
+    font-weight:bold;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:17px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1 / -1;
+}
+
+.form-group label{
+    font-weight:bold;
+    color:#00695c;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-family:Arial,sans-serif;
+}
+
+.form-group textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.whatsapp-btn{
+    width:100%;
+
+    margin-top:22px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:9px;
+
+    background:#25D366;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
+
+.note{
+    margin-top:15px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
+}
+
+.process-card{
+    background:white;
+
+    padding:22px 15px;
+
+    border-radius:13px;
+
+    text-align:center;
+
+    box-shadow:0 3px 11px rgba(0,0,0,.08);
+}
+
+.process-number{
+    width:45px;
+    height:45px;
+
+    line-height:45px;
+
+    margin:0 auto 10px;
+
+    background:#00897b;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-weight:bold;
+
+    font-size:19px;
+}
+
+.process-card h3{
+    color:#00695c;
+    font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#004d40;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 15px;
+
+    margin-top:0;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .hero h1{
+        font-size:33px;
+    }
+
+    .destination-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+}
+
+@media(max-width:500px){
+
+    .logo{
+        font-size:25px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:8px 10px;
+    }
+
+    .hero{
+        min-height:310px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title{
+        font-size:26px;
+    }
+
+    .card img{
+        height:220px;
+    }
+
+    .package-box{
+        padding:22px 15px;
+    }
+
+    .process{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">🌴 Kerala Tourism</div>
+
+    <div class="tagline">
+        God's Own Country
+    </div>
+
+    <nav>
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="index.html#places">📍 Places</a>
+
+        <a href="packages.html">📦 Packages</a>
+
+        <a href="gallery.html">🖼️ Gallery</a>
+
+        <a href="#destinations">🌍 Destinations</a>
+
+        <a href="#custom-package">📝 Custom Package</a>
+
+        <a href="index.html#contact">📞 Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            🌍 Explore More Destinations
+        </h1>
+
+        <p>
+            Discover beautiful destinations across Kerala
+            and South India and create a tour package
+            according to your travel plans.
+        </p>
+
+        <a href="#destinations" class="hero-btn">
+            Explore Destinations
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section class="container" id="destinations">
+
+    <h2 class="section-title">
+        Popular Destinations
+    </h2>
+
+    <p class="section-subtitle">
+        Choose one or more destinations from the list below.
+        You can combine multiple places and request a
+        customised tour package based on your preferred
+        travel date, group size and requirements.
+    </p>
+
+
+    <div class="destination-grid">
+
+
+        <!-- 1 VAGAMON -->
+
+        <div class="card">
+
+            <img
+                src="Vagamon_Kerala.jpeg"
+                alt="Vagamon Kerala"
+            >
+
+            <div class="card-content">
+
+                <h3>Vagamon</h3>
+
+                <div class="location">
+                    📍 Idukki, Kerala, India
+                </div>
+
+                <p class="description">
+
+                    Vagamon is one of Kerala's beautiful hill
+                    destinations, surrounded by lush green meadows,
+                    pine forests, tea plantations and mist-covered
+                    mountains. Its peaceful climate and scenic
+                    landscapes make it a wonderful destination for
+                    families, couples and nature lovers.
+
+                    Visitors can enjoy sightseeing, trekking,
+                    paragliding, photography and relaxing in the
+                    calm mountain environment. The surrounding
+                    countryside also offers beautiful viewpoints
+                    and refreshing natural scenery.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🌿 Highlights & Activities</strong>
+
+                    <ul>
+                        <li>Green meadows and mountain views</li>
+                        <li>Pine forests</li>
+                        <li>Tea plantations</li>
+                        <li>Trekking</li>
+                        <li>Paragliding</li>
+                        <li>Nature photography</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Vagamon"
+                        id="vagamon"
+                    >
+
+                    <label for="vagamon">
+                        Select Vagamon
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 GAVI -->
+
+        <div class="card">
+
+            <img
+                src="Gavi,_Kerala.jpg"
+                alt="Gavi Kerala"
+            >
+
+            <div class="card-content">
+
+                <h3>Gavi</h3>
+
+                <div class="location">
+                    📍 Pathanamthitta, Kerala, India
+                </div>
+
+                <p class="description">
+
+                    Gavi is a peaceful eco-tourism destination
+                    surrounded by forests, mountains, rivers and
+                    rich wildlife. It is an ideal destination for
+                    travellers looking for a quiet experience close
+                    to nature.
+
+                    The region is known for its forest landscapes,
+                    scenic viewpoints and outdoor experiences.
+                    Visitors can enjoy trekking, boating, camping
+                    and exploring the natural beauty of the
+                    Western Ghats.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🌿 Highlights & Activities</strong>
+
+                    <ul>
+                        <li>Forest landscapes</li>
+                        <li>Wildlife experiences</li>
+                        <li>Trekking</li>
+                        <li>Boating</li>
+                        <li>Camping</li>
+                        <li>Nature sightseeing</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Gavi"
+                        id="gavi"
+                    >
+
+                    <label for="gavi">
+                        Select Gavi
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 GURUVAYUR -->
+
+        <div class="card">
+
+            <img
+                src="009392022_Guruvayur_temple,_Kerala_037.jpg"
+                alt="Guruvayur Temple Kerala"
+            >
+
+            <div class="card-content">
+
+                <h3>Guruvayur Temple</h3>
+
+                <div class="location">
+                    📍 Guruvayur, Thrissur, Kerala
+                </div>
+
+                <p class="description">
+
+                    Guruvayur is one of Kerala's most important
+                    pilgrimage destinations and is famous for the
+                    historic Guruvayur Temple dedicated to Lord Krishna.
+                    The temple and surrounding town have a strong
+                    spiritual and cultural atmosphere.
+
+                    Visitors can experience traditional Kerala
+                    architecture, temple customs and the cultural
+                    heritage associated with Guruvayur. The destination
+                    can be combined with nearby attractions in Thrissur
+                    for a memorable cultural journey.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🛕 Highlights & Experiences</strong>
+
+                    <ul>
+                        <li>Guruvayur Temple</li>
+                        <li>Traditional Kerala architecture</li>
+                        <li>Spiritual experiences</li>
+                        <li>Temple traditions</li>
+                        <li>Kerala cultural heritage</li>
+                        <li>Nearby sightseeing</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Guruvayur Temple"
+                        id="guruvayur"
+                    >
+
+                    <label for="guruvayur">
+                        Select Guruvayur Temple
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 PADMANABHASWAMY -->
+
+        <div class="card">
+
+            <img
+                src="Thiruvananthapuram_Padmanabhaswamy_Temple.jpg"
+                alt="Sree Padmanabhaswamy Temple"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    Sree Padmanabhaswamy Temple
+                </h3>
+
+                <div class="location">
+                    📍 Thiruvananthapuram, Kerala
+                </div>
+
+                <p class="description">
+
+                    Sree Padmanabhaswamy Temple is one of the
+                    most renowned historic temples in Kerala.
+                    Located in the heart of Thiruvananthapuram,
+                    the temple is famous for its traditional Kerala
+                    and Dravidian architectural features.
+
+                    The temple has great cultural and spiritual
+                    significance and is an important part of the
+                    heritage of Thiruvananthapuram. Visitors can
+                    combine the temple visit with other attractions
+                    in the capital city.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🛕 Highlights & Experiences</strong>
+
+                    <ul>
+                        <li>Historic temple architecture</li>
+                        <li>Kerala and Dravidian design</li>
+                        <li>Cultural heritage</li>
+                        <li>Spiritual atmosphere</li>
+                        <li>Thiruvananthapuram sightseeing</li>
+                        <li>Heritage photography</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Sree Padmanabhaswamy Temple"
+                        id="padmanabhaswamy"
+                    >
+
+                    <label for="padmanabhaswamy">
+                        Select Temple
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 FORT KOCHI -->
+
+        <div class="card">
+
+            <img
+                src="Fort_Kochi.jpg"
+                alt="Fort Kochi"
+            >
+
+            <div class="card-content">
+
+                <h3>Fort Kochi</h3>
+
+                <div class="location">
+                    📍 Kochi, Kerala
+                </div>
+
+                <p class="description">
+
+                    Fort Kochi is a historic coastal neighbourhood
+                    of Kochi with a fascinating blend of cultures,
+                    heritage buildings and maritime history. Its
+                    charming streets are known for colonial-era
+                    architecture, churches, museums and the famous
+                    Chinese fishing nets.
+
+                    Fort Kochi is ideal for travellers interested
+                    in history, photography, art and local culture.
+                    Visitors can explore heritage streets, waterfront
+                    areas, cafés and important historical landmarks.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🏛️ Highlights & Activities</strong>
+
+                    <ul>
+                        <li>Chinese fishing nets</li>
+                        <li>Heritage architecture</li>
+                        <li>Historic churches</li>
+                        <li>Museums and art spaces</li>
+                        <li>Waterfront sightseeing</li>
+                        <li>Photography and walking tours</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Fort Kochi"
+                        id="fortkochi"
+                    >
+
+                    <label for="fortkochi">
+                        Select Fort Kochi
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 MATTANCHERRY -->
+
+        <div class="card">
+
+            <img
+                src="Mattancherry_Palace_2025.jpg"
+                alt="Mattancherry Palace"
+            >
+
+            <div class="card-content">
+
+                <h3>Mattancherry</h3>
+
+                <div class="location">
+                    📍 Kochi, Kerala
+                </div>
+
+                <p class="description">
+
+                    Mattancherry is one of the historic areas of
+                    Kochi and is known for its heritage buildings,
+                    traditional markets, cultural landmarks and
+                    diverse history. The area offers visitors a
+                    glimpse into the multicultural heritage of
+                    old Kochi.
+
+                    The Mattancherry Palace and surrounding heritage
+                    streets are important attractions. Travellers
+                    can explore historic neighbourhoods, traditional
+                    markets, architecture and local cultural experiences.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🏛️ Highlights & Activities</strong>
+
+                    <ul>
+                        <li>Mattancherry Palace</li>
+                        <li>Historic streets</li>
+                        <li>Traditional markets</li>
+                        <li>Heritage architecture</li>
+                        <li>Cultural experiences</li>
+                        <li>Local shopping</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Mattancherry"
+                        id="mattancherry"
+                    >
+
+                    <label for="mattancherry">
+                        Select Mattancherry
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 OOTY -->
+
+        <div class="card">
+
+            <img
+                src="Ooty_image.jpg"
+                alt="Ooty"
+            >
+
+            <div class="card-content">
+
+                <h3>Ooty</h3>
+
+                <div class="location">
+                    📍 Nilgiris, Tamil Nadu, India
+                </div>
+
+                <p class="description">
+
+                    Ooty, also known as Udhagamandalam, is a popular
+                    hill station in the Nilgiri Mountains. The destination
+                    is known for its pleasant climate, rolling hills,
+                    tea gardens, gardens, lakes and beautiful mountain
+                    landscapes.
+
+                    Ooty is suitable for families, couples and nature
+                    lovers. Visitors can enjoy sightseeing, scenic
+                    drives, tea garden visits, boating and exploring
+                    the charming hill-station environment.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🏔️ Highlights & Activities</strong>
+
+                    <ul>
+                        <li>Nilgiri mountain scenery</li>
+                        <li>Tea gardens</li>
+                        <li>Ooty Lake</li>
+                        <li>Gardens</li>
+                        <li>Hill sightseeing</li>
+                        <li>Nature photography</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Ooty"
+                        id="ooty"
+                    >
+
+                    <label for="ooty">
+                        Select Ooty
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 KODAIKANAL -->
+
+        <div class="card">
+
+            <img
+                src="Kodaikanal_photos.jpg"
+                alt="Kodaikanal"
+            >
+
+            <div class="card-content">
+
+                <h3>Kodaikanal</h3>
+
+                <div class="location">
+                    📍 Dindigul, Tamil Nadu, India
+                </div>
+
+                <p class="description">
+
+                    Kodaikanal is a scenic hill station surrounded
+                    by forests, valleys, waterfalls and mountains.
+                    Often associated with peaceful landscapes and
+                    cool weather, it is a popular destination for
+                    families, couples and nature lovers.
+
+                    Visitors can explore Kodai Lake, viewpoints,
+                    waterfalls, forest areas and scenic roads. The
+                    destination is also suitable for relaxed holidays
+                    away from busy city life.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🏔️ Highlights & Activities</strong>
+
+                    <ul>
+                        <li>Kodai Lake</li>
+                        <li>Mountain viewpoints</li>
+                        <li>Waterfalls</li>
+                        <li>Forest landscapes</li>
+                        <li>Boating</li>
+                        <li>Nature sightseeing</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Kodaikanal"
+                        id="kodaikanal"
+                    >
+
+                    <label for="kodaikanal">
+                        Select Kodaikanal
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 MADURAI -->
+
+        <div class="card">
+
+            <img
+                src="Madurai_Meenakshi_temple,_Madurai.jpg"
+                alt="Madurai Meenakshi Temple"
+            >
+
+            <div class="card-content">
+
+                <h3>Madurai</h3>
+
+                <div class="location">
+                    📍 Tamil Nadu, India
+                </div>
+
+                <p class="description">
+
+                    Madurai is one of Tamil Nadu's historic cultural
+                    cities and is famous for the magnificent Meenakshi
+                    Amman Temple. The city has a rich heritage of
+                    architecture, traditions, markets and Tamil culture.
+
+                    A visit to Madurai offers travellers an opportunity
+                    to explore historic landmarks, traditional streets,
+                    local food and the vibrant atmosphere of one of
+                    South India's important cultural centres.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🏛️ Highlights & Experiences</strong>
+
+                    <ul>
+                        <li>Meenakshi Amman Temple</li>
+                        <li>Historic architecture</li>
+                        <li>Traditional markets</li>
+                        <li>Tamil cultural heritage</li>
+                        <li>Local food experiences</li>
+                        <li>Heritage sightseeing</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Madurai"
+                        id="madurai"
+                    >
+
+                    <label for="madurai">
+                        Select Madurai
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 RAMESHWARAM -->
+
+        <div class="card">
+
+            <img
+                src="Rameswaram_temple.jpg"
+                alt="Rameshwaram Temple"
+            >
+
+            <div class="card-content">
+
+                <h3>Rameshwaram</h3>
+
+                <div class="location">
+                    📍 Tamil Nadu, India
+                </div>
+
+                <p class="description">
+
+                    Rameshwaram is an important pilgrimage and
+                    heritage destination located on Pamban Island.
+                    The destination is especially famous for the
+                    historic Ramanathaswamy Temple, known for its
+                    impressive corridors and traditional architecture.
+
+                    Rameshwaram also offers beautiful coastal scenery,
+                    island landscapes and opportunities to explore
+                    important cultural and spiritual landmarks.
+                    It can be combined with Madurai and other Tamil
+                    Nadu destinations for a longer South India tour.
+
+                </p>
+
+                <div class="highlights">
+
+                    <strong>🛕 Highlights & Experiences</strong>
+
+                    <ul>
+                        <li>Ramanathaswamy Temple</li>
+                        <li>Historic temple corridors</li>
+                        <li>Coastal scenery</li>
+                        <li>Island landscapes</li>
+                        <li>Spiritual heritage</li>
+                        <li>Heritage sightseeing</li>
+                    </ul>
+
+                </div>
+
+                <div class="select-box">
+
+                    <input
+                        type="checkbox"
+                        class="destination"
+                        value="Rameshwaram"
+                        id="rameshwaram"
+                    >
+
+                    <label for="rameshwaram">
+                        Select Rameshwaram
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOM PACKAGE -->
+
+<section class="package-section" id="custom-package">
+
+    <div class="package-box">
+
+        <h2>
+            📝 Create Your Own Custom Tour Package
+        </h2>
+
+        <p class="package-info">
+
+            Select the destinations you would like to visit
+            and tell us your travel requirements. We will
+            review your request and prepare a suitable
+            customised tour plan.
+
+        </p>
+
+
+        <!-- SELECTED DESTINATIONS -->
+
+        <div class="selected-box">
+
+            <strong>
+                📍 Selected Destinations
+            </strong>
+
+            <div id="selectedPlaces">
+                No destinations selected yet.
+            </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="customerName">
+                    👤 Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your full name"
+                >
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label for="customerPhone">
+                    📞 Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Enter your phone number"
+                >
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="form-group">
+
+                <label for="travelDate">
+                    📅 Travel Date
+                </label>
+
+                <input
+                    type="date"
+                    id="travelDate"
+                >
+
+            </div>
+
+
+            <!-- PEOPLE -->
+
+            <div class="form-group">
+
+                <label for="people">
+                    👥 Number of People
+                </label>
+
+                <input
+                    type="number"
+                    id="people"
+                    min="1"
+                    placeholder="Example: 4"
+                >
+
+            </div>
+
+
+            <!-- HOTEL -->
+
+            <div class="form-group">
+
+                <label for="hotel">
+                    🏨 Hotel Requirement
+                </label>
+
+                <select id="hotel">
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option value="Hotel required">
+                        Hotel required
+                    </option>
+
+                    <option value="Hotel not required">
+                        Hotel not required
+                    </option>
+
+                    <option value="Please suggest hotels">
+                        Please suggest hotels
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TRANSPORT -->
+
+            <div class="form-group">
+
+                <label for="transport">
+                    🚗 Transport Requirement
+                </label>
+
+                <select id="transport">
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option value="Transport required">
+                        Transport required
+                    </option>
+
+                    <option value="Transport not required">
+                        Transport not required
+                    </option>
+
+                    <option value="Please suggest transport">
+                        Please suggest transport
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FOOD -->
+
+            <div class="form-group">
+
+                <label for="food">
+                    🍽️ Food Requirement
+                </label>
+
+                <select id="food">
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option value="Food required">
+                        Food required
+                    </option>
+
+                    <option value="Food not required">
+                        Food not required
+                    </option>
+
+                    <option value="Please suggest food options">
+                        Please suggest food options
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ROOM -->
+
+            <div class="form-group">
+
+                <label for="room">
+                    🛏️ Room Preference
+                </label>
+
+                <select id="room">
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option value="Standard room">
+                        Standard room
+                    </option>
+
+                    <option value="Deluxe room">
+                        Deluxe room
+                    </option>
+
+                    <option value="Family room">
+                        Family room
+                    </option>
+
+                    <option value="Please suggest">
+                        Please suggest
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- REQUIREMENTS -->
+
+            <div class="form-group full">
+
+                <label for="requirements">
+                    💬 Additional Requirements
+                </label>
+
+                <textarea
+                    id="requirements"
+                    placeholder="Tell us anything else you need for your trip..."
+                ></textarea>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            class="whatsapp-btn"
+            onclick="sendCustomPackage()"
+        >
+            📱 Send Custom Package Enquiry on WhatsApp
+        </button>
+
+
+        <p class="note">
+
+            No automatic package price is shown on this page.
+            Package itinerary, accommodation, transport and
+            total cost will be discussed after reviewing your
+            travel requirements.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        How Your Custom Package Works
+    </h2>
+
+    <p class="section-subtitle">
+
+        Create a trip according to the places and services
+        you need.
+
+    </p>
+
+
+    <div class="process">
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                1
+            </div>
+
+            <h3>
+                Select Places
+            </h3>
+
+            <p>
+                Choose one or more destinations from the list.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                2
+            </div>
+
+            <h3>
+                Enter Details
+            </h3>
+
+            <p>
+                Provide your date, group size and requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                3
+            </div>
+
+            <h3>
+                Send Enquiry
+            </h3>
+
+            <p>
+                Send your request directly through WhatsApp.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                4
+            </div>
+
+            <h3>
+                Get Your Plan
+            </h3>
+
+            <p>
+                Discuss the itinerary, services and package cost.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        <strong>🌴 Kerala Tourism</strong>
+    </p>
+
+    <p>
+        God's Own Country
+    </p>
+
+    <p>
+        Kerala • Tamil Nadu • South India
+    </p>
+
+    <p>
+        📞 +91 70122 96205
+    </p>
+
+    <p>
+        © 2026 Kerala Tourism | All Rights Reserved
+    </p>
+
+</footer>
+
+
+<script>
+
+/* DESTINATION SELECTION */
+
+const checkboxes =
+    document.querySelectorAll(".destination");
+
+const selectedPlaces =
+    document.getElementById("selectedPlaces");
+
+
+checkboxes.forEach(function(checkbox){
+
+    checkbox.addEventListener(
+        "change",
+        updateSelectedPlaces
+    );
+
+});
+
+
+function updateSelectedPlaces(){
+
+    const selected = [];
+
+    checkboxes.forEach(function(checkbox){
+
+        if(checkbox.checked){
+
+            selected.push(
+                checkbox.value
+            );
+
+        }
+
+    });
+
+
+    if(selected.length === 0){
+
+        selectedPlaces.textContent =
+            "No destinations selected yet.";
+
+    }
+    else{
+
+        selectedPlaces.textContent =
+            selected.join(" • ");
+
+    }
+
+}
+
+
+/* SEND CUSTOM PACKAGE */
+
+function sendCustomPackage(){
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value.trim();
+
+
+    const phone =
+        document.getElementById(
+            "customerPhone"
+        ).value.trim();
+
+
+    const date =
+        document.getElementById(
+            "travelDate"
+        ).value;
+
+
+    const people =
+        document.getElementById(
+            "people"
+        ).value;
+
+
+    const hotel =
+        document.getElementById(
+            "hotel"
+        ).value;
+
+
+    const transport =
+        document.getElementById(
+            "transport"
+        ).value;
+
+
+    const food =
+        document.getElementById(
+            "food"
+        ).value;
+
+
+    const room =
+        document.getElementById(
+            "room"
+        ).value;
+
+
+    const requirements =
+        document.getElementById(
+            "requirements"
+        ).value.trim();
+
+
+    const selected = [];
+
+
+    checkboxes.forEach(function(checkbox){
+
+        if(checkbox.checked){
+
+            selected.push(
+                checkbox.value
+            );
+
+        }
+
+    });
+
+
+    /* VALIDATION */
+
+    if(selected.length === 0){
+
+        alert(
+            "Please select at least one destination."
+        );
+
+        return;
+    }
+
+
+    if(
+        !name ||
+        !phone ||
+        !date ||
+        !people
+    ){
+
+        alert(
+            "Please fill in Name, Phone, Travel Date and Number of People."
+        );
+
+        return;
+    }
+
+
+    /* MESSAGE */
+
+    let message =
+        "🌴 Kerala Tourism - Custom Package Enquiry\n\n";
+
+
+    message +=
+        "👤 Name: " +
+        name +
+        "\n";
+
+
+    message +=
+        "📞 Phone: " +
+        phone +
+        "\n\n";
+
+
+    message +=
+        "📍 Selected Destinations:\n";
+
+
+    selected.forEach(function(place){
+
+        message +=
+            "• " +
+            place +
+            "\n";
+
+    });
+
+
+    message +=
+        "\n📅 Travel Date: " +
+        date +
+        "\n";
+
+
+    message +=
+        "👥 Number of People: " +
+        people +
+        "\n";
+
+
+    if(hotel){
+
+        message +=
+            "🏨 Hotel: " +
+            hotel +
+            "\n";
+
+    }
+
+
+    if(transport){
+
+        message +=
+            "🚗 Transport: " +
+            transport +
+            "\n";
+
+    }
+
+
+    if(food){
+
+        message +=
+            "🍽️ Food: " +
+            food +
+            "\n";
+
+    }
+
+
+    if(room){
+
+        message +=
+            "🛏️ Room: " +
+            room +
+            "\n";
+
+    }
+
+
+    if(requirements){
+
+        message +=
+            "\n💬 Additional Requirements:\n" +
+            requirements +
+            "\n";
+
+    }
+
+
+    message +=
+        "\nPlease prepare a customised tour itinerary and quotation based on my requirements.";
+
+
+    /* WHATSAPP NUMBER */
+
+    const whatsappNumber =
+        "917012296205";
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+  </html>

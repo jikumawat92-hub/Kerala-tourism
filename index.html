@@ -2,18 +2,20 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kerala Tourism | God's Own Country | Kerala Tour Packages</title>
 
 <meta name="description"
-content="Explore Kerala Tourism – God's Own Country. Discover Munnar, Wayanad, Alappuzha, Kovalam, waterfalls and more. Book Kerala tour packages and travel experiences.">
+content="Explore Kerala Tourism – God's Own Country. Discover Munnar, Wayanad, Alappuzha, Kovalam, waterfalls, Kathakali and more. Book Kerala tour packages and travel experiences.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
 
@@ -29,39 +31,40 @@ html{
 
 body{
     font-family:'Montserrat',Arial,sans-serif;
-    background:#f5fbf7;
-    color:#173f38;
+    background:#f4faf7;
+    color:#16463d;
 }
+
 
 /* ================= HEADER ================= */
 
 header{
     position:relative;
-    z-index:10;
+    z-index:20;
     background:linear-gradient(135deg,#004d43,#00796b,#00564d);
     color:white;
-    padding:10px 4%;
     box-shadow:0 4px 18px rgba(0,0,0,.25);
 }
 
-.nav-wrap{
-    max-width:1400px;
+.header-inner{
+    max-width:1450px;
     margin:auto;
+    padding:10px 3%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    gap:15px;
 }
 
 .logo-area{
-    min-width:270px;
+    min-width:260px;
     text-align:center;
 }
 
 .logo{
     font-family:'Pacifico',cursive;
     font-size:34px;
-    color:white;
+    color:#fff;
     line-height:1.1;
 }
 
@@ -71,26 +74,24 @@ header{
 
 .tagline{
     font-family:'DM Serif Display',serif;
-    font-size:16px;
-    letter-spacing:.5px;
+    font-size:15px;
     margin-top:3px;
-    color:#f4fff9;
 }
 
 nav{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:6px;
+    gap:5px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    padding:9px 13px;
+    font-size:12px;
+    font-weight:700;
+    padding:8px 11px;
     border-radius:25px;
-    font-size:13px;
-    font-weight:600;
     transition:.3s;
     white-space:nowrap;
 }
@@ -100,64 +101,37 @@ nav a:hover{
     transform:translateY(-2px);
 }
 
+
 /* ================= HERO ================= */
 
 .hero{
-    min-height:650px;
     position:relative;
+    min-height:650px;
 
-    background:
-    linear-gradient(
-        rgba(0,40,35,.08),
-        rgba(0,30,25,.18)
-    ),
-    url("kerala-hero.jpg");
+    background-image:
+        linear-gradient(
+            rgba(0,35,30,.08),
+            rgba(0,35,30,.10)
+        ),
+        url("./kerala-hero.jpg");
 
     background-size:cover;
-    background-position:center;
+    background-position:center center;
+    background-repeat:no-repeat;
+
     display:flex;
-    align-items:center;
+    align-items:flex-end;
     justify-content:center;
-    text-align:center;
-    overflow:hidden;
-}
 
-.hero-content{
-    width:90%;
-    max-width:900px;
-    padding:60px 20px 40px;
-    color:white;
-    text-shadow:0 4px 15px rgba(0,0,0,.6);
-}
-
-.hero h1{
-    font-family:'Pacifico',cursive;
-    font-size:clamp(55px,8vw,105px);
-    color:white;
-    margin-bottom:5px;
-    line-height:1.1;
-}
-
-.hero-subtitle{
-    font-family:'DM Serif Display',serif;
-    font-size:32px;
-    margin-bottom:28px;
-}
-
-.hero-line{
-    width:120px;
-    height:3px;
-    background:#ffd43b;
-    margin:15px auto 25px;
-    border-radius:10px;
+    padding:0 20px 55px;
 }
 
 .hero-buttons{
     display:flex;
     justify-content:center;
+    align-items:center;
+    gap:18px;
     flex-wrap:wrap;
-    gap:15px;
-    margin-top:25px;
 }
 
 .btn{
@@ -165,28 +139,32 @@ nav a:hover{
     text-decoration:none;
     border:none;
     cursor:pointer;
-    padding:16px 28px;
+
+    padding:15px 28px;
     border-radius:35px;
+
+    font-size:14px;
     font-weight:800;
-    font-size:15px;
+
     transition:.3s;
-}
 
-.btn-primary{
-    background:#ffd43b;
-    color:#173f38;
-    box-shadow:0 7px 20px rgba(0,0,0,.25);
-}
-
-.btn-whatsapp{
-    background:#149b70;
-    color:white;
-    box-shadow:0 7px 20px rgba(0,0,0,.25);
+    box-shadow:0 8px 22px rgba(0,0,0,.25);
 }
 
 .btn:hover{
     transform:translateY(-4px) scale(1.02);
 }
+
+.btn-yellow{
+    background:#ffd43b;
+    color:#17463c;
+}
+
+.btn-green{
+    background:#149b70;
+    color:white;
+}
+
 
 /* ================= COMMON ================= */
 
@@ -204,17 +182,20 @@ section{
 
 .section-subtitle{
     text-align:center;
-    color:#42635d;
+    color:#46645e;
     margin-bottom:35px;
 }
+
 
 /* ================= ABOUT ================= */
 
 .about{
     background:
-    linear-gradient(rgba(255,255,255,.93),rgba(255,255,255,.93)),
-    url("kerala-hero.jpg");
-    background-size:cover;
+        linear-gradient(
+            rgba(255,255,255,.94),
+            rgba(255,255,255,.94)
+        ),
+        url("./kerala-hero.jpg") center/cover;
 }
 
 .about-text{
@@ -222,29 +203,31 @@ section{
     margin:0 auto 35px;
     text-align:center;
     line-height:1.8;
-    color:#365650;
+    color:#3b5b55;
 }
 
 .features{
     max-width:1100px;
     margin:auto;
+
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:14px;
 }
 
 .feature{
-    background:rgba(225,245,237,.9);
+    background:rgba(226,245,237,.95);
     border-radius:15px;
     padding:25px 15px;
     text-align:center;
-    min-height:115px;
+    min-height:120px;
+
     transition:.3s;
 }
 
 .feature:hover{
     transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,80,65,.12);
+    box-shadow:0 8px 22px rgba(0,70,55,.15);
 }
 
 .feature-icon{
@@ -255,7 +238,7 @@ section{
 .feature h3{
     color:#087565;
     font-size:16px;
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
 
 .feature p{
@@ -263,17 +246,22 @@ section{
     line-height:1.5;
 }
 
-/* ================= PLACES ================= */
+
+/* ================= POPULAR PLACES ================= */
 
 .places{
     background:
-    linear-gradient(rgba(240,250,248,.90),rgba(240,250,248,.90)),
-    url("kerala-hero.jpg") center/cover;
+        linear-gradient(
+            rgba(241,250,247,.91),
+            rgba(241,250,247,.91)
+        ),
+        url("./kerala-hero.jpg") center/cover;
 }
 
 .place-grid{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
+
     display:grid;
     grid-template-columns:repeat(6,1fr);
     gap:12px;
@@ -281,9 +269,11 @@ section{
 
 .place-card{
     background:white;
-    border-radius:13px;
+    border-radius:14px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+
     transition:.3s;
 }
 
@@ -303,22 +293,30 @@ section{
     color:white;
     text-align:center;
     padding:10px 5px;
-    font-weight:700;
-    font-size:14px;
+    font-size:13px;
+    font-weight:800;
 }
+
 
 /* ================= MORE DESTINATIONS ================= */
 
 .more-destinations{
-    min-height:350px;
+
+    min-height:370px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
 
     background:
-    linear-gradient(rgba(0,55,45,.55),rgba(0,55,45,.65)),
-    url("kerala-hero.jpg") center/cover;
+        linear-gradient(
+            rgba(0,60,48,.48),
+            rgba(0,55,45,.68)
+        ),
+        url("./kerala-hero.jpg") center/cover;
+
     color:white;
 }
 
@@ -328,8 +326,8 @@ section{
 
 .more-box h2{
     font-family:'Pacifico',cursive;
-    font-size:45px;
-    margin-bottom:20px;
+    font-size:44px;
+    margin-bottom:18px;
 }
 
 .more-box p{
@@ -337,29 +335,59 @@ section{
     margin-bottom:25px;
 }
 
+
+/* ================= ACTIVITIES ================= */
+
+#activities{
+    background:#f7fcfa;
+}
+
+
+/* ================= GROUP TRIP ================= */
+
+.group-trip{
+    background:
+        linear-gradient(
+            rgba(255,255,255,.94),
+            rgba(255,255,255,.94)
+        ),
+        url("./kerala-hero.jpg") center/cover;
+}
+
+
 /* ================= BOOKING ================= */
 
 .booking{
-    background:#f5fbf8;
+    background:#eef8f4;
 }
 
 .booking-box{
     max-width:650px;
     margin:auto;
+
     background:white;
+
     padding:30px;
+
     border-radius:20px;
+
     box-shadow:0 8px 30px rgba(0,0,0,.12);
 }
 
 .booking-box input,
 .booking-box select,
 .booking-box textarea{
+
     width:100%;
+
     padding:14px;
+
     margin-bottom:14px;
+
     border:1px solid #c8ded7;
+
     border-radius:10px;
+
     font-family:inherit;
     font-size:14px;
 }
@@ -373,28 +401,39 @@ section{
     width:100%;
 }
 
+
 /* ================= REVIEWS ================= */
 
 .reviews{
-    background:#eaf7f1;
+    background:#e9f7f1;
 }
 
 .review-form{
     max-width:650px;
     margin:0 auto 35px;
+
     background:white;
+
     padding:25px;
+
     border-radius:18px;
-    box-shadow:0 6px 20px rgba(0,0,0,.1);
+
+    box-shadow:0 6px 20px rgba(0,0,0,.10);
 }
 
 .review-form input,
 .review-form textarea{
+
     width:100%;
+
     padding:13px;
+
     margin-bottom:12px;
+
     border:1px solid #c9ddd7;
+
     border-radius:10px;
+
     font-family:inherit;
 }
 
@@ -405,20 +444,25 @@ section{
 .review-list{
     max-width:900px;
     margin:auto;
+
     display:grid;
     gap:15px;
 }
 
 .review{
     background:white;
+
     padding:20px;
+
     border-radius:15px;
+
     box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
 .review strong{
     color:#087565;
 }
+
 
 /* ================= MAP ================= */
 
@@ -429,8 +473,10 @@ section{
 .map-container{
     max-width:1000px;
     margin:auto;
+
     border-radius:20px;
     overflow:hidden;
+
     box-shadow:0 7px 25px rgba(0,0,0,.15);
 }
 
@@ -440,10 +486,18 @@ section{
     border:0;
 }
 
+
 /* ================= CONTACT ================= */
 
 .contact{
-    background:linear-gradient(135deg,#004d43,#00796b);
+
+    background:
+        linear-gradient(
+            135deg,
+            #004d43,
+            #00796b
+        );
+
     color:white;
     text-align:center;
 }
@@ -464,31 +518,46 @@ section{
 }
 
 .whatsapp-big{
+
     display:inline-block;
+
     margin-top:20px;
+
     background:#25d366;
+
     color:white;
+
     padding:15px 28px;
+
     border-radius:30px;
+
     text-decoration:none;
+
     font-weight:800;
 }
+
 
 /* ================= FOOTER ================= */
 
 footer{
+
     background:#003b34;
+
     color:#d9eee8;
+
     text-align:center;
+
     padding:22px;
+
     font-size:13px;
 }
 
+
 /* ================= MOBILE ================= */
 
-@media(max-width:1000px){
+@media(max-width:1050px){
 
-    .nav-wrap{
+    .header-inner{
         flex-direction:column;
     }
 
@@ -505,36 +574,43 @@ footer{
     }
 }
 
+
 @media(max-width:700px){
 
     header{
-        padding:12px 3%;
+        padding:10px 5px;
     }
 
     .logo{
-        font-size:30px;
+        font-size:29px;
+    }
+
+    .tagline{
+        font-size:14px;
     }
 
     nav a{
-        font-size:11px;
-        padding:7px 9px;
+        font-size:10px;
+        padding:7px 8px;
     }
 
     .hero{
-        min-height:620px;
-        background-position:center;
+
+        min-height:560px;
+
+        padding:0 15px 30px;
+
+        background-position:center center;
     }
 
-    .hero-content{
-        padding-top:40px;
+    .hero-buttons{
+        gap:12px;
+        width:100%;
     }
 
-    .hero h1{
-        font-size:52px;
-    }
-
-    .hero-subtitle{
-        font-size:25px;
+    .btn{
+        padding:15px 22px;
+        font-size:13px;
     }
 
     .features{
@@ -558,7 +634,22 @@ footer{
     }
 }
 
+
 @media(max-width:450px){
+
+    .hero{
+        min-height:530px;
+        background-position:center center;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:90%;
+        text-align:center;
+    }
 
     .features{
         grid-template-columns:1fr;
@@ -568,46 +659,67 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-        align-items:center;
+    .place-card img{
+        height:110px;
     }
 
-    .btn{
-        width:90%;
+    nav a{
+        font-size:9px;
+        padding:6px 7px;
     }
 }
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="nav-wrap">
+<div class="header-inner">
 
 <div class="logo-area">
-    <div class="logo">🌴 Kerala <span>Tourism</span></div>
-    <div class="tagline">God's Own Country</div>
+
+<div class="logo">
+🌴 Kerala <span>Tourism</span>
 </div>
+
+<div class="tagline">
+God's Own Country
+</div>
+
+</div>
+
 
 <nav>
 
 <a href="#home">🏠 Home</a>
+
 <a href="#about">ⓘ About</a>
+
 <a href="#places">📍 Places</a>
+
 <a href="packages.html">📦 Packages</a>
+
 <a href="gallery.html">🖼️ Gallery</a>
+
 <a href="vehicles.html">🚕 Taxi Service</a>
 
 <a href="#activities">◎ Activities</a>
+
 <a href="#group-trip">🔥 Group Trip</a>
+
 <a href="#booking">🧾 Booking</a>
+
 <a href="#reviews">⭐ Reviews</a>
+
 <a href="#map">🗺️ Map</a>
+
 <a href="#contact">📞 Contact</a>
 
 </nav>
@@ -621,29 +733,25 @@ footer{
 
 <section class="hero" id="home">
 
-<div class="hero-content">
-
-<h1>Kerala Tourism</h1>
-
-<div class="hero-line"></div>
-
-<div class="hero-subtitle">
-God's Own Country
-</div>
-
 <div class="hero-buttons">
 
-<a href="#booking" class="btn btn-primary">
+<a
+href="#booking"
+class="btn btn-yellow">
+
 📅 Book Your Kerala Trip →
+
 </a>
 
-<a href="https://wa.me/917012296205"
-class="btn btn-whatsapp"
-target="_blank">
+
+<a
+href="https://wa.me/917012296205"
+target="_blank"
+class="btn btn-green">
+
 💬 Chat on WhatsApp
-</a>
 
-</div>
+</a>
 
 </div>
 
@@ -663,50 +771,97 @@ Discover Kerala with flexible travel options for couples, families, friends and 
 </p>
 
 <p class="about-text">
+
 Kerala, known as God’s Own Country, is famous for its beautiful
-backwaters, green hills, beaches, wildlife, waterfalls, traditional
-culture and delicious cuisine. We help travellers explore Kerala
-through personalised travel plans, sightseeing, accommodation and
-transportation options.
+backwaters, green hills, beaches, wildlife, waterfalls,
+traditional culture and delicious cuisine.
+
+We help travellers explore Kerala through personalised travel plans,
+sightseeing, accommodation and transportation options.
+
 </p>
+
 
 <div class="features">
 
+
 <div class="feature">
+
 <div class="feature-icon">💚💞</div>
+
 <h3>Couple Trips</h3>
-<p>Relaxing and memorable experiences for couples.</p>
+
+<p>
+Relaxing and memorable experiences for couples.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">👨‍👩‍👧‍👦</div>
+
 <h3>Family Trips</h3>
-<p>Comfortable travel plans for families.</p>
+
+<p>
+Comfortable travel plans for families.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">👥</div>
+
 <h3>Friends Trips</h3>
-<p>Fun-filled trips with friends and groups.</p>
+
+<p>
+Fun-filled trips with friends and groups.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">👨‍👩‍👧‍👦</div>
+
 <h3>Group Tours</h3>
-<p>Custom travel arrangements for groups.</p>
+
+<p>
+Custom travel arrangements for groups.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">❤️</div>
+
 <h3>Honeymoon Trips</h3>
-<p>Beautiful destinations for memorable journeys.</p>
+
+<p>
+Beautiful destinations for memorable journeys.
+</p>
+
 </div>
 
+
 <div class="feature">
-<div class="feature-icon">🟢</div>
+
+<div class="feature-icon">💬</div>
+
 <h3>WhatsApp Enquiry</h3>
-<p>Contact us directly for travel enquiries.</p>
+
+<p>
+Contact us directly for travel enquiries.
+</p>
+
 </div>
+
 
 </div>
 
@@ -725,37 +880,87 @@ Popular Tourist Places
 Explore some of the most beautiful destinations in Kerala.
 </p>
 
+
 <div class="place-grid">
 
-<div class="place-card">
-<img src="munnar%20neela%20kurinji.%20jpj.jpeg" alt="Munnar">
-<div class="place-name">Munnar</div>
-</div>
 
 <div class="place-card">
-<img src="wayanad.%20jpj.jpeg" alt="Wayanad">
-<div class="place-name">Wayanad</div>
+
+<img
+src="munnar%20neela%20kurinji.%20jpj.jpeg"
+alt="Munnar">
+
+<div class="place-name">
+Munnar
 </div>
 
-<div class="place-card">
-<img src="backwaters%20jpj.jpeg" alt="Alappuzha">
-<div class="place-name">Alappuzha</div>
 </div>
 
-<div class="place-card">
-<img src="kovalam%20jpj.%201.jpeg" alt="Kovalam">
-<div class="place-name">Kovalam</div>
-</div>
 
 <div class="place-card">
-<img src="water%20fall's%20jpj.jpeg" alt="Waterfalls">
-<div class="place-name">Waterfalls</div>
+
+<img
+src="wayanad.%20jpj.jpeg"
+alt="Wayanad">
+
+<div class="place-name">
+Wayanad
 </div>
 
-<div class="place-card">
-<img src="kadhakali.%20jpj.jpeg" alt="Kathakali">
-<div class="place-name">Kathakali</div>
 </div>
+
+
+<div class="place-card">
+
+<img
+src="backwaters%20jpj.jpeg"
+alt="Alappuzha">
+
+<div class="place-name">
+Alappuzha
+</div>
+
+</div>
+
+
+<div class="place-card">
+
+<img
+src="kovalam%20jpj.%201.jpeg"
+alt="Kovalam">
+
+<div class="place-name">
+Kovalam
+</div>
+
+</div>
+
+
+<div class="place-card">
+
+<img
+src="water%20fall's%20jpj.jpeg"
+alt="Waterfalls">
+
+<div class="place-name">
+Waterfalls
+</div>
+
+</div>
+
+
+<div class="place-card">
+
+<img
+src="kadhakali.%20jpj.jpeg"
+alt="Kathakali">
+
+<div class="place-name">
+Kathakali
+</div>
+
+</div>
+
 
 </div>
 
@@ -768,19 +973,33 @@ Explore some of the most beautiful destinations in Kerala.
 
 <div class="more-box">
 
-<h2>Explore More Destinations</h2>
+<h2>
+Explore More Destinations
+</h2>
 
 <p>
+
 Want to visit places beyond the regular Kerala destinations?
+
 <br>
-Explore Vagamon, Gavi, Guruvayur, Thiruvananthapuram,
+
+Explore Vagamon, Gavi, Guruvayur,
+Thiruvananthapuram,
+
 <br>
-Fort Kochi, Mattancherry, Ooty, Kodaikanal,
-Madurai and Rameshwaram.
+
+Fort Kochi, Mattancherry, Ooty,
+Kodaikanal, Madurai and Rameshwaram.
+
 </p>
 
-<a href="destinations.html" class="btn btn-primary">
+
+<a
+href="destinations.html"
+class="btn btn-yellow">
+
 📍 View Destinations & Create Custom Package →
+
 </a>
 
 </div>
@@ -800,43 +1019,87 @@ Kerala Activities
 Experience culture, nature, adventure and unforgettable Kerala moments.
 </p>
 
+
 <div class="features">
 
+
 <div class="feature">
+
 <div class="feature-icon">🚣</div>
+
 <h3>Backwater Cruise</h3>
-<p>Enjoy peaceful Kerala backwaters and houseboats.</p>
+
+<p>
+Enjoy peaceful Kerala backwaters and houseboats.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">🎭</div>
+
 <h3>Traditional Culture</h3>
-<p>Experience Kerala's rich traditional arts and culture.</p>
+
+<p>
+Experience Kerala's rich traditional arts and culture.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">🏞️</div>
+
 <h3>Hill Station Trips</h3>
-<p>Explore beautiful mountains and green landscapes.</p>
+
+<p>
+Explore beautiful mountains and green landscapes.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">🌊</div>
+
 <h3>Beach Trips</h3>
-<p>Relax at Kerala's beautiful beaches.</p>
+
+<p>
+Relax at Kerala's beautiful beaches.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">🐘</div>
+
 <h3>Wildlife</h3>
-<p>Discover Kerala's forests and wildlife.</p>
+
+<p>
+Discover Kerala's forests and wildlife.
+</p>
+
 </div>
 
+
 <div class="feature">
+
 <div class="feature-icon">🚤</div>
+
 <h3>Adventure</h3>
-<p>Enjoy exciting travel and outdoor experiences.</p>
+
+<p>
+Enjoy exciting travel and outdoor experiences.
+</p>
+
 </div>
+
 
 </div>
 
@@ -845,7 +1108,7 @@ Experience culture, nature, adventure and unforgettable Kerala moments.
 
 <!-- ================= GROUP TRIP ================= -->
 
-<section id="group-trip" class="about">
+<section class="group-trip" id="group-trip">
 
 <h2 class="section-title">
 Munnar 3-Day Group Trip
@@ -855,12 +1118,13 @@ Munnar 3-Day Group Trip
 Enjoy Kerala with family, friends or your travel group.
 </p>
 
-<div style="text-align:center">
+
+<div style="text-align:center;">
 
 <a
 href="https://wa.me/917012296205?text=Hello%2C%20I%20am%20interested%20in%20the%20Munnar%203-Day%20Group%20Trip."
-class="btn btn-whatsapp"
-target="_blank">
+target="_blank"
+class="btn btn-green">
 
 🔥 Enquire for Group Trip
 
@@ -880,40 +1144,83 @@ Book Your Kerala Trip
 </h2>
 
 <p class="section-subtitle">
-Send your travel details and contact us on WhatsApp.
+Send your travel details and contact us directly on WhatsApp.
 </p>
+
 
 <div class="booking-box">
 
-<input type="text" id="name" placeholder="Your Name">
 
-<input type="tel" id="phone" placeholder="Phone Number">
+<input
+type="text"
+id="name"
+placeholder="Your Name">
+
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number">
+
 
 <select id="trip">
 
-<option value="">Select Trip Type</option>
-<option>Couple Trip</option>
-<option>Family Trip</option>
-<option>Friends Trip</option>
-<option>Group Trip</option>
-<option>Honeymoon Trip</option>
-<option>Custom Kerala Package</option>
+<option value="">
+Select Trip Type
+</option>
+
+<option>
+Couple Trip
+</option>
+
+<option>
+Family Trip
+</option>
+
+<option>
+Friends Trip
+</option>
+
+<option>
+Group Trip
+</option>
+
+<option>
+Honeymoon Trip
+</option>
+
+<option>
+Custom Kerala Package
+</option>
+
 </select>
 
-<input type="text" id="destination"
+
+<input
+type="text"
+id="destination"
 placeholder="Preferred Destination">
 
-<input type="date" id="date">
 
-<textarea id="message"
-placeholder="Tell us about your travel requirements"></textarea>
+<input
+type="date"
+id="date">
 
-<button class="btn btn-primary"
+
+<textarea
+id="message"
+placeholder="Tell us about your travel requirements">
+</textarea>
+
+
+<button
+class="btn btn-yellow"
 onclick="sendBooking()">
 
 📲 Send Booking Enquiry
 
 </button>
+
 
 </div>
 
@@ -932,16 +1239,23 @@ Traveller Reviews
 Share your Kerala travel experience.
 </p>
 
+
 <div class="review-form">
 
-<input type="text"
+<input
+type="text"
 id="reviewName"
 placeholder="Your Name">
 
-<textarea id="reviewText"
-placeholder="Write your review"></textarea>
 
-<button class="btn btn-primary"
+<textarea
+id="reviewText"
+placeholder="Write your review">
+</textarea>
+
+
+<button
+class="btn btn-yellow"
 onclick="addReview()">
 
 ⭐ Submit Review
@@ -950,13 +1264,28 @@ onclick="addReview()">
 
 </div>
 
-<div class="review-list" id="reviewList">
+
+<div
+class="review-list"
+id="reviewList">
+
 
 <div class="review">
-<strong>Kerala Traveller</strong>
-<p>🌟🌟🌟🌟🌟</p>
-<p>Beautiful Kerala travel experience.</p>
+
+<strong>
+Kerala Traveller
+</strong>
+
+<p>
+🌟🌟🌟🌟🌟
+</p>
+
+<p>
+Beautiful Kerala travel experience.
+</p>
+
 </div>
+
 
 </div>
 
@@ -974,6 +1303,7 @@ Kerala Travel Map
 <p class="section-subtitle">
 Explore Kerala destinations.
 </p>
+
 
 <div class="map-container">
 
@@ -995,26 +1325,41 @@ loading="lazy">
 Contact Kerala Tourism
 </h2>
 
+
 <div class="contact-info">
 
-<p>🏢 <strong>Office</strong></p>
+<p>
+🏢 <strong>Office</strong>
+</p>
 
 <p>
+
 Kerala Tourism<br>
+
 Cherucode PO, Vallappuzha<br>
+
 Palakkad, Kerala, India
+
 </p>
 
+
 <p>
-📞 <a href="tel:+917012296205">
+
+📞
+
+<a href="tel:+917012296205">
+
 +91 70122 96205
+
 </a>
+
 </p>
+
 
 <a
 href="https://wa.me/917012296205"
-class="whatsapp-big"
-target="_blank">
+target="_blank"
+class="whatsapp-big">
 
 💬 WhatsApp Us
 
@@ -1044,6 +1389,7 @@ Kerala Travel • Tour Packages • Booking • Transportation
 
 <script>
 
+
 /* BOOKING */
 
 function sendBooking(){
@@ -1066,12 +1412,16 @@ function sendBooking(){
     const message =
     document.getElementById("message").value.trim();
 
+
     if(!name || !phone || !trip){
 
-        alert("Please enter your Name, Phone Number and Trip Type.");
+        alert(
+        "Please enter your Name, Phone Number and Trip Type."
+        );
 
         return;
     }
+
 
     const text =
 `Hello Kerala Tourism,
@@ -1079,19 +1429,26 @@ function sendBooking(){
 I would like to book a Kerala trip.
 
 Name: ${name}
+
 Phone: ${phone}
+
 Trip Type: ${trip}
+
 Destination: ${destination}
+
 Travel Date: ${date}
 
 Message:
 ${message}`;
 
+
     const url =
-    "https://wa.me/917012296205?text=" +
-    encodeURIComponent(text);
+    "https://wa.me/917012296205?text="
+    + encodeURIComponent(text);
+
 
     window.open(url,"_blank");
+
 }
 
 
@@ -1100,52 +1457,85 @@ ${message}`;
 function addReview(){
 
     const name =
-    document.getElementById("reviewName").value.trim();
+    document
+    .getElementById("reviewName")
+    .value
+    .trim();
+
 
     const text =
-    document.getElementById("reviewText").value.trim();
+    document
+    .getElementById("reviewText")
+    .value
+    .trim();
+
 
     if(!name || !text){
 
-        alert("Please enter your name and review.");
+        alert(
+        "Please enter your name and review."
+        );
 
         return;
     }
 
+
     const review =
     document.createElement("div");
 
+
     review.className="review";
 
+
     review.innerHTML=`
+
         <strong>${escapeHTML(name)}</strong>
+
         <p>🌟🌟🌟🌟🌟</p>
+
         <p>${escapeHTML(text)}</p>
+
     `;
+
 
     document
     .getElementById("reviewList")
     .prepend(review);
 
-    document.getElementById("reviewName").value="";
-    document.getElementById("reviewText").value="";
 
-    alert("Thank you! Your review has been added.");
+    document
+    .getElementById("reviewName")
+    .value="";
+
+
+    document
+    .getElementById("reviewText")
+    .value="";
+
+
+    alert(
+    "Thank you! Your review has been added."
+    );
+
 }
 
 
-/* SECURITY */
+/* SAFE TEXT */
 
 function escapeHTML(text){
 
-    const div=document.createElement("div");
+    const div =
+    document.createElement("div");
 
     div.textContent=text;
 
     return div.innerHTML;
+
 }
 
 </script>
 
+
 </body>
-   </html>
+
+    </html>

@@ -7,87 +7,125 @@
 <title>Kerala Tourism Gallery</title>
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial,sans-serif;
     background:#f1f8f5;
+    color:#222;
 }
 
 header{
-    background:#00695c;
+    background:linear-gradient(135deg,#00695c,#00a896);
     color:white;
     text-align:center;
-    padding:35px 15px;
+    padding:45px 15px;
+}
+
+header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:17px;
 }
 
 nav{
     background:#004d40;
-    text-align:center;
     padding:15px;
+    text-align:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:8px;
+    margin:0 10px;
     font-weight:bold;
 }
 
 .container{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
-    padding:30px 15px;
+    padding:35px 15px;
 }
 
-h2{
+.title{
     text-align:center;
+    margin-bottom:30px;
+}
+
+.title h2{
     color:#00695c;
-    margin-bottom:25px;
+    font-size:30px;
+    margin-bottom:8px;
 }
 
 .gallery{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:20px;
 }
 
 .card{
     background:white;
-    border-radius:15px;
+    border-radius:16px;
     overflow:hidden;
-    box-shadow:0 5px 15px #0002;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 .card img{
     width:100%;
-    height:230px;
+    height:240px;
     object-fit:cover;
     display:block;
 }
 
 .card h3{
-    text-align:center;
     color:#00695c;
-    padding:12px;
+    text-align:center;
+    padding:16px 10px;
+    font-size:19px;
 }
 
 footer{
-    margin-top:30px;
     background:#004d40;
     color:white;
     text-align:center;
     padding:25px;
+    margin-top:35px;
 }
 
-@media(max-width:700px){
+@media(max-width:750px){
     .gallery{
         grid-template-columns:repeat(2,1fr);
     }
+
+    .card img{
+        height:200px;
+    }
 }
 
-@media(max-width:450px){
+@media(max-width:480px){
     .gallery{
         grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:240px;
+    }
+
+    header h1{
+        font-size:28px;
     }
 }
 </style>
@@ -96,56 +134,110 @@ footer{
 <body>
 
 <header>
-<h1>🌴 Kerala Tourism</h1>
-<p>God's Own Country</p>
+    <h1>🌴 Kerala Tourism</h1>
+    <p>Explore the Beauty of God's Own Country</p>
 </header>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="packages.html">Packages</a>
-<a href="gallery.html">Gallery</a>
-<a href="index.html#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="index.html#places">Places</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-<h2>📸 Kerala Tourism Gallery</h2>
+<div class="title">
+    <h2>📸 Kerala Tourism Gallery</h2>
+    <p>Beautiful places, culture and experiences of Kerala</p>
+</div>
 
 <div class="gallery">
 
 <div class="card">
-<img src="munnar.jpg" alt="Munnar">
+<img src="beach%20jpj.jpeg" alt="Kerala Beach">
+<h3>🏖️ Kerala Beach</h3>
+</div>
+
+<div class="card">
+<img src="wild%20life.%20jpj.jpeg" alt="Kerala Wildlife">
+<h3>🐘 Kerala Wildlife</h3>
+</div>
+
+<div class="card">
+<img src="munnar%20neela%20kurinji.%20jpj.jpeg" alt="Munnar">
 <h3>🏔️ Munnar</h3>
 </div>
 
 <div class="card">
-<img src="kovalam.jpg" alt="Kovalam">
+<img src="wayanad.%20jpj.jpeg" alt="Wayanad">
+<h3>🌿 Wayanad</h3>
+</div>
+
+<div class="card">
+<img src="backwaters%20jpj.jpeg" alt="Alappuzha Backwaters">
+<h3>🚤 Alappuzha Backwaters</h3>
+</div>
+
+<div class="card">
+<img src="ayurveda.%20jpj.jpeg" alt="Kerala Ayurveda">
+<h3>🌿 Kerala Ayurveda</h3>
+</div>
+
+<div class="card">
+<img src="munnar%202.jpj.jpeg" alt="Munnar">
+<h3>🍃 Munnar Tea Gardens</h3>
+</div>
+
+<div class="card">
+<img src="water%20fall's%20jpj.jpeg" alt="Kerala Waterfall">
+<h3>💦 Kerala Waterfalls</h3>
+</div>
+
+<div class="card">
+<img src="dheep%20jpj.jpeg" alt="Kerala">
+<h3>🌴 Kerala Beauty</h3>
+</div>
+
+<div class="card">
+<img src="munnar%202.5jpj.jpeg" alt="Munnar">
+<h3>🏔️ Munnar Hills</h3>
+</div>
+
+<div class="card">
+<img src="kovalam%20jpj.%201.jpeg" alt="Kovalam">
 <h3>🏖️ Kovalam</h3>
 </div>
 
 <div class="card">
-<img src="Alappy.jpg" alt="Alappuzha">
-<h3>🚤 Alappuzha</h3>
+<img src="kerala%20traditional%20lunch.jpeg" alt="Kerala Food">
+<h3>🍛 Kerala Traditional Food</h3>
 </div>
 
 <div class="card">
-<img src="beach jpj.jpeg" alt="Kerala Beach">
-<h3>🌊 Kerala Beach</h3>
+<img src="kadhakali.%20jpj.jpeg" alt="Kathakali">
+<h3>🎭 Kathakali</h3>
 </div>
 
 <div class="card">
-<img src="backwaters jpj.jpeg" alt="Backwaters">
-<h3>🚤 Backwaters</h3>
+<img src="alappuzha%20village%20jpj.jpeg" alt="Alappuzha Village">
+<h3>🌴 Alappuzha Village</h3>
 </div>
 
 <div class="card">
-<img src="ayurveda. jpj.jpeg" alt="Kerala Ayurveda">
-<h3>🌿 Ayurveda</h3>
+<img src="grandeur-in-kathakali-1759913784_8160f82e945e3dc23369.jpeg" alt="Kathakali">
+<h3>🎭 Kerala Kathakali</h3>
 </div>
 
 <div class="card">
-<img src="dheep jpj.jpeg" alt="Kerala">
-<h3>🌴 Kerala</h3>
+<img src="munnar.%20m%20jpj.jpeg" alt="Munnar">
+<h3>🏔️ Munnar Beauty</h3>
+</div>
+
+<div class="card">
+<img src="munnar%20tea%20jpj.jpeg" alt="Munnar Tea">
+<h3>🍃 Munnar Tea Plantation</h3>
 </div>
 
 </div>
@@ -156,4 +248,4 @@ footer{
 </footer>
 
 </body>
-    </html>
+</html>

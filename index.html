@@ -15,6 +15,7 @@ content="Explore Kerala Tourism. Discover Munnar, Wayanad, Alappuzha, Kovalam, w
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
+
 <style>
 
 *{
@@ -273,12 +274,12 @@ section{
 
     transition:.3s;
 
-    /* NEW: card is clickable */
     cursor:pointer;
 }
 
 .place:hover{
     transform:translateY(-8px);
+    box-shadow:0 12px 28px rgba(0,80,65,.25);
 }
 
 .place img{
@@ -295,6 +296,148 @@ section{
     padding:11px 5px;
     font-size:13px;
     font-weight:800;
+}
+
+
+/* ================= DESTINATION POPUP ================= */
+
+.destination-modal{
+    display:none;
+
+    position:fixed;
+    z-index:9999;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,35,30,.78);
+
+    padding:20px;
+
+    overflow-y:auto;
+}
+
+.destination-modal.show{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.destination-box{
+    width:100%;
+    max-width:850px;
+
+    max-height:92vh;
+    overflow-y:auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 60px rgba(0,0,0,.4);
+
+    position:relative;
+
+    animation:popup .3s ease;
+}
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:scale(.92) translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+
+}
+
+.destination-image{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:25px 25px 0 0;
+}
+
+.destination-content{
+    padding:30px;
+}
+
+.destination-content h2{
+    font-family:'DM Serif Display',serif;
+    color:#075c52;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.destination-content p{
+    color:#4b625e;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.destination-content h3{
+    color:#087565;
+    font-size:22px;
+    margin:25px 0 12px;
+}
+
+.destination-content ul{
+    padding-left:25px;
+    color:#4b625e;
+    line-height:2;
+}
+
+.destination-content li{
+    padding:2px 0;
+}
+
+.close-modal{
+    position:absolute;
+
+    right:15px;
+    top:15px;
+
+    width:44px;
+    height:44px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(0,0,0,.65);
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    z-index:5;
+}
+
+.close-modal:hover{
+    background:#075c52;
+}
+
+.modal-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.modal-buttons a{
+    text-decoration:none;
+    text-align:center;
 }
 
 
@@ -538,147 +681,6 @@ footer{
 }
 
 
-/* =========================================================
-   NEW: DESTINATION DETAILS POPUP
-   ========================================================= */
-
-.destination-modal{
-    display:none;
-
-    position:fixed;
-    z-index:99999;
-
-    inset:0;
-
-    background:rgba(0,0,0,.78);
-
-    padding:20px;
-
-    overflow-y:auto;
-}
-
-.destination-box{
-    position:relative;
-
-    max-width:850px;
-
-    margin:35px auto;
-
-    background:white;
-
-    border-radius:25px;
-
-    overflow:hidden;
-
-    box-shadow:0 15px 60px rgba(0,0,0,.45);
-
-    animation:destinationOpen .3s ease;
-}
-
-@keyframes destinationOpen{
-
-    from{
-        transform:translateY(35px);
-        opacity:0;
-    }
-
-    to{
-        transform:translateY(0);
-        opacity:1;
-    }
-
-}
-
-.destination-image{
-    width:100%;
-    height:300px;
-
-    object-fit:cover;
-
-    display:block;
-}
-
-.destination-content{
-    padding:30px;
-
-    color:#405d57;
-}
-
-.destination-content h2{
-    font-family:'DM Serif Display',serif;
-
-    font-size:40px;
-
-    color:#075c52;
-
-    margin-bottom:15px;
-}
-
-.destination-content h3{
-    color:#087565;
-
-    margin-top:24px;
-
-    margin-bottom:9px;
-
-    font-size:19px;
-}
-
-.destination-content p{
-    line-height:1.8;
-
-    margin-bottom:8px;
-}
-
-.destination-content ul{
-    padding-left:22px;
-
-    line-height:1.9;
-}
-
-.destination-close{
-    position:absolute;
-
-    z-index:5;
-
-    top:14px;
-    right:14px;
-
-    width:45px;
-    height:45px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:white;
-
-    color:#075c52;
-
-    font-size:30px;
-
-    line-height:40px;
-
-    cursor:pointer;
-
-    box-shadow:0 4px 15px rgba(0,0,0,.3);
-}
-
-.destination-close:hover{
-    background:#ffd43b;
-}
-
-.destination-buttons{
-    display:flex;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-    margin-top:25px;
-}
-
-
 /* ================= MOBILE ================= */
 
 @media(max-width:1050px){
@@ -748,36 +750,47 @@ footer{
         font-size:34px;
     }
 
-    /* NEW popup mobile */
-
     .destination-modal{
         padding:10px;
     }
 
     .destination-box{
-        margin:15px auto;
+        max-height:95vh;
         border-radius:20px;
     }
 
     .destination-image{
         height:210px;
+        border-radius:20px 20px 0 0;
     }
 
     .destination-content{
-        padding:22px;
+        padding:22px 18px 25px;
     }
 
     .destination-content h2{
-        font-size:32px;
+        font-size:31px;
     }
 
-    .destination-buttons{
+    .destination-content h3{
+        font-size:20px;
+    }
+
+    .destination-content p{
+        font-size:14px;
+    }
+
+    .destination-content ul{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .modal-buttons{
         flex-direction:column;
     }
 
-    .destination-buttons .btn{
+    .modal-buttons .btn{
         width:100%;
-        text-align:center;
     }
 
 }
@@ -804,15 +817,14 @@ footer{
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -864,9 +876,7 @@ God's Own Country
 </header>
 
 
-<!-- =====================================================
-     HERO
-     ===================================================== -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
@@ -894,9 +904,7 @@ class="btn green">
 </section>
 
 
-<!-- =====================================================
-     ABOUT
-     ===================================================== -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
@@ -963,9 +971,7 @@ sightseeing, accommodation and transportation options.
 </section>
 
 
-<!-- =====================================================
-     PLACES
-     ===================================================== -->
+<!-- ================= PLACES ================= -->
 
 <section class="places" id="places">
 
@@ -983,9 +989,7 @@ Explore some of the most beautiful destinations in Kerala.
 
 <!-- MUNNAR -->
 
-<div
-class="place"
-onclick="showDestination('munnar')">
+<div class="place" onclick="openDestination('munnar')">
 
 <img
 src="munnar%20neela%20kurinji.%20jpj.jpeg"
@@ -1000,9 +1004,7 @@ Munnar
 
 <!-- WAYANAD -->
 
-<div
-class="place"
-onclick="showDestination('wayanad')">
+<div class="place" onclick="openDestination('wayanad')">
 
 <img
 src="wayanad.%20jpj.jpeg"
@@ -1017,9 +1019,7 @@ Wayanad
 
 <!-- ALAPPUZHA -->
 
-<div
-class="place"
-onclick="showDestination('alappuzha')">
+<div class="place" onclick="openDestination('alappuzha')">
 
 <img
 src="backwaters%20jpj.jpeg"
@@ -1034,9 +1034,7 @@ Alappuzha
 
 <!-- KOVALAM -->
 
-<div
-class="place"
-onclick="showDestination('kovalam')">
+<div class="place" onclick="openDestination('kovalam')">
 
 <img
 src="kovalam%20jpj.%201.jpeg"
@@ -1051,9 +1049,7 @@ Kovalam
 
 <!-- WATERFALLS -->
 
-<div
-class="place"
-onclick="showDestination('waterfalls')">
+<div class="place" onclick="openDestination('waterfalls')">
 
 <img
 src="water%20fall's%20jpj.jpeg"
@@ -1068,9 +1064,7 @@ Waterfalls
 
 <!-- KATHAKALI -->
 
-<div
-class="place"
-onclick="showDestination('kathakali')">
+<div class="place" onclick="openDestination('kathakali')">
 
 <img
 src="kadhakali.%20jpj.jpeg"
@@ -1088,9 +1082,42 @@ Kathakali
 </section>
 
 
-<!-- =====================================================
-     MORE DESTINATIONS
-     ===================================================== -->
+<!-- ================= DESTINATION POPUP ================= -->
+
+<div
+id="destinationModal"
+class="destination-modal"
+onclick="closeOutside(event)">
+
+<div class="destination-box">
+
+<button
+class="close-modal"
+onclick="closeDestination()">
+
+×
+</button>
+
+
+<img
+id="destinationImage"
+class="destination-image"
+src=""
+alt="Kerala Destination">
+
+
+<div
+id="destinationContent"
+class="destination-content">
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- ================= MORE DESTINATIONS ================= -->
 
 <section class="more">
 
@@ -1117,7 +1144,9 @@ Kodaikanal, Madurai and Rameshwaram.
 </p>
 
 <a href="destinations.html" class="btn yellow">
+
 📍 View Destinations & Create Custom Package →
+
 </a>
 
 </div>
@@ -1125,9 +1154,7 @@ Kodaikanal, Madurai and Rameshwaram.
 </section>
 
 
-<!-- =====================================================
-     ACTIVITIES
-     ===================================================== -->
+<!-- ================= ACTIVITIES ================= -->
 
 <section class="activities" id="activities">
 
@@ -1183,9 +1210,7 @@ Experience culture, nature, adventure and unforgettable Kerala moments.
 </section>
 
 
-<!-- =====================================================
-     GROUP TRIP
-     ===================================================== -->
+<!-- ================= GROUP TRIP ================= -->
 
 <section class="group" id="group">
 
@@ -1213,9 +1238,7 @@ class="btn yellow">
 </section>
 
 
-<!-- =====================================================
-     BOOKING
-     ===================================================== -->
+<!-- ================= BOOKING ================= -->
 
 <section class="booking" id="booking">
 
@@ -1272,18 +1295,22 @@ Custom Kerala Package
 
 </select>
 
+
 <input
 id="destination"
 type="text"
 placeholder="Preferred Destination">
 
+
 <input
 id="date"
 type="date">
 
+
 <textarea
 id="message"
 placeholder="Tell us about your travel requirements"></textarea>
+
 
 <button
 class="btn yellow"
@@ -1298,9 +1325,7 @@ onclick="sendBooking()">
 </section>
 
 
-<!-- =====================================================
-     REVIEWS
-     ===================================================== -->
+<!-- ================= REVIEWS ================= -->
 
 <section class="reviews" id="reviews">
 
@@ -1320,9 +1345,11 @@ id="reviewName"
 type="text"
 placeholder="Your Name">
 
+
 <textarea
 id="reviewText"
 placeholder="Write your review"></textarea>
+
 
 <button
 class="btn yellow"
@@ -1335,13 +1362,19 @@ onclick="addReview()">
 </div>
 
 
-<div class="review-list" id="reviewList">
+<div
+class="review-list"
+id="reviewList">
 
 <div class="review">
 
-<strong>Kerala Traveller</strong>
+<strong>
+Kerala Traveller
+</strong>
 
-<p>🌟🌟🌟🌟🌟</p>
+<p>
+🌟🌟🌟🌟🌟
+</p>
 
 <p>
 Beautiful Kerala travel experience.
@@ -1354,9 +1387,7 @@ Beautiful Kerala travel experience.
 </section>
 
 
-<!-- =====================================================
-     MAP
-     ===================================================== -->
+<!-- ================= MAP ================= -->
 
 <section class="map-section" id="map">
 
@@ -1380,15 +1411,14 @@ loading="lazy">
 </section>
 
 
-<!-- =====================================================
-     CONTACT
-     ===================================================== -->
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
 <h2 class="title">
 Contact Kerala Tourism
 </h2>
+
 
 <div class="contact-info">
 
@@ -1397,10 +1427,13 @@ Contact Kerala Tourism
 </p>
 
 <p>
+
 Kerala Tourism<br>
 Cherucode PO, Vallappuzha<br>
 Palakkad, Kerala, India
+
 </p>
+
 
 <p>
 
@@ -1411,6 +1444,7 @@ Palakkad, Kerala, India
 </a>
 
 </p>
+
 
 <a
 href="https://wa.me/917012296205"
@@ -1426,9 +1460,7 @@ class="whatsapp">
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1442,46 +1474,543 @@ Kerala Travel • Tour Packages • Booking • Transportation
 
 
 
-<!-- =====================================================
-     DESTINATION DETAILS POPUP
-     ===================================================== -->
-
-<div
-class="destination-modal"
-id="destinationModal">
-
-<div class="destination-box">
+<script>
 
 
-<button
-class="destination-close"
-onclick="closeDestination()">
+/* =====================================================
+   DESTINATION DETAILS
+===================================================== */
 
-×
-
-</button>
+const destinations = {
 
 
-<img
-id="destinationImage"
-class="destination-image"
-src=""
-alt="Kerala Destination">
+munnar: {
+
+title:"Munnar",
+
+image:"munnar%20neela%20kurinji.%20jpj.jpeg",
+
+details:`
+
+<p>
+
+<strong>Munnar</strong> is one of the most beautiful hill stations
+in Kerala. It is famous for its green tea plantations, misty mountains,
+cool climate and beautiful valleys.
+
+</p>
 
 
-<div class="destination-content">
+<h3>
+📍 Places to Visit in Munnar
+</h3>
 
-<h2 id="destinationTitle"></h2>
+<ul>
 
-<div id="destinationDetails"></div>
+<li>🌿 Tea Plantations</li>
+
+<li>🌸 Eravikulam National Park</li>
+
+<li>🏔️ Top Station</li>
+
+<li>🌄 Mattupetty Dam</li>
+
+<li>🚣 Mattupetty Lake</li>
+
+<li>🌊 Kundala Lake</li>
+
+<li>🏞️ Echo Point</li>
+
+<li>🌳 Photo Point</li>
+
+<li>🌄 Gap Road</li>
+
+<li>🌿 Anamudi Surroundings</li>
+
+</ul>
 
 
-<div class="destination-buttons">
+<h3>
+🎯 Activities in Munnar
+</h3>
+
+<ul>
+
+<li>Tea plantation sightseeing</li>
+
+<li>Mountain sightseeing</li>
+
+<li>Boating</li>
+
+<li>Nature photography</li>
+
+<li>Wildlife visits</li>
+
+<li>Family sightseeing</li>
+
+<li>Couple sightseeing</li>
+
+</ul>
+
+
+<h3>
+🌤️ Why Visit Munnar?
+</h3>
+
+<p>
+
+Enjoy misty mountains, beautiful tea gardens,
+cool weather, peaceful valleys and unforgettable
+views in Munnar.
+
+</p>
+
+`
+
+},
+
+
+
+wayanad: {
+
+title:"Wayanad",
+
+image:"wayanad.%20jpj.jpeg",
+
+details:`
+
+<p>
+
+<strong>Wayanad</strong> is a beautiful green destination in Kerala,
+famous for forests, mountains, waterfalls, caves and wildlife.
+
+</p>
+
+
+<h3>
+📍 Places to Visit in Wayanad
+</h3>
+
+<ul>
+
+<li>🏞️ Edakkal Caves</li>
+
+<li>🌊 Soochipara Waterfalls</li>
+
+<li>🌊 Meenmutty Waterfalls</li>
+
+<li>🌿 Banasura Sagar Dam</li>
+
+<li>🏔️ Chembra Peak</li>
+
+<li>🌳 Wayanad Wildlife Sanctuary</li>
+
+<li>🌄 Lakkidi View Point</li>
+
+<li>🌿 Pookode Lake</li>
+
+<li>🌄 Vythiri</li>
+
+</ul>
+
+
+<h3>
+🎯 Activities in Wayanad
+</h3>
+
+<ul>
+
+<li>Trekking</li>
+
+<li>Waterfall sightseeing</li>
+
+<li>Boating</li>
+
+<li>Nature photography</li>
+
+<li>Wildlife experiences</li>
+
+<li>Mountain sightseeing</li>
+
+</ul>
+
+
+<h3>
+🌿 Why Visit Wayanad?
+</h3>
+
+<p>
+
+Explore peaceful forests, green mountains,
+waterfalls and beautiful natural landscapes
+in Wayanad.
+
+</p>
+
+`
+
+},
+
+
+
+alappuzha: {
+
+title:"Alappuzha",
+
+image:"backwaters%20jpj.jpeg",
+
+details:`
+
+<p>
+
+<strong>Alappuzha</strong>, also known as Alleppey,
+is famous for its beautiful backwaters, houseboats,
+canals and village scenery.
+
+</p>
+
+
+<h3>
+📍 Places to Visit in Alappuzha
+</h3>
+
+<ul>
+
+<li>🚤 Kerala Backwaters</li>
+
+<li>🏠 Houseboat Cruise</li>
+
+<li>🌴 Kuttanad</li>
+
+<li>🏖️ Alappuzha Beach</li>
+
+<li>⛵ Vembanad Lake</li>
+
+<li>🌿 Pathiramanal Island</li>
+
+<li>🛶 Backwater Villages</li>
+
+</ul>
+
+
+<h3>
+🎯 Activities in Alappuzha
+</h3>
+
+<ul>
+
+<li>Houseboat cruise</li>
+
+<li>Shikara boat ride</li>
+
+<li>Canoe ride</li>
+
+<li>Village sightseeing</li>
+
+<li>Backwater photography</li>
+
+<li>Sunset cruise</li>
+
+</ul>
+
+
+<h3>
+🚤 Special Experience
+</h3>
+
+<p>
+
+Enjoy Kerala's peaceful backwaters,
+traditional villages, beautiful canals
+and unforgettable houseboat experiences.
+
+</p>
+
+`
+
+},
+
+
+
+kovalam: {
+
+title:"Kovalam",
+
+image:"kovalam%20jpj.%201.jpeg",
+
+details:`
+
+<p>
+
+<strong>Kovalam</strong> is a famous beach destination
+in Kerala, known for its beautiful coastline,
+lighthouse and relaxing atmosphere.
+
+</p>
+
+
+<h3>
+📍 Places to Visit in Kovalam
+</h3>
+
+<ul>
+
+<li>🏖️ Lighthouse Beach</li>
+
+<li>🌊 Hawa Beach</li>
+
+<li>🏝️ Samudra Beach</li>
+
+<li>💡 Vizhinjam Lighthouse</li>
+
+<li>🌴 Kovalam Beach</li>
+
+<li>🐟 Vizhinjam Fishing Harbour</li>
+
+</ul>
+
+
+<h3>
+🎯 Activities in Kovalam
+</h3>
+
+<ul>
+
+<li>Beach sightseeing</li>
+
+<li>Sunset viewing</li>
+
+<li>Photography</li>
+
+<li>Swimming where permitted</li>
+
+<li>Ayurvedic wellness experiences</li>
+
+<li>Local food experiences</li>
+
+</ul>
+
+
+<h3>
+🌅 Special Experience
+</h3>
+
+<p>
+
+Enjoy beautiful beaches, sea views,
+sunsets and the famous lighthouse
+at Kovalam.
+
+</p>
+
+`
+
+},
+
+
+
+waterfalls: {
+
+title:"Kerala Waterfalls",
+
+image:"water%20fall's%20jpj.jpeg",
+
+details:`
+
+<p>
+
+Kerala is famous for its beautiful waterfalls
+surrounded by green forests, mountains
+and peaceful natural landscapes.
+
+</p>
+
+
+<h3>
+📍 Famous Waterfalls in Kerala
+</h3>
+
+<ul>
+
+<li>🌊 Athirappilly Waterfalls</li>
+
+<li>🌊 Vazhachal Waterfalls</li>
+
+<li>🌊 Soochipara Waterfalls</li>
+
+<li>🌊 Meenmutty Waterfalls</li>
+
+<li>🌊 Palaruvi Waterfalls</li>
+
+<li>🌊 Thommankuthu Waterfalls</li>
+
+</ul>
+
+
+<h3>
+🎯 Activities
+</h3>
+
+<ul>
+
+<li>Waterfall sightseeing</li>
+
+<li>Nature photography</li>
+
+<li>Forest sightseeing</li>
+
+<li>Nature walks</li>
+
+<li>Family trips</li>
+
+<li>Adventure experiences where permitted</li>
+
+</ul>
+
+
+<h3>
+🌿 Special Experience
+</h3>
+
+<p>
+
+Enjoy the beauty of Kerala's waterfalls,
+forests and mountains.
+
+During the monsoon season, the waterfalls
+can be especially beautiful.
+
+Always follow local safety instructions.
+
+</p>
+
+`
+
+},
+
+
+
+kathakali: {
+
+title:"Kathakali",
+
+image:"kadhakali.%20jpj.jpeg",
+
+details:`
+
+<p>
+
+<strong>Kathakali</strong> is one of Kerala's most famous
+traditional performing arts.
+
+It is known for colourful costumes,
+elaborate makeup, facial expressions,
+hand gestures and traditional music.
+
+</p>
+
+
+<h3>
+🎭 What Can You See in Kathakali?
+</h3>
+
+<ul>
+
+<li>🎨 Traditional makeup</li>
+
+<li>👑 Colourful costumes</li>
+
+<li>🥁 Traditional musical instruments</li>
+
+<li>👏 Hand gestures and mudras</li>
+
+<li>🙂 Expressive facial movements</li>
+
+<li>📖 Traditional stories and performances</li>
+
+</ul>
+
+
+<h3>
+📍 Where Can You Experience Kathakali?
+</h3>
+
+<ul>
+
+<li>Kochi</li>
+
+<li>Thiruvananthapuram</li>
+
+<li>Kerala cultural centres</li>
+
+<li>Tourist destinations with cultural performances</li>
+
+</ul>
+
+
+<h3>
+🎯 Cultural Experience
+</h3>
+
+<p>
+
+Experience the traditional art, music,
+costumes and storytelling of Kerala
+through a live Kathakali performance.
+
+</p>
+
+`
+
+}
+
+};
+
+
+
+/* =====================================================
+   OPEN DESTINATION
+===================================================== */
+
+function openDestination(name){
+
+const data = destinations[name];
+
+if(!data){
+return;
+}
+
+
+document.getElementById("destinationImage").src =
+data.image;
+
+document.getElementById("destinationImage").alt =
+data.title;
+
+
+document.getElementById("destinationContent").innerHTML = `
+
+<h2>
+${data.title}
+</h2>
+
+${data.details}
+
+
+<div class="modal-buttons">
+
+<a
+href="#booking"
+onclick="closeDestination()"
+class="btn yellow">
+
+📅 Book This Destination
+
+</a>
 
 
 <a
-id="destinationWhatsApp"
-href="#"
+href="https://wa.me/917012296205?text=${encodeURIComponent("Hello Kerala Tourism, I would like to enquire about a trip to " + data.title + ".")}"
 target="_blank"
 class="btn green">
 
@@ -1489,37 +2018,78 @@ class="btn green">
 
 </a>
 
-
-<a
-href="#booking"
-onclick="closeDestination()"
-class="btn yellow">
-
-📅 Create Trip Package
-
-</a>
-
-
 </div>
 
-</div>
-
-</div>
-
-</div>
+`;
 
 
+document
+.getElementById("destinationModal")
+.classList.add("show");
 
-<!-- =====================================================
-     JAVASCRIPT
-     ===================================================== -->
 
-<script>
+document.body.style.overflow="hidden";
+
+}
+
 
 
 /* =====================================================
-   ORIGINAL BOOKING FUNCTION
-   ===================================================== */
+   CLOSE DESTINATION
+===================================================== */
+
+function closeDestination(){
+
+document
+.getElementById("destinationModal")
+.classList.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+
+
+/* =====================================================
+   CLOSE WHEN CLICKING OUTSIDE
+===================================================== */
+
+function closeOutside(event){
+
+if(
+event.target ===
+document.getElementById("destinationModal")
+){
+
+closeDestination();
+
+}
+
+}
+
+
+
+/* =====================================================
+   ESC KEY CLOSE
+===================================================== */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Escape"){
+
+closeDestination();
+
+}
+
+});
+
+
+
+/* =====================================================
+   BOOKING WHATSAPP
+===================================================== */
 
 function sendBooking(){
 
@@ -1554,6 +2124,7 @@ return;
 
 
 const text =
+
 `Hello Kerala Tourism,
 
 I would like to book a Kerala trip.
@@ -1569,9 +2140,13 @@ ${message}`;
 
 
 window.open(
+
 "https://wa.me/917012296205?text="
-+ encodeURIComponent(text),
++
+encodeURIComponent(text),
+
 "_blank"
+
 );
 
 }
@@ -1579,8 +2154,8 @@ window.open(
 
 
 /* =====================================================
-   ORIGINAL REVIEW FUNCTION
-   ===================================================== */
+   REVIEWS
+===================================================== */
 
 function addReview(){
 
@@ -1593,7 +2168,9 @@ document.getElementById("reviewText").value.trim();
 
 if(!name || !text){
 
-alert("Please enter your name and review.");
+alert(
+"Please enter your name and review."
+);
 
 return;
 
@@ -1605,13 +2182,20 @@ document.createElement("div");
 
 review.className="review";
 
+
 review.innerHTML=`
 
-<strong>${escapeHTML(name)}</strong>
+<strong>
+${escapeHTML(name)}
+</strong>
 
-<p>🌟🌟🌟🌟🌟</p>
+<p>
+🌟🌟🌟🌟🌟
+</p>
 
-<p>${escapeHTML(text)}</p>
+<p>
+${escapeHTML(text)}
+</p>
 
 `;
 
@@ -1626,15 +2210,22 @@ document.getElementById("reviewName").value="";
 document.getElementById("reviewText").value="";
 
 
-alert("Thank you! Your review has been added.");
+alert(
+"Thank you! Your review has been added."
+);
 
 }
 
 
 
+/* =====================================================
+   SECURITY
+===================================================== */
+
 function escapeHTML(text){
 
-const div=document.createElement("div");
+const div =
+document.createElement("div");
 
 div.textContent=text;
 
@@ -1642,545 +2233,8 @@ return div.innerHTML;
 
 }
 
-
-
-/* =====================================================
-   NEW DESTINATION DATA
-   ===================================================== */
-
-const destinations = {
-
-
-/* ================= MUNNAR ================= */
-
-munnar:{
-
-title:"Munnar",
-
-image:"munnar%20neela%20kurinji.%20jpj.jpeg",
-
-details:`
-
-<p>
-<strong>Munnar</strong> is one of the most beautiful hill stations
-in Kerala. It is famous for its green tea plantations, misty mountains,
-cool climate and beautiful valleys.
-</p>
-
-<h3>📍 Munnar-il kaananulla sthalangal</h3>
-
-<ul>
-
-<li>🌿 Tea Plantations</li>
-
-<li>🌸 Eravikulam National Park</li>
-
-<li>🏔️ Top Station</li>
-
-<li>🌄 Mattupetty Dam</li>
-
-<li>🚣 Mattupetty Lake</li>
-
-<li>🌊 Kundala Lake</li>
-
-<li>🏞️ Echo Point</li>
-
-<li>🌳 Photo Point</li>
-
-<li>🌄 Gap Road</li>
-
-<li>🌿 Anamudi surroundings</li>
-
-</ul>
-
-
-<h3>🎯 Munnar-il cheyyavunna activities</h3>
-
-<ul>
-
-<li>Tea plantation sightseeing</li>
-
-<li>Mountain sightseeing</li>
-
-<li>Boating</li>
-
-<li>Nature photography</li>
-
-<li>Wildlife visit</li>
-
-<li>Family & couple sightseeing</li>
-
-</ul>
-
-
-<h3>🌤️ Munnar Special</h3>
-
-<p>
-Misty mountains, tea gardens and cool weather enjoy cheyyan
-Munnar valare beautiful destination aanu.
-</p>
-
-`
-
-},
-
-
-
-/* ================= WAYANAD ================= */
-
-wayanad:{
-
-title:"Wayanad",
-
-image:"wayanad.%20jpj.jpeg",
-
-details:`
-
-<p>
-<strong>Wayanad</strong> is a beautiful green destination in Kerala,
-known for forests, mountains, waterfalls, caves and wildlife.
-</p>
-
-
-<h3>📍 Wayanad-il kaananulla sthalangal</h3>
-
-<ul>
-
-<li>🏞️ Edakkal Caves</li>
-
-<li>🌊 Soochipara Waterfalls</li>
-
-<li>🌊 Meenmutty Waterfalls</li>
-
-<li>🌿 Banasura Sagar Dam</li>
-
-<li>🏔️ Chembra Peak</li>
-
-<li>🌳 Wayanad Wildlife Sanctuary</li>
-
-<li>🌄 Lakkidi View Point</li>
-
-<li>🌿 Pookode Lake</li>
-
-<li>🌄 Vythiri</li>
-
-</ul>
-
-
-<h3>🎯 Activities</h3>
-
-<ul>
-
-<li>Trekking</li>
-
-<li>Waterfall sightseeing</li>
-
-<li>Boating</li>
-
-<li>Nature photography</li>
-
-<li>Wildlife experience</li>
-
-<li>Mountain sightseeing</li>
-
-</ul>
-
-
-<h3>🌿 Why Visit Wayanad?</h3>
-
-<p>
-Forest, mountains, waterfalls and peaceful nature experience
-cheyyan Wayanad beautiful destination aanu.
-</p>
-
-`
-
-},
-
-
-
-/* ================= ALAPPUZHA ================= */
-
-alappuzha:{
-
-title:"Alappuzha",
-
-image:"backwaters%20jpj.jpeg",
-
-details:`
-
-<p>
-<strong>Alappuzha</strong>, also known as Alleppey, is famous for
-its beautiful backwaters, houseboats, canals and village scenery.
-</p>
-
-
-<h3>📍 Alappuzha-il kaananulla sthalangal</h3>
-
-<ul>
-
-<li>🚤 Kerala Backwaters</li>
-
-<li>🏠 Houseboat Cruise</li>
-
-<li>🌴 Kuttanad</li>
-
-<li>🏖️ Alappuzha Beach</li>
-
-<li>⛵ Vembanad Lake</li>
-
-<li>🌿 Pathiramanal Island</li>
-
-<li>🛶 Village Backwater Areas</li>
-
-</ul>
-
-
-<h3>🎯 Activities</h3>
-
-<ul>
-
-<li>Houseboat cruise</li>
-
-<li>Shikara boat ride</li>
-
-<li>Canoe ride</li>
-
-<li>Village sightseeing</li>
-
-<li>Backwater photography</li>
-
-<li>Sunset cruise</li>
-
-</ul>
-
-
-<h3>🚤 Special Experience</h3>
-
-<p>
-Kerala backwatersinte manoharamaya kaazhchakalum
-houseboat experience-um aanu Alappuzhayude main attraction.
-</p>
-
-`
-
-},
-
-
-
-/* ================= KOVALAM ================= */
-
-kovalam:{
-
-title:"Kovalam",
-
-image:"kovalam%20jpj.%201.jpeg",
-
-details:`
-
-<p>
-<strong>Kovalam</strong> is a famous beach destination in Kerala,
-known for its beautiful coastline, lighthouse and relaxing atmosphere.
-</p>
-
-
-<h3>📍 Kovalam-il kaananulla sthalangal</h3>
-
-<ul>
-
-<li>🏖️ Lighthouse Beach</li>
-
-<li>🌊 Hawah Beach</li>
-
-<li>🏝️ Samudra Beach</li>
-
-<li>💡 Vizhinjam Lighthouse</li>
-
-<li>🌴 Kovalam Beach</li>
-
-<li>🐟 Vizhinjam Fishing Harbour</li>
-
-</ul>
-
-
-<h3>🎯 Activities</h3>
-
-<ul>
-
-<li>Beach sightseeing</li>
-
-<li>Sunset viewing</li>
-
-<li>Photography</li>
-
-<li>Swimming where permitted</li>
-
-<li>Ayurvedic wellness experiences</li>
-
-<li>Local seafood experience</li>
-
-</ul>
-
-
-<h3>🌅 Special Experience</h3>
-
-<p>
-Beach, sea, sunset and lighthouse views enjoy cheyyan
-Kovalam valare popular aanu.
-</p>
-
-`
-
-},
-
-
-
-/* ================= WATERFALLS ================= */
-
-waterfalls:{
-
-title:"Kerala Waterfalls",
-
-image:"water%20fall's%20jpj.jpeg",
-
-details:`
-
-<p>
-Kerala is famous for its beautiful waterfalls surrounded by
-green forests and mountains.
-</p>
-
-
-<h3>📍 Famous Waterfalls</h3>
-
-<ul>
-
-<li>🌊 Athirappilly Waterfalls</li>
-
-<li>🌊 Vazhachal Waterfalls</li>
-
-<li>🌊 Soochipara Waterfalls</li>
-
-<li>🌊 Meenmutty Waterfalls</li>
-
-<li>🌊 Palaruvi Waterfalls</li>
-
-<li>🌊 Thommankuthu Waterfalls</li>
-
-</ul>
-
-
-<h3>🎯 Activities</h3>
-
-<ul>
-
-<li>Waterfall sightseeing</li>
-
-<li>Nature photography</li>
-
-<li>Forest sightseeing</li>
-
-<li>Short nature walks</li>
-
-<li>Family trips</li>
-
-<li>Adventure experiences where permitted</li>
-
-</ul>
-
-
-<h3>🌿 Special Experience</h3>
-
-<p>
-Monsoon seasonil waterfallsinte beauty valare kooduthal aayirikkum.
-Safety rules follow cheythu mathram vellathil iranguka.
-</p>
-
-`
-
-},
-
-
-
-/* ================= KATHAKALI ================= */
-
-kathakali:{
-
-title:"Kathakali",
-
-image:"kadhakali.%20jpj.jpeg",
-
-details:`
-
-<p>
-<strong>Kathakali</strong> is one of Kerala's most famous traditional
-performing arts. Colourful costumes, elaborate makeup, facial
-expressions, hand gestures and traditional music are its important features.
-</p>
-
-
-<h3>🎭 Kathakali-il enthokke kaanam?</h3>
-
-<ul>
-
-<li>🎨 Traditional makeup</li>
-
-<li>👑 Colourful costumes</li>
-
-<li>🥁 Traditional musical instruments</li>
-
-<li>👏 Hand gestures (Mudras)</li>
-
-<li>🙂 Facial expressions</li>
-
-<li>📖 Stories from traditional epics</li>
-
-</ul>
-
-
-<h3>📍 Evide Kathakali kaanam?</h3>
-
-<ul>
-
-<li>Kochi</li>
-
-<li>Thiruvananthapuram</li>
-
-<li>Kerala cultural centres</li>
-
-<li>Tourist destinations with cultural performances</li>
-
-</ul>
-
-
-<h3>🎯 Cultural Experience</h3>
-
-<p>
-Kerala-yude traditional culture neritt anubhavikkan agrahikkunna
-travellers-kku Kathakali performance oru special experience aanu.
-</p>
-
-`
-
-}
-
-};
-
-
-
-/* =====================================================
-   OPEN DESTINATION
-   ===================================================== */
-
-function showDestination(place){
-
-const data=destinations[place];
-
-if(!data){
-return;
-}
-
-
-document.getElementById("destinationTitle").innerHTML=
-data.title;
-
-
-document.getElementById("destinationImage").src=
-data.image;
-
-
-document.getElementById("destinationImage").alt=
-data.title;
-
-
-document.getElementById("destinationDetails").innerHTML=
-data.details;
-
-
-/* WhatsApp */
-
-const whatsappText=
-"Hello Kerala Tourism,\n\n"+
-"I am interested in a trip to "+
-data.title+
-". Please send me the details and package options.";
-
-
-document.getElementById("destinationWhatsApp").href=
-"https://wa.me/917012296205?text="+
-encodeURIComponent(whatsappText);
-
-
-/* Show popup */
-
-document.getElementById("destinationModal").style.display=
-"block";
-
-
-/* Prevent background scrolling */
-
-document.body.style.overflow=
-"hidden";
-
-}
-
-
-
-/* =====================================================
-   CLOSE DESTINATION
-   ===================================================== */
-
-function closeDestination(){
-
-document.getElementById("destinationModal").style.display=
-"none";
-
-document.body.style.overflow=
-"auto";
-
-}
-
-
-
-/* =====================================================
-   CLICK OUTSIDE TO CLOSE
-   ===================================================== */
-
-document.getElementById("destinationModal")
-.addEventListener(
-"click",
-function(event){
-
-if(event.target===this){
-
-closeDestination();
-
-}
-
-}
-);
-
-
-
-/* =====================================================
-   ESC KEY TO CLOSE
-   ===================================================== */
-
-document.addEventListener(
-"keydown",
-function(event){
-
-if(event.key==="Escape"){
-
-closeDestination();
-
-}
-
-}
-);
-
 </script>
 
 
 </body>
-    </html>
+</html>

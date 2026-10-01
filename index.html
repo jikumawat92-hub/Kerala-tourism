@@ -792,7 +792,7 @@ section{
 }
 
 
-/* ================= BOOKING ================= */
+/* ================= ORIGINAL BOOKING ================= */
 
 .booking{
     background:#edf8f3;
@@ -834,6 +834,363 @@ section{
 }
 
 
+/* ================= ADVANCED BOOKING ================= */
+
+.advanced-booking{
+    background:linear-gradient(135deg,#e9f8f2,#f8fffc);
+}
+
+.booking-features{
+    max-width:1100px;
+    margin:0 auto 30px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.booking-feature{
+    background:white;
+    padding:20px 15px;
+    border-radius:18px;
+    text-align:center;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.booking-feature .icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.booking-feature h3{
+    color:#087565;
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.booking-feature p{
+    font-size:12px;
+    color:#5a706b;
+    line-height:1.5;
+}
+
+.advanced-booking-box{
+    max-width:800px;
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.12);
+}
+
+.form-title{
+    text-align:center;
+
+    color:#075c52;
+
+    font-family:'DM Serif Display',serif;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+}
+
+.form-subtitle{
+    text-align:center;
+
+    color:#617570;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.advanced-booking-box label{
+    display:block;
+
+    color:#075c52;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+}
+
+.advanced-booking-box input,
+.advanced-booking-box select,
+.advanced-booking-box textarea{
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:1px solid #cbded8;
+
+    border-radius:11px;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    outline:none;
+}
+
+.advanced-booking-box input:focus,
+.advanced-booking-box select:focus,
+.advanced-booking-box textarea:focus{
+    border-color:#12a36f;
+
+    box-shadow:
+    0 0 0 3px rgba(18,163,111,.10);
+}
+
+.advanced-booking-box textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.booking-reference{
+    display:none;
+
+    background:#eaf7f1;
+
+    border:2px dashed #12a36f;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    margin-top:20px;
+
+    text-align:center;
+}
+
+.booking-reference.show{
+    display:block;
+}
+
+.booking-reference h3{
+    color:#075c52;
+
+    margin-bottom:8px;
+}
+
+.reference-number{
+    font-size:22px;
+
+    font-weight:800;
+
+    color:#087565;
+
+    letter-spacing:1px;
+}
+
+
+/* ================= PACKAGE CARDS ================= */
+
+.package-preview{
+    background:white;
+}
+
+.package-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.package-card{
+    background:#f5faf8;
+
+    border-radius:20px;
+
+    padding:25px 20px;
+
+    text-align:center;
+
+    border:1px solid #dcece6;
+
+    transition:.3s;
+}
+
+.package-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 10px 28px rgba(0,80,65,.15);
+}
+
+.package-card .package-icon{
+    font-size:38px;
+
+    margin-bottom:10px;
+}
+
+.package-card h3{
+    color:#075c52;
+
+    font-family:'DM Serif Display',serif;
+
+    font-size:25px;
+
+    margin-bottom:8px;
+}
+
+.package-card .duration{
+    color:#12a36f;
+
+    font-weight:800;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+}
+
+.package-card p{
+    color:#536963;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    margin-bottom:15px;
+}
+
+
+/* ================= GROUP SEAT STATUS ================= */
+
+.group-status{
+    max-width:780px;
+
+    margin:25px auto 0;
+
+    background:#f5faf8;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.group-status h3{
+    color:#075c52;
+
+    margin-bottom:10px;
+}
+
+.seat-number{
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#087565;
+}
+
+.seat-box-label{
+    display:block;
+
+    color:#506862;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+}
+
+.progress{
+    width:100%;
+
+    height:12px;
+
+    background:#dbece6;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:12px 0;
+}
+
+.progress-bar{
+    width:35%;
+
+    height:100%;
+
+    background:#12a36f;
+
+    border-radius:20px;
+
+    transition:.4s;
+}
+
+.seats-text{
+    color:#506862;
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+
+/* ================= TAXI QUICK BOOKING ================= */
+
+.taxi-box{
+    max-width:850px;
+
+    margin:30px auto 0;
+
+    background:#075c52;
+
+    color:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+}
+
+.taxi-box h3{
+    font-family:'DM Serif Display',serif;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.taxi-box p{
+    line-height:1.7;
+
+    margin-bottom:18px;
+}
+
+.taxi-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+
 /* ================= REVIEWS ================= */
 
 .reviews{
@@ -843,19 +1200,28 @@ section{
 .review-form{
     max-width:650px;
     margin:auto;
+
     background:white;
+
     padding:25px;
+
     border-radius:20px;
+
     box-shadow:0 6px 20px rgba(0,0,0,.1);
 }
 
 .review-form input,
 .review-form textarea{
     width:100%;
+
     padding:13px;
+
     margin-bottom:12px;
+
     border:1px solid #cbded8;
+
     border-radius:10px;
+
     font-family:inherit;
 }
 
@@ -865,15 +1231,21 @@ section{
 
 .review-list{
     max-width:900px;
+
     margin:30px auto 0;
+
     display:grid;
+
     gap:15px;
 }
 
 .review{
     background:white;
+
     padding:20px;
+
     border-radius:16px;
+
     box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
@@ -890,15 +1262,21 @@ section{
 
 .map{
     max-width:1000px;
+
     margin:auto;
+
     border-radius:20px;
+
     overflow:hidden;
+
     box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
 .map iframe{
     width:100%;
+
     height:380px;
+
     border:0;
 }
 
@@ -914,6 +1292,7 @@ section{
         );
 
     color:white;
+
     text-align:center;
 }
 
@@ -927,16 +1306,23 @@ section{
 
 .contact-info a{
     color:white;
+
     text-decoration:none;
 }
 
 .whatsapp{
     display:inline-block;
+
     margin-top:18px;
+
     background:#25d366;
+
     color:white;
+
     padding:14px 28px;
+
     border-radius:35px;
+
     font-weight:800;
 }
 
@@ -945,10 +1331,15 @@ section{
 
 footer{
     background:#003b34;
+
     color:#d7eee8;
+
     text-align:center;
+
     padding:23px;
+
     font-size:13px;
+
     line-height:1.8;
 }
 
@@ -972,6 +1363,15 @@ footer{
     .place-grid{
         grid-template-columns:repeat(3,1fr);
     }
+
+    .booking-features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .package-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
 
@@ -983,22 +1383,27 @@ footer{
 
     nav a{
         font-size:10px;
+
         padding:7px 8px;
     }
 
     .hero{
         min-height:590px;
+
         background-position:center center;
+
         padding-bottom:35px;
     }
 
     .hero-buttons{
         flex-direction:column;
+
         align-items:center;
     }
 
     .hero-buttons .btn{
         width:90%;
+
         text-align:center;
     }
 
@@ -1028,11 +1433,13 @@ footer{
 
     .destination-box{
         max-height:95vh;
+
         border-radius:20px;
     }
 
     .destination-image{
         height:210px;
+
         border-radius:20px 20px 0 0;
     }
 
@@ -1054,6 +1461,7 @@ footer{
 
     .destination-content ul{
         font-size:14px;
+
         line-height:1.8;
     }
 
@@ -1083,12 +1491,15 @@ footer{
 
     .group-modal-box{
         max-height:96vh;
+
         border-radius:20px;
     }
 
     .group-hero{
         min-height:330px;
+
         border-radius:20px 20px 0 0;
+
         padding:45px 18px;
     }
 
@@ -1112,6 +1523,28 @@ footer{
         font-size:19px;
     }
 
+    .form-row{
+        grid-template-columns:1fr;
+
+        gap:0;
+    }
+
+    .advanced-booking-box{
+        padding:20px 15px;
+    }
+
+    .package-grid{
+        grid-template-columns:1fr;
+    }
+
+    .taxi-buttons{
+        flex-direction:column;
+    }
+
+    .taxi-buttons .btn{
+        width:100%;
+    }
+
 }
 
 
@@ -1131,6 +1564,10 @@ footer{
 
     .group-box{
         padding:30px 15px;
+    }
+
+    .booking-features{
+        grid-template-columns:1fr 1fr;
     }
 
 }
@@ -1170,7 +1607,7 @@ God's Own Country
 
 <a href="#places">📍 Places</a>
 
-<a href="packages.html">📦 Packages</a>
+<a href="#packages">📦 Packages</a>
 
 <a href="gallery.html">🖼️ Gallery</a>
 
@@ -1306,8 +1743,6 @@ Explore some of the most beautiful destinations in Kerala.
 <div class="place-grid">
 
 
-<!-- MUNNAR -->
-
 <div class="place" onclick="openDestination('munnar')">
 
 <img
@@ -1320,8 +1755,6 @@ Munnar
 
 </div>
 
-
-<!-- WAYANAD -->
 
 <div class="place" onclick="openDestination('wayanad')">
 
@@ -1336,8 +1769,6 @@ Wayanad
 </div>
 
 
-<!-- ALAPPUZHA -->
-
 <div class="place" onclick="openDestination('alappuzha')">
 
 <img
@@ -1350,8 +1781,6 @@ Alappuzha
 
 </div>
 
-
-<!-- KOVALAM -->
 
 <div class="place" onclick="openDestination('kovalam')">
 
@@ -1366,8 +1795,6 @@ Kovalam
 </div>
 
 
-<!-- WATERFALLS -->
-
 <div class="place" onclick="openDestination('waterfalls')">
 
 <img
@@ -1380,8 +1807,6 @@ Waterfalls
 
 </div>
 
-
-<!-- KATHAKALI -->
 
 <div class="place" onclick="openDestination('kathakali')">
 
@@ -1586,8 +2011,6 @@ onclick="closeGroupTrip()">
 </button>
 
 
-<!-- GROUP HERO -->
-
 <div class="group-hero">
 
 <div class="group-hero-content">
@@ -1617,8 +2040,6 @@ stories, food and unforgettable moments.
 </div>
 
 
-<!-- GROUP CONTENT -->
-
 <div class="group-content">
 
 
@@ -1645,8 +2066,6 @@ not simply reaching the destination.
 
 </div>
 
-
-<!-- EXPERIENCE FEATURES -->
 
 <div class="group-features">
 
@@ -1779,8 +2198,6 @@ new connections and shared memories.
 </div>
 
 
-<!-- ITINERARY -->
-
 <div class="itinerary">
 
 <h3>
@@ -1845,8 +2262,6 @@ You may leave Munnar, but the memories stay with you.
 </div>
 
 
-<!-- QUOTE -->
-
 <div class="group-quote">
 
 “Some trips take you to beautiful places.
@@ -1854,8 +2269,6 @@ The best trips also introduce you to beautiful people.”
 
 </div>
 
-
-<!-- FINAL CTA -->
 
 <div class="group-bottom">
 
@@ -1890,7 +2303,185 @@ class="btn green">
 </div>
 
 
-<!-- ================= BOOKING ================= -->
+<!-- ================= PACKAGES ================= -->
+
+<section class="package-preview" id="packages">
+
+<h2 class="title">
+Kerala Tour Packages
+</h2>
+
+<p class="subtitle">
+Choose a travel style and create your Kerala holiday plan.
+</p>
+
+
+<div class="package-grid">
+
+
+<div class="package-card">
+
+<div class="package-icon">
+🌿
+</div>
+
+<h3>
+Munnar Escape
+</h3>
+
+<div class="duration">
+3 Days • 2 Nights
+</div>
+
+<p>
+Tea gardens, misty mountains, viewpoints,
+nature experiences and beautiful Munnar moments.
+</p>
+
+<a
+href="#advancedBooking"
+class="btn green"
+onclick="selectPackage('Munnar 3-Day Package')">
+
+Choose Package
+
+</a>
+
+</div>
+
+
+<div class="package-card">
+
+<div class="package-icon">
+🚤
+</div>
+
+<h3>
+Alappuzha Backwaters
+</h3>
+
+<div class="duration">
+2 Days • 1 Night
+</div>
+
+<p>
+Enjoy Kerala backwaters, village scenery,
+boat experiences and peaceful moments.
+</p>
+
+<a
+href="#advancedBooking"
+class="btn green"
+onclick="selectPackage('Alappuzha Backwater Package')">
+
+Choose Package
+
+</a>
+
+</div>
+
+
+<div class="package-card">
+
+<div class="package-icon">
+🏞️
+</div>
+
+<h3>
+Wayanad Adventure
+</h3>
+
+<div class="duration">
+3 Days • 2 Nights
+</div>
+
+<p>
+Explore forests, waterfalls, mountains,
+wildlife and beautiful Wayanad landscapes.
+</p>
+
+<a
+href="#advancedBooking"
+class="btn green"
+onclick="selectPackage('Wayanad Adventure Package')">
+
+Choose Package
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= GROUP AVAILABILITY ================= -->
+
+<section class="group" style="background:#f7fcfa;">
+
+<h2 class="title">
+Munnar Group Trip
+</h2>
+
+<p class="subtitle">
+3 Days • 2 Nights • Meet New People • Create Memories
+</p>
+
+
+<div class="group-status">
+
+<h3>
+🎟️ Current Group Availability
+</h3>
+
+<div
+class="seat-number"
+id="availableSeats">
+
+13
+
+</div>
+
+<span class="seat-box-label">
+Seats currently shown as available
+</span>
+
+
+<div class="progress">
+
+<div
+class="progress-bar"
+id="seatProgress">
+</div>
+
+</div>
+
+
+<p class="seats-text">
+
+Limited group size helps everyone enjoy
+a more personal experience.
+
+</p>
+
+
+<a
+href="#advancedBooking"
+class="btn yellow"
+onclick="selectGroupTrip()">
+
+🔥 Join the Munnar Group Trip
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= ORIGINAL BOOKING ================= -->
 
 <section class="booking" id="booking">
 
@@ -1971,6 +2562,406 @@ onclick="sendBooking()">
 📲 Send Booking Enquiry
 
 </button>
+
+</div>
+
+</section>
+
+
+<!-- ================= ADVANCED BOOKING ================= -->
+
+<section
+class="advanced-booking"
+id="advancedBooking">
+
+<h2 class="title">
+Advanced Trip Enquiry
+</h2>
+
+<p class="subtitle">
+Tell us what kind of Kerala journey you are planning.
+</p>
+
+
+<div class="booking-features">
+
+
+<div class="booking-feature">
+
+<div class="icon">
+📅
+</div>
+
+<h3>
+Travel Planning
+</h3>
+
+<p>
+Share your preferred travel date and destination.
+</p>
+
+</div>
+
+
+<div class="booking-feature">
+
+<div class="icon">
+👥
+</div>
+
+<h3>
+Group Size
+</h3>
+
+<p>
+Tell us how many travellers are joining.
+</p>
+
+</div>
+
+
+<div class="booking-feature">
+
+<div class="icon">
+🚕
+</div>
+
+<h3>
+Transport
+</h3>
+
+<p>
+Request taxi or transportation assistance.
+</p>
+
+</div>
+
+
+<div class="booking-feature">
+
+<div class="icon">
+💬
+</div>
+
+<h3>
+WhatsApp
+</h3>
+
+<p>
+Send your enquiry directly to Kerala Tourism.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="advanced-booking-box">
+
+<h3 class="form-title">
+Plan Your Kerala Trip
+</h3>
+
+<p class="form-subtitle">
+No online payment required. This is a travel enquiry.
+</p>
+
+
+<div class="form-row">
+
+<div>
+
+<label>
+Full Name
+</label>
+
+<input
+id="advancedName"
+type="text"
+placeholder="Enter your name">
+
+</div>
+
+
+<div>
+
+<label>
+Phone Number
+</label>
+
+<input
+id="advancedPhone"
+type="tel"
+placeholder="Enter your phone number">
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div>
+
+<label>
+Trip Type
+</label>
+
+<select id="advancedTrip">
+
+<option value="">
+Select Trip Type
+</option>
+
+<option>
+Couple Trip
+</option>
+
+<option>
+Family Trip
+</option>
+
+<option>
+Friends Trip
+</option>
+
+<option>
+Group Trip
+</option>
+
+<option>
+Honeymoon Trip
+</option>
+
+<option>
+Munnar Group Adventure
+</option>
+
+<option>
+Custom Kerala Package
+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+Preferred Package
+</label>
+
+<select id="advancedPackage">
+
+<option value="">
+Select Package
+</option>
+
+<option>
+Munnar 3-Day Package
+</option>
+
+<option>
+Alappuzha Backwater Package
+</option>
+
+<option>
+Wayanad Adventure Package
+</option>
+
+<option>
+Custom Package
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div>
+
+<label>
+Preferred Destination
+</label>
+
+<input
+id="advancedDestination"
+type="text"
+placeholder="Example: Munnar">
+
+</div>
+
+
+<div>
+
+<label>
+Travel Date
+</label>
+
+<input
+id="advancedDate"
+type="date">
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div>
+
+<label>
+Number of Travellers
+</label>
+
+<select id="travellers">
+
+<option value="">
+Select Number
+</option>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+Transportation Required?
+</label>
+
+<select id="transport">
+
+<option value="">
+Select Option
+</option>
+
+<option>
+Yes - Taxi Required
+</option>
+
+<option>
+No - Own Transportation
+</option>
+
+<option>
+Not Sure
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<label>
+Special Requirements
+</label>
+
+<textarea
+id="advancedMessage"
+placeholder="Tell us about your travel requirements, hotel preference, sightseeing or anything else you need."></textarea>
+
+
+<button
+class="btn yellow"
+style="width:100%;"
+onclick="sendAdvancedBooking()">
+
+📲 Send Detailed Enquiry on WhatsApp
+
+</button>
+
+
+<div
+id="bookingReference"
+class="booking-reference">
+
+<h3>
+✅ Enquiry Prepared Successfully
+</h3>
+
+<p>
+Your enquiry reference is:
+</p>
+
+<div
+class="reference-number"
+id="referenceNumber">
+
+</div>
+
+<p
+style="margin-top:10px;font-size:13px;color:#58716b;">
+
+Please keep this reference number for your conversation.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TAXI QUICK ENQUIRY ================= -->
+
+<section class="activities">
+
+<div class="taxi-box">
+
+<h3>
+🚕 Need a Taxi for Your Kerala Trip?
+</h3>
+
+<p>
+Tell us your pickup location, destination and travel date.
+We can discuss suitable transportation options with you.
+</p>
+
+
+<div class="taxi-buttons">
+
+<a
+href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20need%20a%20taxi%20for%20my%20Kerala%20trip.%20Please%20share%20the%20available%20options."
+target="_blank"
+class="btn yellow">
+
+💬 Taxi Enquiry
+
+</a>
+
+
+<a
+href="tel:+917012296205"
+class="btn green">
+
+📞 Call Kerala Tourism
+
+</a>
+
+</div>
 
 </div>
 
@@ -2135,7 +3126,6 @@ Kerala Travel • Tour Packages • Booking • Transportation
 
 const destinations = {
 
-
 munnar: {
 
 title:"Munnar",
@@ -2152,7 +3142,6 @@ cool climate and beautiful valleys.
 
 </p>
 
-
 <h3>
 📍 Places to Visit in Munnar
 </h3>
@@ -2160,27 +3149,17 @@ cool climate and beautiful valleys.
 <ul>
 
 <li>🌿 Tea Plantations</li>
-
 <li>🌸 Eravikulam National Park</li>
-
 <li>🏔️ Top Station</li>
-
 <li>🌄 Mattupetty Dam</li>
-
 <li>🚣 Mattupetty Lake</li>
-
 <li>🌊 Kundala Lake</li>
-
 <li>🏞️ Echo Point</li>
-
 <li>🌳 Photo Point</li>
-
 <li>🌄 Gap Road</li>
-
 <li>🌿 Anamudi Surroundings</li>
 
 </ul>
-
 
 <h3>
 🎯 Activities in Munnar
@@ -2189,21 +3168,14 @@ cool climate and beautiful valleys.
 <ul>
 
 <li>Tea plantation sightseeing</li>
-
 <li>Mountain sightseeing</li>
-
 <li>Boating</li>
-
 <li>Nature photography</li>
-
 <li>Wildlife visits</li>
-
 <li>Family sightseeing</li>
-
 <li>Couple sightseeing</li>
 
 </ul>
-
 
 <h3>
 🌤️ Why Visit Munnar?
@@ -2222,7 +3194,6 @@ views in Munnar.
 },
 
 
-
 wayanad: {
 
 title:"Wayanad",
@@ -2238,7 +3209,6 @@ famous for forests, mountains, waterfalls, caves and wildlife.
 
 </p>
 
-
 <h3>
 📍 Places to Visit in Wayanad
 </h3>
@@ -2246,25 +3216,16 @@ famous for forests, mountains, waterfalls, caves and wildlife.
 <ul>
 
 <li>🏞️ Edakkal Caves</li>
-
 <li>🌊 Soochipara Waterfalls</li>
-
 <li>🌊 Meenmutty Waterfalls</li>
-
 <li>🌿 Banasura Sagar Dam</li>
-
 <li>🏔️ Chembra Peak</li>
-
 <li>🌳 Wayanad Wildlife Sanctuary</li>
-
 <li>🌄 Lakkidi View Point</li>
-
 <li>🌿 Pookode Lake</li>
-
 <li>🌄 Vythiri</li>
 
 </ul>
-
 
 <h3>
 🎯 Activities in Wayanad
@@ -2273,19 +3234,13 @@ famous for forests, mountains, waterfalls, caves and wildlife.
 <ul>
 
 <li>Trekking</li>
-
 <li>Waterfall sightseeing</li>
-
 <li>Boating</li>
-
 <li>Nature photography</li>
-
 <li>Wildlife experiences</li>
-
 <li>Mountain sightseeing</li>
 
 </ul>
-
 
 <h3>
 🌿 Why Visit Wayanad?
@@ -2304,7 +3259,6 @@ in Wayanad.
 },
 
 
-
 alappuzha: {
 
 title:"Alappuzha",
@@ -2321,7 +3275,6 @@ canals and village scenery.
 
 </p>
 
-
 <h3>
 📍 Places to Visit in Alappuzha
 </h3>
@@ -2329,21 +3282,14 @@ canals and village scenery.
 <ul>
 
 <li>🚤 Kerala Backwaters</li>
-
 <li>🏠 Houseboat Cruise</li>
-
 <li>🌴 Kuttanad</li>
-
 <li>🏖️ Alappuzha Beach</li>
-
 <li>⛵ Vembanad Lake</li>
-
 <li>🌿 Pathiramanal Island</li>
-
 <li>🛶 Backwater Villages</li>
 
 </ul>
-
 
 <h3>
 🎯 Activities in Alappuzha
@@ -2352,19 +3298,13 @@ canals and village scenery.
 <ul>
 
 <li>Houseboat cruise</li>
-
 <li>Shikara boat ride</li>
-
 <li>Canoe ride</li>
-
 <li>Village sightseeing</li>
-
 <li>Backwater photography</li>
-
 <li>Sunset cruise</li>
 
 </ul>
-
 
 <h3>
 🚤 Special Experience
@@ -2383,7 +3323,6 @@ and unforgettable houseboat experiences.
 },
 
 
-
 kovalam: {
 
 title:"Kovalam",
@@ -2400,7 +3339,6 @@ lighthouse and relaxing atmosphere.
 
 </p>
 
-
 <h3>
 📍 Places to Visit in Kovalam
 </h3>
@@ -2408,19 +3346,13 @@ lighthouse and relaxing atmosphere.
 <ul>
 
 <li>🏖️ Lighthouse Beach</li>
-
 <li>🌊 Hawa Beach</li>
-
 <li>🏝️ Samudra Beach</li>
-
 <li>💡 Vizhinjam Lighthouse</li>
-
 <li>🌴 Kovalam Beach</li>
-
 <li>🐟 Vizhinjam Fishing Harbour</li>
 
 </ul>
-
 
 <h3>
 🎯 Activities in Kovalam
@@ -2429,19 +3361,13 @@ lighthouse and relaxing atmosphere.
 <ul>
 
 <li>Beach sightseeing</li>
-
 <li>Sunset viewing</li>
-
 <li>Photography</li>
-
 <li>Swimming where permitted</li>
-
 <li>Ayurvedic wellness experiences</li>
-
 <li>Local food experiences</li>
 
 </ul>
-
 
 <h3>
 🌅 Special Experience
@@ -2460,7 +3386,6 @@ at Kovalam.
 },
 
 
-
 waterfalls: {
 
 title:"Kerala Waterfalls",
@@ -2477,7 +3402,6 @@ and peaceful natural landscapes.
 
 </p>
 
-
 <h3>
 📍 Famous Waterfalls in Kerala
 </h3>
@@ -2485,19 +3409,13 @@ and peaceful natural landscapes.
 <ul>
 
 <li>🌊 Athirappilly Waterfalls</li>
-
 <li>🌊 Vazhachal Waterfalls</li>
-
 <li>🌊 Soochipara Waterfalls</li>
-
 <li>🌊 Meenmutty Waterfalls</li>
-
 <li>🌊 Palaruvi Waterfalls</li>
-
 <li>🌊 Thommankuthu Waterfalls</li>
 
 </ul>
-
 
 <h3>
 🎯 Activities
@@ -2506,19 +3424,13 @@ and peaceful natural landscapes.
 <ul>
 
 <li>Waterfall sightseeing</li>
-
 <li>Nature photography</li>
-
 <li>Forest sightseeing</li>
-
 <li>Nature walks</li>
-
 <li>Family trips</li>
-
 <li>Adventure experiences where permitted</li>
 
 </ul>
-
 
 <h3>
 🌿 Special Experience
@@ -2541,7 +3453,6 @@ Always follow local safety instructions.
 },
 
 
-
 kathakali: {
 
 title:"Kathakali",
@@ -2561,7 +3472,6 @@ hand gestures and traditional music.
 
 </p>
 
-
 <h3>
 🎭 What Can You See in Kathakali?
 </h3>
@@ -2569,19 +3479,13 @@ hand gestures and traditional music.
 <ul>
 
 <li>🎨 Traditional makeup</li>
-
 <li>👑 Colourful costumes</li>
-
 <li>🥁 Traditional musical instruments</li>
-
 <li>👏 Hand gestures and mudras</li>
-
 <li>🙂 Expressive facial movements</li>
-
 <li>📖 Traditional stories and performances</li>
 
 </ul>
-
 
 <h3>
 📍 Where Can You Experience Kathakali?
@@ -2590,15 +3494,11 @@ hand gestures and traditional music.
 <ul>
 
 <li>Kochi</li>
-
 <li>Thiruvananthapuram</li>
-
 <li>Kerala cultural centres</li>
-
 <li>Tourist destinations with cultural performances</li>
 
 </ul>
-
 
 <h3>
 🎯 Cultural Experience
@@ -2619,7 +3519,6 @@ through a live Kathakali performance.
 };
 
 
-
 /* =====================================================
    OPEN DESTINATION
 ===================================================== */
@@ -2632,13 +3531,11 @@ if(!data){
 return;
 }
 
-
 document.getElementById("destinationImage").src =
 data.image;
 
 document.getElementById("destinationImage").alt =
 data.title;
-
 
 document.getElementById("destinationContent").innerHTML = `
 
@@ -2647,7 +3544,6 @@ ${data.title}
 </h2>
 
 ${data.details}
-
 
 <div class="modal-buttons">
 
@@ -2659,7 +3555,6 @@ class="btn yellow">
 📅 Book This Destination
 
 </a>
-
 
 <a
 href="https://wa.me/917012296205?text=${encodeURIComponent("Hello Kerala Tourism, I would like to enquire about a trip to " + data.title + ".")}"
@@ -2674,16 +3569,13 @@ class="btn green">
 
 `;
 
-
 document
 .getElementById("destinationModal")
 .classList.add("show");
 
-
 document.body.style.overflow="hidden";
 
 }
-
 
 
 /* =====================================================
@@ -2701,9 +3593,8 @@ document.body.style.overflow="";
 }
 
 
-
 /* =====================================================
-   CLOSE WHEN CLICKING OUTSIDE
+   CLOSE OUTSIDE
 ===================================================== */
 
 function closeOutside(event){
@@ -2768,7 +3659,6 @@ closeGroupTrip();
 }
 
 
-
 /* =====================================================
    ESC KEY CLOSE
 ===================================================== */
@@ -2780,6 +3670,7 @@ function(event){
 if(event.key==="Escape"){
 
 closeDestination();
+
 closeGroupTrip();
 
 }
@@ -2787,9 +3678,8 @@ closeGroupTrip();
 });
 
 
-
 /* =====================================================
-   BOOKING WHATSAPP
+   ORIGINAL BOOKING WHATSAPP
 ===================================================== */
 
 function sendBooking(){
@@ -2853,6 +3743,260 @@ encodeURIComponent(text),
 }
 
 
+/* =====================================================
+   ADVANCED PACKAGE SELECTION
+===================================================== */
+
+function selectPackage(packageName){
+
+const packageSelect =
+document.getElementById("advancedPackage");
+
+if(packageSelect){
+
+packageSelect.value =
+packageName;
+
+}
+
+}
+
+
+/* =====================================================
+   GROUP TRIP SELECTION
+===================================================== */
+
+function selectGroupTrip(){
+
+const tripSelect =
+document.getElementById("advancedTrip");
+
+const packageSelect =
+document.getElementById("advancedPackage");
+
+const destination =
+document.getElementById("advancedDestination");
+
+
+if(tripSelect){
+
+tripSelect.value =
+"Munnar Group Adventure";
+
+}
+
+
+if(packageSelect){
+
+packageSelect.value =
+"Munnar 3-Day Package";
+
+}
+
+
+if(destination){
+
+destination.value =
+"Munnar";
+
+}
+
+}
+
+
+/* =====================================================
+   ADVANCED BOOKING
+===================================================== */
+
+function sendAdvancedBooking(){
+
+const name =
+document.getElementById("advancedName")
+.value.trim();
+
+const phone =
+document.getElementById("advancedPhone")
+.value.trim();
+
+const trip =
+document.getElementById("advancedTrip")
+.value;
+
+const packageName =
+document.getElementById("advancedPackage")
+.value;
+
+const destination =
+document.getElementById("advancedDestination")
+.value.trim();
+
+const date =
+document.getElementById("advancedDate")
+.value;
+
+const travellers =
+document.getElementById("travellers")
+.value;
+
+const transport =
+document.getElementById("transport")
+.value;
+
+const message =
+document.getElementById("advancedMessage")
+.value.trim();
+
+
+if(!name || !phone || !trip){
+
+alert(
+"Please enter your name, phone number and trip type."
+);
+
+return;
+
+}
+
+
+/* CREATE ENQUIRY REFERENCE */
+
+const now =
+new Date();
+
+const random =
+Math.floor(
+1000 +
+Math.random() * 9000
+);
+
+const reference =
+"KT-" +
+now.getFullYear() +
+String(now.getMonth()+1).padStart(2,"0") +
+String(now.getDate()).padStart(2,"0") +
+"-" +
+random;
+
+
+document.getElementById("referenceNumber")
+.textContent =
+reference;
+
+
+document.getElementById("bookingReference")
+.classList.add("show");
+
+
+/* WHATSAPP MESSAGE */
+
+const text =
+
+`Hello Kerala Tourism,
+
+I would like to plan a Kerala trip.
+
+Enquiry Reference: ${reference}
+
+Name: ${name}
+
+Phone: ${phone}
+
+Trip Type: ${trip}
+
+Preferred Package: ${packageName || "Not selected"}
+
+Destination: ${destination || "Not specified"}
+
+Travel Date: ${date || "Not specified"}
+
+Number of Travellers: ${travellers || "Not specified"}
+
+Transportation: ${transport || "Not specified"}
+
+Special Requirements:
+${message || "No additional requirements"}
+
+Please share the available travel options and details.
+
+Thank you.`;
+
+
+window.open(
+
+"https://wa.me/917012296205?text="
++
+encodeURIComponent(text),
+
+"_blank"
+
+);
+
+}
+
+
+/* =====================================================
+   ADVANCED DATE
+===================================================== */
+
+const advancedDate =
+document.getElementById("advancedDate");
+
+if(advancedDate){
+
+const today =
+new Date()
+.toISOString()
+.split("T")[0];
+
+advancedDate.min =
+today;
+
+}
+
+
+/* =====================================================
+   GROUP SEAT DISPLAY
+===================================================== */
+
+function updateSeatDisplay(){
+
+const seats = 13;
+
+const totalSeats = 20;
+
+const used =
+totalSeats - seats;
+
+const percentage =
+(used / totalSeats) * 100;
+
+
+const seatElement =
+document.getElementById("availableSeats");
+
+const progress =
+document.getElementById("seatProgress");
+
+
+if(seatElement){
+
+seatElement.textContent =
+seats;
+
+}
+
+
+if(progress){
+
+progress.style.width =
+percentage + "%";
+
+}
+
+}
+
+updateSeatDisplay();
+
 
 /* =====================================================
    REVIEWS
@@ -2861,10 +4005,12 @@ encodeURIComponent(text),
 function addReview(){
 
 const name =
-document.getElementById("reviewName").value.trim();
+document.getElementById("reviewName")
+.value.trim();
 
 const text =
-document.getElementById("reviewText").value.trim();
+document.getElementById("reviewText")
+.value.trim();
 
 
 if(!name || !text){
@@ -2881,10 +4027,11 @@ return;
 const review =
 document.createElement("div");
 
-review.className="review";
+review.className =
+"review";
 
 
-review.innerHTML=`
+review.innerHTML = `
 
 <strong>
 ${escapeHTML(name)}
@@ -2906,9 +4053,11 @@ document
 .prepend(review);
 
 
-document.getElementById("reviewName").value="";
+document.getElementById("reviewName")
+.value="";
 
-document.getElementById("reviewText").value="";
+document.getElementById("reviewText")
+.value="";
 
 
 alert(
@@ -2916,7 +4065,6 @@ alert(
 );
 
 }
-
 
 
 /* =====================================================
@@ -2928,7 +4076,8 @@ function escapeHTML(text){
 const div =
 document.createElement("div");
 
-div.textContent=text;
+div.textContent =
+text;
 
 return div.innerHTML;
 
@@ -2938,4 +4087,4 @@ return div.innerHTML;
 
 
 </body>
-    </html>
+</html>

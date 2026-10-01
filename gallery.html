@@ -7,44 +7,29 @@
 <title>Kerala Tourism Gallery</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
+    margin:0;
     font-family:Arial,sans-serif;
     background:#f1f8f5;
-    color:#222;
 }
 
 header{
-    background:linear-gradient(135deg,#00695c,#009688);
+    background:#00695c;
     color:white;
     text-align:center;
-    padding:40px 20px;
-}
-
-header h1{
-    font-size:34px;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:17px;
+    padding:35px 15px;
 }
 
 nav{
     background:#004d40;
-    padding:15px;
     text-align:center;
+    padding:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 12px;
+    margin:8px;
     font-weight:bold;
 }
 
@@ -54,15 +39,10 @@ nav a{
     padding:30px 15px;
 }
 
-.title{
+h2{
     text-align:center;
-    margin-bottom:30px;
-}
-
-.title h2{
     color:#00695c;
-    font-size:30px;
-    margin-bottom:8px;
+    margin-bottom:25px;
 }
 
 .gallery{
@@ -71,56 +51,43 @@ nav a{
     gap:18px;
 }
 
-.photo{
+.card{
     background:white;
     border-radius:15px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    box-shadow:0 5px 15px #0002;
 }
 
-.photo img{
+.card img{
     width:100%;
     height:230px;
     object-fit:cover;
     display:block;
 }
 
-.photo h3{
-    padding:15px;
+.card h3{
     text-align:center;
     color:#00695c;
+    padding:12px;
 }
 
 footer{
+    margin-top:30px;
     background:#004d40;
     color:white;
     text-align:center;
     padding:25px;
-    margin-top:35px;
 }
 
 @media(max-width:700px){
     .gallery{
         grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .photo img{
-        height:180px;
-    }
-
-    header h1{
-        font-size:28px;
     }
 }
 
 @media(max-width:450px){
     .gallery{
         grid-template-columns:1fr;
-    }
-
-    .photo img{
-        height:240px;
     }
 }
 </style>
@@ -129,70 +96,56 @@ footer{
 <body>
 
 <header>
-    <h1>🌴 Kerala Tourism</h1>
-    <p>Explore the Beauty of God's Own Country</p>
+<h1>🌴 Kerala Tourism</h1>
+<p>God's Own Country</p>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#places">Places</a>
-    <a href="packages.html">Packages</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="index.html#contact">Contact</a>
+<a href="index.html">Home</a>
+<a href="packages.html">Packages</a>
+<a href="gallery.html">Gallery</a>
+<a href="index.html#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-<div class="title">
-    <h2>📸 Kerala Photo Gallery</h2>
-    <p>Beautiful destinations and experiences of Kerala</p>
-</div>
+<h2>📸 Kerala Tourism Gallery</h2>
 
 <div class="gallery">
 
-<div class="photo">
-<img src="beach jpj.jpeg" alt="Kerala Beach">
-<h3>🏖️ Kerala Beach</h3>
-</div>
-
-<div class="photo">
-<img src="wild life. jpj.jpeg" alt="Kerala Wildlife">
-<h3>🐘 Kerala Wildlife</h3>
-</div>
-
-<div class="photo">
-<img src="munnar neela kurinji. jpj.jpeg" alt="Munnar">
+<div class="card">
+<img src="munnar.jpg" alt="Munnar">
 <h3>🏔️ Munnar</h3>
 </div>
 
-<div class="photo">
-<img src="wayanad. jpj.jpeg" alt="Wayanad">
-<h3>🌿 Wayanad</h3>
+<div class="card">
+<img src="kovalam.jpg" alt="Kovalam">
+<h3>🏖️ Kovalam</h3>
 </div>
 
-<div class="photo">
-<img src="backwaters jpj.jpeg" alt="Alappuzha Backwaters">
-<h3>🚤 Alappuzha Backwaters</h3>
+<div class="card">
+<img src="Alappy.jpg" alt="Alappuzha">
+<h3>🚤 Alappuzha</h3>
 </div>
 
-<div class="photo">
+<div class="card">
+<img src="beach jpj.jpeg" alt="Kerala Beach">
+<h3>🌊 Kerala Beach</h3>
+</div>
+
+<div class="card">
+<img src="backwaters jpj.jpeg" alt="Backwaters">
+<h3>🚤 Backwaters</h3>
+</div>
+
+<div class="card">
 <img src="ayurveda. jpj.jpeg" alt="Kerala Ayurveda">
-<h3>🌿 Kerala Ayurveda</h3>
+<h3>🌿 Ayurveda</h3>
 </div>
 
-<div class="photo">
-<img src="munnar 2.jpg.jpeg" alt="Munnar Tea Gardens">
-<h3>🍃 Munnar Tea Gardens</h3>
-</div>
-
-<div class="photo">
-<img src="water fall's jpj.jpeg" alt="Kerala Waterfall">
-<h3>💦 Kerala Waterfalls</h3>
-</div>
-
-<div class="photo">
-<img src="dheep jpj.jpeg" alt="Kerala Backwaters">
-<h3>🌴 Kerala Backwaters</h3>
+<div class="card">
+<img src="dheep jpj.jpeg" alt="Kerala">
+<h3>🌴 Kerala</h3>
 </div>
 
 </div>
@@ -203,4 +156,4 @@ footer{
 </footer>
 
 </body>
-</html>
+    </html>

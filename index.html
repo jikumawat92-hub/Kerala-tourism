@@ -508,10 +508,7 @@ function showDetails(place) {
         behavior: "smooth"
     });
 }
-
-</script>
 function sendBooking() {
-
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const packageName = document.getElementById("package").value;
@@ -531,13 +528,16 @@ function sendBooking() {
         "📅 Date: " + date + "\n" +
         "👥 People: " + people;
 
-    const whatsappNumber = "917012296205;
+    const whatsappNumber = "917012296205";
 
     window.open(
         "https://wa.me/" + whatsappNumber +
         "?text=" + encodeURIComponent(message),
         "_blank"
     );
-}
+    }
+</script>
+
+        
 </body>
 </html>

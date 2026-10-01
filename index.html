@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kerala Tourism</title>
+<title>Kerala Tourism | God's Own Country</title>
 
 <style>
 
@@ -23,6 +23,7 @@ body{
     font-family:Arial,sans-serif;
     background:#f1f8f5;
     color:#222;
+    line-height:1.6;
 }
 
 /* HEADER */
@@ -30,27 +31,27 @@ body{
 header{
     background:#087f5b;
     color:white;
-    padding:20px;
     text-align:center;
+    padding:22px 15px;
 }
 
 header h1{
-    font-size:30px;
+    font-size:32px;
 }
 
 header p{
-    margin-top:5px;
+    font-size:18px;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav{
     background:#056b4c;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:8px;
-    padding:12px;
+    gap:6px;
+    padding:10px;
     position:sticky;
     top:0;
     z-index:1000;
@@ -59,7 +60,7 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    padding:10px 14px;
+    padding:9px 12px;
     border-radius:6px;
     font-weight:bold;
 }
@@ -71,9 +72,10 @@ nav a:hover{
 /* HERO */
 
 .hero{
-    height:420px;
+    min-height:430px;
+
     background-image:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.38)),
     url("kadhakali.%20jpj.jpeg");
 
     background-size:cover;
@@ -87,12 +89,12 @@ nav a:hover{
 }
 
 .hero-content{
-    padding:20px;
+    padding:25px;
 }
 
 .hero h2{
-    font-size:42px;
-    margin-bottom:15px;
+    font-size:44px;
+    margin-bottom:12px;
 }
 
 .hero p{
@@ -102,16 +104,71 @@ nav a:hover{
 /* COMMON */
 
 section{
-    padding:45px 20px;
     max-width:1200px;
     margin:auto;
+    padding:50px 20px;
 }
 
 .section-title{
     text-align:center;
     color:#087f5b;
-    margin-bottom:30px;
     font-size:30px;
+    margin-bottom:30px;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:11px 18px;
+    background:#087f5b;
+    color:white;
+    text-decoration:none;
+    border:0;
+    border-radius:7px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#056b4c;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+    border-radius:14px;
+    padding:30px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.about h3{
+    color:#087f5b;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about p{
+    max-width:900px;
+    margin:12px auto;
+    font-size:17px;
+}
+
+.activities{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:12px;
+    margin-top:25px;
+}
+
+.activity{
+    background:#e8f7f0;
+    padding:15px;
+    border-radius:10px;
+    font-weight:bold;
 }
 
 /* PLACES */
@@ -144,29 +201,6 @@ section{
     margin-bottom:8px;
 }
 
-.card p{
-    line-height:1.5;
-}
-
-/* BUTTON */
-
-.btn{
-    display:inline-block;
-    margin-top:12px;
-    padding:11px 18px;
-    background:#087f5b;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#056b4c;
-}
-
 /* PACKAGES */
 
 .packages{
@@ -184,32 +218,35 @@ section{
 
 .package h3{
     color:#087f5b;
-    margin-bottom:12px;
 }
 
 .price{
+    color:#e67e22;
     font-size:24px;
     font-weight:bold;
-    color:#e67e22;
     margin:15px 0;
 }
 
 /* BOOKING */
 
 .booking{
-    background:white;
     max-width:700px;
     margin:auto;
+    background:white;
     padding:25px;
     border-radius:12px;
     box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.booking label{
+    font-weight:bold;
 }
 
 .booking input,
 .booking select{
     width:100%;
     padding:13px;
-    margin:8px 0 15px;
+    margin:7px 0 15px;
     border:1px solid #ccc;
     border-radius:6px;
     font-size:16px;
@@ -232,13 +269,12 @@ section{
 
 .stars{
     color:#f5a623;
-    font-size:22px;
-    margin-bottom:10px;
+    font-size:23px;
 }
 
 .review h4{
     color:#087f5b;
-    margin-top:15px;
+    margin-top:12px;
 }
 
 /* MAP */
@@ -252,7 +288,7 @@ section{
 
 .map-box iframe{
     width:100%;
-    height:450px;
+    height:430px;
     border:0;
     border-radius:8px;
 }
@@ -260,13 +296,14 @@ section{
 /* CONTACT */
 
 .contact{
-    text-align:center;
     background:#e1f5ec;
-    border-radius:12px;
+    text-align:center;
+    padding:35px 20px;
+    border-radius:14px;
 }
 
 .contact p{
-    margin:10px 0;
+    margin:8px;
     font-size:17px;
 }
 
@@ -276,22 +313,29 @@ footer{
     background:#056b4c;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:22px;
     margin-top:30px;
 }
+
+/* MOBILE */
 
 @media(max-width:600px){
 
     .hero{
-        height:350px;
+        min-height:360px;
     }
 
     .hero h2{
-        font-size:30px;
+        font-size:31px;
     }
 
     .hero p{
         font-size:17px;
+    }
+
+    nav a{
+        font-size:14px;
+        padding:8px 9px;
     }
 
     .map-box iframe{
@@ -305,6 +349,7 @@ footer{
 </head>
 
 <body>
+
 
 <!-- HEADER -->
 
@@ -323,11 +368,15 @@ footer{
 
 <a href="#home">Home</a>
 
+<a href="#about">About</a>
+
 <a href="#places">Places</a>
 
 <a href="packages.html">Packages</a>
 
 <a href="gallery.html">Gallery</a>
+
+<a href="#activities">Activities</a>
 
 <a href="#booking">Booking</a>
 
@@ -348,16 +397,64 @@ footer{
 
 <h2>Welcome to Kerala</h2>
 
-<p>Discover the beauty, culture and nature of God's Own Country</p>
+<p>Discover the beauty, culture, adventure and nature of God's Own Country</p>
 
-<a href="#places" class="btn">Explore Kerala</a>
+<a href="#about" class="btn">Explore Kerala</a>
 
 </div>
 
 </section>
 
 
-<!-- TOURIST PLACES -->
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">🌴 About Kerala Tourism</h2>
+
+<div class="about">
+
+<h3>“കേരളം കാണാൻ മാത്രമല്ല… അനുഭവിക്കാനാണ്!”</h3>
+
+<p>
+മലനിരകളിലെ മഞ്ഞും 🌄, കായലിലെ houseboat യാത്രയും 🚤,
+കടൽത്തീരത്തിന്റെ സൗന്ദര്യവും 🏖️, കാടിന്റെ സാഹസികതയും 🌳,
+കേരളത്തിന്റെ തനത് ഭക്ഷണവും 🍛, കലകളും 🎭 —
+എല്ലാം ഒരുമിച്ച് അനുഭവിക്കാൻ നിങ്ങളുടെ യാത്ര ഞങ്ങളോടൊപ്പം പ്ലാൻ ചെയ്യാം.
+</p>
+
+<p>
+Couple Trip, Family Trip, Friends Trip, Group Tour,
+Honeymoon Trip എന്നിവയ്ക്കനുസരിച്ച് യാത്രാ plans ഒരുക്കാം.
+</p>
+
+<p>
+<strong>
+“നിങ്ങൾക്ക് പോകണം എന്ന് തോന്നുന്ന സ്ഥലം പറയൂ…
+യാത്ര എങ്ങനെ മനോഹരമാക്കാം എന്ന് നമുക്ക് സംസാരിക്കാം.”
+</strong>
+</p>
+
+<p>
+📱 <strong>ഒരു enquiry message അയക്കൂ —
+നിങ്ങളുടെ dream Kerala trip കുറിച്ച് ചോദിച്ചറിയാം!</strong>
+</p>
+
+<a
+class="btn"
+href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20would%20like%20to%20know%20about%20Kerala%20tour%20packages."
+target="_blank">
+
+💬 WhatsApp Enquiry
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PLACES -->
 
 <section id="places">
 
@@ -395,7 +492,7 @@ View Map
 
 <h3>🌳 Wayanad</h3>
 
-<p>Explore forests, waterfalls, mountains and wildlife.</p>
+<p>Forests, waterfalls, mountains and wildlife experiences.</p>
 
 <a class="btn"
 href="https://www.google.com/maps/search/?api=1&query=Wayanad+Kerala"
@@ -416,7 +513,7 @@ View Map
 
 <h3>🚤 Alappuzha</h3>
 
-<p>Enjoy beautiful Kerala backwaters and houseboats.</p>
+<p>Beautiful backwaters and memorable houseboat experiences.</p>
 
 <a class="btn"
 href="https://www.google.com/maps/search/?api=1&query=Alappuzha+Kerala"
@@ -437,7 +534,7 @@ View Map
 
 <h3>🏖️ Kovalam</h3>
 
-<p>Relax on beautiful beaches and enjoy the sea.</p>
+<p>Beautiful beaches and relaxing seaside experiences.</p>
 
 <a class="btn"
 href="https://www.google.com/maps/search/?api=1&query=Kovalam+Kerala"
@@ -458,7 +555,7 @@ View Map
 
 <h3>💦 Waterfalls</h3>
 
-<p>Experience the natural beauty of Kerala waterfalls.</p>
+<p>Enjoy the natural beauty of Kerala waterfalls.</p>
 
 <a class="btn"
 href="https://www.google.com/maps/search/?api=1&query=Athirappilly+Waterfalls+Kerala"
@@ -479,7 +576,7 @@ View Map
 
 <h3>🎭 Kathakali</h3>
 
-<p>Experience the traditional art and culture of Kerala.</p>
+<p>Experience Kerala's traditional art and culture.</p>
 
 <a class="btn"
 href="https://www.google.com/maps/search/?api=1&query=Kerala+Kathakali+Centre+Kochi"
@@ -491,6 +588,56 @@ View Map
 
 </div>
 
+
+</div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section id="activities">
+
+<h2 class="section-title">✨ Adventure & Activities</h2>
+
+<div class="activities">
+
+<div class="activity">🚤 Houseboat & Backwater Ride</div>
+
+<div class="activity">🪂 Adventure Activities</div>
+
+<div class="activity">🚙 Jeep Safari</div>
+
+<div class="activity">🌊 Water Activities</div>
+
+<div class="activity">🏕️ Camping</div>
+
+<div class="activity">🌄 Trekking</div>
+
+<div class="activity">🐘 Wildlife Experiences</div>
+
+<div class="activity">🏖️ Beach Activities</div>
+
+<div class="activity">🌿 Nature Experiences</div>
+
+<div class="activity">🎭 Kerala Traditional Arts</div>
+
+<div class="activity">🍛 Kerala Food Experiences</div>
+
+<div class="activity">🏡 Village Experiences</div>
+
+</div>
+
+<div style="text-align:center;margin-top:25px;">
+
+<a
+class="btn"
+href="https://wa.me/917012296205?text=Hello%20Kerala%20Tourism%2C%20I%20am%20interested%20in%20adventure%20and%20activities."
+target="_blank">
+
+💬 Ask About Activities
+
+</a>
 
 </div>
 
@@ -659,7 +806,7 @@ were amazing."
 </section>
 
 
-<!-- TOURIST MAP -->
+<!-- MAP -->
 
 <section id="map">
 
@@ -674,7 +821,10 @@ allowfullscreen>
 </iframe>
 
 <p style="text-align:center;margin-top:15px;">
-Click the buttons above to open individual tourist places in Google Maps.
+
+Munnar, Wayanad, Alappuzha, Thekkady, Kovalam
+എന്നിവയുടെ map location മുകളിൽ ഉള്ള View Map buttons വഴി കാണാം.
+
 </p>
 
 </div>
@@ -733,7 +883,7 @@ href="tel:+917012296205">
 </footer>
 
 
-<!-- WHATSAPP BOOKING -->
+<!-- WHATSAPP BOOKING SCRIPT -->
 
 <script>
 

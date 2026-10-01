@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>24×7 Taxi Service | Kerala Tourism</title>
+
+<meta name="description"
+content="24×7 taxi and travel service in Kerala. Airport transfers, railway station transfers, Kerala sightseeing, local and outstation travel.">
+
+<link rel="canonical"
+href="https://jikumawat92-hub.github.io/Kerala-tourism/vehicles.html">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f1f8f5;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#00695c,#00897b,#2e7d32);
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.tagline{
+    margin-top:4px;
+}
+
+nav{
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:9px 14px;
+    border-radius:20px;
+    background:rgba(255,255,255,.15);
+    font-size:14px;
+}
+
+nav a:hover{
+    background:white;
+    color:#00695c;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,70,60,.65),rgba(0,70,60,.65));
+
+    min-height:360px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    padding:40px 15px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:46px;
+    margin-bottom:12px;
+}
+
+.hero h2{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.whatsapp-btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:14px 25px;
+    border-radius:28px;
+    font-weight:bold;
+    margin:6px;
+}
+
+/* SECTION */
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:50px 15px;
+}
+
+.section-title{
+    text-align:center;
+    color:#00695c;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#555;
+    margin-bottom:30px;
+}
+
+/* SERVICES */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.1);
+}
+
+.service-icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.service-card h3{
+    color:#00695c;
+    margin-bottom:8px;
+}
+
+.service-card p{
+    color:#555;
+}
+
+/* VEHICLES */
+
+.vehicle-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.vehicle-card{
+    background:white;
+    padding:28px 20px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.1);
+}
+
+.vehicle-icon{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.vehicle-card h3{
+    color:#00695c;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.vehicle-card p{
+    color:#555;
+    margin-bottom:18px;
+}
+
+.vehicle-btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+    background:linear-gradient(135deg,#004d40,#00897b);
+    color:white;
+    padding:40px 25px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.highlight h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.highlight p{
+    max-width:800px;
+    margin:0 auto 20px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.1);
+}
+
+.contact h2{
+    color:#00695c;
+    margin-bottom:12px;
+}
+
+.contact p{
+    margin:6px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#004d40;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .service-grid,
+    .vehicle-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h2{
+        font-size:21px;
+    }
+
+    .service-grid,
+    .vehicle-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:27px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        🌴 Kerala Tourism
+    </div>
+
+    <div class="tagline">
+        God's Own Country
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            🏠 Home
+        </a>
+
+        <a href="packages.html">
+            📦 Packages
+        </a>
+
+        <a href="gallery.html">
+            🖼️ Gallery
+        </a>
+
+        <a href="destinations.html">
+            🌍 Destinations
+        </a>
+
+        <a href="vehicles.html">
+            🚕 Taxi Service
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            🚕 Kerala Taxi & Travel Service
+        </h1>
+
+        <h2>
+            24×7 Taxi Service Available
+        </h2>
+
+        <p>
+            Travel anytime, anywhere with comfortable and
+            reliable taxi and travel services.
+        </p>
+
+        <a
+            href="https://wa.me/917012296205?text=Hello%2C%20I%20need%20a%2024x7%20taxi%20service."
+            target="_blank"
+            class="whatsapp-btn"
+        >
+            📱 Book / Enquire on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        🚕 Our Travel Services
+    </h2>
+
+    <p class="section-subtitle">
+        Taxi and transportation services for local and long-distance travel.
+    </p>
+
+
+    <div class="service-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ✈️
+            </div>
+
+            <h3>
+                Airport Pickup & Drop
+            </h3>
+
+            <p>
+                Convenient taxi service for airport pickup
+                and drop-off.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🚉
+            </div>
+
+            <h3>
+                Railway Station
+            </h3>
+
+            <p>
+                Pickup and drop service from railway stations.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📍
+            </div>
+
+            <h3>
+                Local Travel
+            </h3>
+
+            <p>
+                Taxi service for local sightseeing and travel.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏞️
+            </div>
+
+            <h3>
+                Kerala Sightseeing
+            </h3>
+
+            <p>
+                Explore Kerala destinations comfortably by road.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🛣️
+            </div>
+
+            <h3>
+                Outstation Travel
+            </h3>
+
+            <p>
+                Travel between cities and destinations by road.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🌙
+            </div>
+
+            <h3>
+                24×7 Service
+            </h3>
+
+            <p>
+                Travel support available day and night.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- VEHICLES -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        🚘 Travel Vehicles
+    </h2>
+
+    <p class="section-subtitle">
+        Different vehicles are available for your travel requirements.
+    </p>
+
+
+    <div class="vehicle-grid">
+
+
+        <div class="vehicle-card">
+
+            <div class="vehicle-icon">
+                🚗
+            </div>
+
+            <h3>
+                Car
+            </h3>
+
+            <p>
+                Comfortable car service for your travel.
+            </p>
+
+            <a
+                href="https://wa.me/917012296205?text=Hello%2C%20I%20need%20a%20Car%20for%20travel."
+                target="_blank"
+                class="vehicle-btn"
+            >
+                📱 Enquire
+            </a>
+
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <div class="vehicle-icon">
+                🚙
+            </div>
+
+            <h3>
+                SUV
+            </h3>
+
+            <p>
+                Comfortable SUV travel for Kerala journeys.
+            </p>
+
+            <a
+                href="https://wa.me/917012296205?text=Hello%2C%20I%20need%20an%20SUV%20for%20travel."
+                target="_blank"
+                class="vehicle-btn"
+            >
+                📱 Enquire
+            </a>
+
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <div class="vehicle-icon">
+                🚐
+            </div>
+
+            <h3>
+                Tempo Traveller
+            </h3>
+
+            <p>
+                A convenient option for group travel.
+            </p>
+
+            <a
+                href="https://wa.me/917012296205?text=Hello%2C%20I%20need%20a%20Tempo%20Traveller%20for%20travel."
+                target="_blank"
+                class="vehicle-btn"
+            >
+                📱 Enquire
+            </a>
+
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <div class="vehicle-icon">
+                🚌
+            </div>
+
+            <h3>
+                Mini Bus
+            </h3>
+
+            <p>
+                Comfortable transportation for larger groups.
+            </p>
+
+            <a
+                href="https://wa.me/917012296205?text=Hello%2C%20I%20need%20a%20Mini%20Bus%20for%20travel."
+                target="_blank"
+                class="vehicle-btn"
+            >
+                📱 Enquire
+            </a>
+
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <div class="vehicle-icon">
+                🚌
+            </div>
+
+            <h3>
+                Bus
+            </h3>
+
+            <p>
+                Travel transportation for larger groups and tours.
+            </p>
+
+            <a
+                href="https://wa.me/917012296205?text=Hello%2C%20I%20need%20a%20Bus%20for%20travel."
+                target="_blank"
+                class="vehicle-btn"
+            >
+                📱 Enquire
+            </a>
+
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <div class="vehicle-icon">
+                🚐
+            </div>
+
+            <h3>
+                Luxury Vehicles
+            </h3>
+
+            <p>
+                Comfortable vehicle options for special travel requirements.
+            </p>
+
+            <a
+                href="https://wa.me/917012296205?text=Hello%2C%20I%20need%20a%20Luxury%20Vehicle%20for%20travel."
+                target="_blank"
+                class="vehicle-btn"
+            >
+                📱 Enquire
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- 24x7 HIGHLIGHT -->
+
+<section class="container">
+
+    <div class="highlight">
+
+        <h2>
+            🌙 24×7 Taxi Service Available
+        </h2>
+
+        <p>
+            Need a taxi early morning, late night or anytime
+            during your journey? Contact us on WhatsApp for
+            availability and travel details.
+        </p>
+
+        <a
+            href="https://wa.me/917012296205?text=Hello%2C%20I%20need%2024x7%20taxi%20service."
+            target="_blank"
+            class="whatsapp-btn"
+        >
+            💬 Contact on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="container">
+
+    <div class="contact">
+
+        <h2>
+            📞 Kerala Tourism
+        </h2>
+
+        <p>
+            Cherucode PO, Vallappuzha,
+            Palakkad, Kerala, India
+        </p>
+
+        <p>
+            📱 +91 70122 96205
+        </p>
+
+        <p>
+            🚕 24×7 Taxi & Travel Service Available
+        </p>
+
+        <a
+            href="https://wa.me/917012296205"
+            target="_blank"
+            class="whatsapp-btn"
+        >
+            💬 Chat on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Kerala Tourism | God's Own Country
+    </p>
+
+    <p>
+        🚕 24×7 Taxi Service Available
+    </p>
+
+    <p>
+        Nature • Culture • Adventure • Travel
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

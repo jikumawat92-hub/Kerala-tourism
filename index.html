@@ -2188,6 +2188,327 @@ closeGroupTrip();
 });
 
 </script>
+<!-- ================= AI ASSISTANT ================= -->
 
+<style>
+
+#ktAiButton{
+    position:fixed;
+    right:18px;
+    bottom:90px;
+    z-index:2500;
+    border:none;
+    border-radius:30px;
+    padding:13px 18px;
+    background:#075e54;
+    color:white;
+    font-weight:800;
+    font-size:14px;
+    box-shadow:0 6px 20px rgba(0,0,0,.3);
+    cursor:pointer;
+}
+
+#ktAiBox{
+    display:none;
+    position:fixed;
+    right:18px;
+    bottom:155px;
+    width:min(370px,calc(100vw - 30px));
+    height:500px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
+    z-index:2500;
+    overflow:hidden;
+    border:1px solid #d9e5e1;
+}
+
+#ktAiHeader{
+    background:#075e54;
+    color:white;
+    padding:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#ktAiHeader strong{
+    font-size:16px;
+}
+
+#ktAiClose{
+    border:none;
+    background:transparent;
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+}
+
+#ktAiMessages{
+    height:370px;
+    overflow-y:auto;
+    padding:15px;
+    background:#f4faf7;
+}
+
+.ktAiMsg{
+    max-width:85%;
+    padding:10px 13px;
+    margin-bottom:10px;
+    border-radius:14px;
+    line-height:1.5;
+    font-size:14px;
+    white-space:pre-wrap;
+}
+
+.ktAiBot{
+    background:white;
+    color:#17352f;
+    border:1px solid #dce8e4;
+}
+
+.ktAiUser{
+    background:#075e54;
+    color:white;
+    margin-left:auto;
+}
+
+#ktAiInputArea{
+    display:flex;
+    gap:7px;
+    padding:10px;
+    background:white;
+    border-top:1px solid #ddd;
+}
+
+#ktAiInput{
+    flex:1;
+    border:1px solid #ccd9d5;
+    border-radius:20px;
+    padding:10px 13px;
+    outline:none;
+    font-size:14px;
+}
+
+#ktAiSend{
+    border:none;
+    border-radius:50%;
+    width:43px;
+    height:43px;
+    background:#075e54;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+@media(max-width:600px){
+
+    #ktAiButton{
+        right:15px;
+        bottom:88px;
+        padding:12px 15px;
+        font-size:13px;
+    }
+
+    #ktAiBox{
+        right:10px;
+        bottom:145px;
+        width:calc(100vw - 20px);
+        height:500px;
+    }
+
+}
+
+</style>
+
+<button id="ktAiButton" onclick="ktOpenAI()">
+🤖 AI Assistant
+</button>
+
+<div id="ktAiBox">
+
+    <div id="ktAiHeader">
+
+        <strong>🤖 Kerala Tourism AI</strong>
+
+        <button id="ktAiClose" onclick="ktCloseAI()">
+            ×
+        </button>
+
+    </div>
+
+    <div id="ktAiMessages">
+
+        <div class="ktAiMsg ktAiBot">
+            നമസ്കാരം! 👋
+            
+            ഞാൻ Kerala Tourism AI Assistant ആണ്.
+
+            Munnar, Wayanad, Alappuzha, packages,
+            taxi, Kerala travel തുടങ്ങിയ കാര്യങ്ങൾ
+            എന്നോട് ചോദിക്കാം.
+        </div>
+
+    </div>
+
+    <div id="ktAiInputArea">
+
+        <input
+            id="ktAiInput"
+            type="text"
+            placeholder="നിങ്ങളുടെ ചോദ്യം എഴുതൂ..."
+            autocomplete="off">
+
+        <button id="ktAiSend" onclick="ktSendAI()">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+const KT_AI_WORKER =
+"https://kerala-tourism-ai.jikumawat92.workers.dev";
+
+
+function ktOpenAI(){
+
+    document.getElementById("ktAiBox").style.display="block";
+
+    setTimeout(function(){
+
+        document.getElementById("ktAiInput").focus();
+
+    },100);
+
+}
+
+
+function ktCloseAI(){
+
+    document.getElementById("ktAiBox").style.display="none";
+
+}
+
+
+function ktAddMessage(text,type){
+
+    const messages=
+        document.getElementById("ktAiMessages");
+
+    const div=
+        document.createElement("div");
+
+    div.className=
+        "ktAiMsg "+
+        (type==="user" ? "ktAiUser" : "ktAiBot");
+
+    div.textContent=text;
+
+    messages.appendChild(div);
+
+    messages.scrollTop=messages.scrollHeight;
+
+}
+
+
+async function ktSendAI(){
+
+    const input=
+        document.getElementById("ktAiInput");
+
+    const message=
+        input.value.trim();
+
+    if(!message) return;
+
+    ktAddMessage(message,"user");
+
+    input.value="";
+
+    ktAddMessage("⏳ മറുപടി തയ്യാറാക്കുന്നു...","bot");
+
+    const messages=
+        document.getElementById("ktAiMessages");
+
+    const loading=
+        messages.lastElementChild;
+
+
+    try{
+
+        const response=
+            await fetch(KT_AI_WORKER,{
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify({
+                    message:message
+                })
+
+            });
+
+
+        const data=
+            await response.json();
+
+
+        loading.remove();
+
+
+        if(!response.ok || !data.reply){
+
+            ktAddMessage(
+                "ക്ഷമിക്കണം, ഇപ്പോൾ AI service ലഭ്യമല്ല. WhatsApp വഴി ബന്ധപ്പെടാം: +91 70122 96205",
+                "bot"
+            );
+
+            return;
+        }
+
+
+        ktAddMessage(
+            data.reply,
+            "bot"
+        );
+
+
+    }catch(error){
+
+        loading.remove();
+
+        ktAddMessage(
+            "ക്ഷമിക്കണം, ഇപ്പോൾ AI service ലഭ്യമല്ല. WhatsApp: +91 70122 96205",
+            "bot"
+        );
+
+    }
+
+}
+
+
+document
+.getElementById("ktAiInput")
+.addEventListener("keydown",function(event){
+
+    if(event.key==="Enter"){
+
+        event.preventDefault();
+
+        ktSendAI();
+
+    }
+
+});
+
+</script>
+
+<!-- ================= END AI ASSISTANT ================= -->
 </body>
 </html>

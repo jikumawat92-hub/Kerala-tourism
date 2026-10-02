@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Build My Kerala Trip | Kerala Tourism</title>
+
+<meta name="description"
+content="Create your own Kerala trip plan with destinations, travel days, travellers, interests and budget. Build your Kerala trip with Kerala Tourism.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://jikumawat92-hub.github.io/Kerala-tourism/build-my-trip.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#f4faf7;
+    color:#17352f;
+}
+
+header{
+    background:#075e54;
+    color:white;
+    padding:22px 15px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.logo h1{
+    font-family:'Pacifico',cursive;
+    font-size:40px;
+}
+
+.logo h1 span{
+    color:#ffd52e;
+}
+
+.logo p{
+    font-family:'DM Serif Display',serif;
+    font-size:20px;
+    margin-top:5px;
+}
+
+nav{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:9px 13px;
+    border-radius:9px;
+    font-weight:700;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:rgba(255,255,255,.15);
+}
+
+.hero{
+    background:
+    linear-gradient(
+        rgba(0,55,48,.72),
+        rgba(0,40,35,.82)
+    ),
+    url("./kerala-hero%20jog.png")
+    center/cover no-repeat;
+
+    min-height:390px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h2{
+    font-family:'DM Serif Display',serif;
+    font-size:55px;
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+section{
+    padding:55px 18px;
+}
+
+.container{
+    width:min(1000px,100%);
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-family:'DM Serif Display',serif;
+    color:#075e54;
+    font-size:40px;
+}
+
+.section-title p{
+    color:#65756f;
+    margin-top:8px;
+}
+
+.planner-box{
+    background:white;
+    padding:30px;
+    border-radius:22px;
+    box-shadow:0 10px 35px rgba(0,0,0,.10);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    margin-bottom:5px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    display:block;
+    font-weight:800;
+    color:#075e54;
+    margin-bottom:8px;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccd9d5;
+    border-radius:11px;
+    font-size:15px;
+    outline:none;
+    background:white;
+}
+
+input:focus,
+select:focus{
+    border-color:#075e54;
+}
+
+.interests{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.interest{
+    border:2px solid #dce8e4;
+    padding:13px 8px;
+    border-radius:12px;
+    text-align:center;
+    cursor:pointer;
+    font-weight:700;
+    transition:.2s;
+    user-select:none;
+}
+
+.interest.active{
+    background:#075e54;
+    color:white;
+    border-color:#075e54;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    display:inline-block;
+    padding:14px 23px;
+    border-radius:30px;
+    background:#ffd52e;
+    color:#17352f;
+    font-weight:800;
+    font-size:15px;
+    margin:5px;
+    transition:.2s;
+    text-decoration:none;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 7px 18px rgba(0,0,0,.2);
+}
+
+.btn-green{
+    background:#075e54;
+    color:white;
+}
+
+.generate{
+    text-align:center;
+    margin-top:25px;
+}
+
+#result{
+    display:none;
+    margin-top:35px;
+}
+
+.result-box{
+    background:#eaf6f1;
+    border-radius:20px;
+    padding:28px;
+}
+
+.result-header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.result-header h2{
+    font-family:'DM Serif Display',serif;
+    color:#075e54;
+    font-size:35px;
+}
+
+.summary{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.summary-card{
+    background:white;
+    padding:18px 10px;
+    border-radius:14px;
+    text-align:center;
+}
+
+.summary-card .icon{
+    font-size:28px;
+}
+
+.summary-card strong{
+    display:block;
+    margin-top:7px;
+    color:#075e54;
+}
+
+.day{
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    margin:15px 0;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.day h3{
+    color:#075e54;
+    margin-bottom:12px;
+    font-size:21px;
+}
+
+.day p{
+    line-height:1.7;
+    color:#596c66;
+    margin:6px 0;
+}
+
+.cost-box{
+    background:#075e54;
+    color:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.cost-box h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.cost{
+    font-size:34px;
+    font-weight:800;
+    color:#ffd52e;
+}
+
+.note{
+    font-size:13px;
+    margin-top:8px;
+    opacity:.85;
+}
+
+.actions{
+    text-align:center;
+    margin-top:22px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.info-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 7px 25px rgba(0,0,0,.07);
+}
+
+.info-card .icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.info-card h3{
+    color:#075e54;
+    margin-bottom:8px;
+}
+
+.info-card p{
+    color:#65756f;
+    line-height:1.6;
+}
+
+footer{
+    background:#043f39;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 6px 20px rgba(0,0,0,.3);
+    z-index:1000;
+}
+
+@media(max-width:700px){
+
+    .logo h1{
+        font-size:31px;
+    }
+
+    nav{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    nav a{
+        text-align:center;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:350px;
+    }
+
+    .hero h2{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .interests{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .summary{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .planner-box{
+        padding:20px 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<h1>🌴 Kerala <span>Tourism</span></h1>
+
+<p>Build Your Own Kerala Trip</p>
+
+</div>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="index.html#places">📍 Places</a>
+
+<a href="index.html#packages">📦 Packages</a>
+
+<a href="gallery.html">🖼️ Gallery</a>
+
+<a href="vehicles.html">🚕 Taxi</a>
+
+<a href="index.html#booking">📋 Booking</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Build My Kerala Trip</h2>
+
+<p>
+Create your own Kerala travel plan.
+Choose your destinations, travel days,
+number of travellers and interests.
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🧳 Create Your Trip</h2>
+
+<p>
+Tell us what kind of Kerala trip you want.
+</p>
+
+</div>
+
+
+<div class="planner-box">
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>📍 Main Destination</label>
+
+<select id="destination">
+
+<option value="">Choose destination</option>
+
+<option value="Munnar">Munnar</option>
+
+<option value="Wayanad">Wayanad</option>
+
+<option value="Alappuzha">Alappuzha</option>
+
+<option value="Kovalam">Kovalam</option>
+
+<option value="Multiple">Multiple Destinations</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>📅 Number of Days</label>
+
+<select id="days">
+
+<option value="">Choose days</option>
+
+<option value="2">2 Days</option>
+
+<option value="3">3 Days</option>
+
+<option value="4">4 Days</option>
+
+<option value="5">5 Days</option>
+
+<option value="6">6 Days</option>
+
+<option value="7">7 Days</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>👥 Travellers</label>
+
+<input
+type="number"
+id="travellers"
+min="1"
+max="50"
+value="2"
+placeholder="Number of travellers">
+
+</div>
+
+
+<div class="form-group">
+
+<label>💰 Budget Level</label>
+
+<select id="budget">
+
+<option value="">Choose budget</option>
+
+<option value="budget">Budget</option>
+
+<option value="standard">Standard</option>
+
+<option value="premium">Premium</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>❤️ What do you like?</label>
+
+<div class="interests">
+
+<div class="interest"
+onclick="toggleInterest(this,'nature')">
+🌿 Nature
+</div>
+
+<div class="interest"
+onclick="toggleInterest(this,'adventure')">
+🥾 Adventure
+</div>
+
+<div class="interest"
+onclick="toggleInterest(this,'beach')">
+🏖️ Beach
+</div>
+
+<div class="interest"
+onclick="toggleInterest(this,'backwater')">
+🚤 Backwaters
+</div>
+
+<div class="interest"
+onclick="toggleInterest(this,'culture')">
+🎭 Culture
+</div>
+
+<div class="interest"
+onclick="toggleInterest(this,'relax')">
+😌 Relaxation
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="generate">
+
+<button class="btn btn-green"
+onclick="generateTrip()">
+
+✨ Generate My Trip
+
+</button>
+
+</div>
+
+
+<div id="result">
+
+<div class="result-box">
+
+<div class="result-header">
+
+<h2>🌴 Your Kerala Trip Plan</h2>
+
+<p id="resultIntro"></p>
+
+</div>
+
+
+<div class="summary">
+
+<div class="summary-card">
+
+<div class="icon">📍</div>
+
+<strong id="summaryDestination">
+-
+</strong>
+
+</div>
+
+<div class="summary-card">
+
+<div class="icon">📅</div>
+
+<strong id="summaryDays">
+-
+</strong>
+
+</div>
+
+<div class="summary-card">
+
+<div class="icon">👥</div>
+
+<strong id="summaryTravellers">
+-
+</strong>
+
+</div>
+
+<div class="summary-card">
+
+<div class="icon">💰</div>
+
+<strong id="summaryBudget">
+-
+</strong>
+
+</div>
+
+</div>
+
+
+<div id="itinerary"></div>
+
+
+<div class="cost-box">
+
+<h3>Estimated Trip Cost</h3>
+
+<div class="cost"
+id="estimatedCost">
+₹0
+</div>
+
+<div class="note">
+This is an approximate estimate.
+Actual price may change depending on
+season, accommodation, transport and activities.
+</div>
+
+</div>
+
+
+<div class="actions">
+
+<a id="whatsappPlan"
+class="btn"
+target="_blank">
+
+💬 Send This Plan on WhatsApp
+
+</a>
+
+<a href="index.html#booking"
+class="btn btn-green">
+
+📋 Book Your Trip
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>✨ Why Use Our Trip Builder?</h2>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="icon">🎯</div>
+
+<h3>Personal Plan</h3>
+
+<p>
+Create a travel plan based on
+your destination, days and interests.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="icon">💰</div>
+
+<h3>Budget Estimate</h3>
+
+<p>
+Get an approximate idea of the
+possible trip cost before booking.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="icon">📲</div>
+
+<h3>Easy Enquiry</h3>
+
+<p>
+Send your selected trip plan
+directly to Kerala Tourism through WhatsApp.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Kerala Tourism. All Rights Reserved.
+</p>
+
+<p>
+God's Own Country 🌴
+</p>
+
+</footer>
+
+
+<a class="whatsapp"
+href="https://wa.me/917012296205"
+target="_blank"
+aria-label="WhatsApp">
+
+💬
+
+</a>
+
+
+<script>
+
+let selectedInterests=[];
+
+
+/* ================= INTERESTS ================= */
+
+function toggleInterest(element,interest){
+
+element.classList.toggle("active");
+
+if(selectedInterests.includes(interest)){
+
+selectedInterests=
+selectedInterests.filter(x=>x!==interest);
+
+}else{
+
+selectedInterests.push(interest);
+
+}
+
+}
+
+
+/* ================= DESTINATION DATA ================= */
+
+const plans={
+
+Munnar:{
+
+places:[
+"Tea Gardens",
+"Mattupetty Dam",
+"Echo Point",
+"Top Station",
+"Waterfalls",
+"Eravikulam National Park"
+],
+
+nature:
+"Explore tea plantations, misty mountains and beautiful viewpoints.",
+
+adventure:
+"Optional trekking, nature walks and outdoor activities.",
+
+culture:
+"Experience Kerala food and local culture.",
+
+relax:
+"Enjoy the cool climate and peaceful mountain surroundings."
+
+},
+
+Wayanad:{
+
+places:[
+"Edakkal Caves",
+"Soochipara Waterfalls",
+"Banasura Sagar Dam",
+"Tea & Coffee Plantations",
+"Wildlife Areas"
+],
+
+nature:
+"Explore forests, mountains, plantations and waterfalls.",
+
+adventure:
+"Trekking, caves, waterfalls and outdoor activities.",
+
+culture:
+"Experience local village life and Kerala traditions.",
+
+relax:
+"Enjoy peaceful stays surrounded by greenery."
+
+},
+
+Alappuzha:{
+
+places:[
+"Alappuzha Backwaters",
+"Houseboat",
+"Vembanad Lake",
+"Kuttanad",
+"Village Areas"
+],
+
+nature:
+"Explore beautiful backwaters and Kerala village scenery.",
+
+adventure:
+"Backwater cruises and sightseeing activities.",
+
+culture:
+"Experience local village life and traditional Kerala culture.",
+
+relax:
+"Enjoy a peaceful backwater journey and sunset views."
+
+},
+
+Kovalam:{
+
+places:[
+"Lighthouse Beach",
+"Hawa Beach",
+"Samudra Beach",
+"Kovalam Lighthouse"
+],
+
+nature:
+"Enjoy beautiful coastal views and sunsets.",
+
+adventure:
+"Beach activities where available.",
+
+culture:
+"Explore Kerala coastal life and local food.",
+
+relax:
+"Relax beside the Arabian Sea."
+
+},
+
+Multiple:{
+
+places:[
+"Munnar",
+"Wayanad",
+"Alappuzha",
+"Kovalam"
+],
+
+nature:
+"Experience Kerala's mountains, forests and backwaters.",
+
+adventure:
+"Choose activities according to each destination.",
+
+culture:
+"Explore Kerala's culture, food and traditions.",
+
+relax:
+"Enjoy a balanced Kerala holiday."
+
+}
+
+};
+
+
+/* ================= GENERATE ================= */
+
+function generateTrip(){
+
+const destination=
+document.getElementById("destination").value;
+
+const days=
+parseInt(document.getElementById("days").value);
+
+const travellers=
+parseInt(document.getElementById("travellers").value);
+
+const budget=
+document.getElementById("budget").value;
+
+
+if(!destination || !days || !travellers || !budget){
+
+alert(
+"Please select destination, days, travellers and budget."
+);
+
+return;
+
+}
+
+
+const data=plans[destination];
+
+document.getElementById("summaryDestination")
+.textContent=destination;
+
+document.getElementById("summaryDays")
+.textContent=days+" Days";
+
+document.getElementById("summaryTravellers")
+.textContent=travellers+" Travellers";
+
+document.getElementById("summaryBudget")
+.textContent=
+budget.charAt(0).toUpperCase()+budget.slice(1);
+
+
+document.getElementById("resultIntro")
+.textContent=
+"Here is a suggested "+days+"-day Kerala plan for "+travellers+" traveller(s).";
+
+
+let itinerary="";
+
+
+for(let i=1;i<=days;i++){
+
+let placeIndex=(i-1)%data.places.length;
+
+let mainPlace=data.places[placeIndex];
+
+let activity="";
+
+if(selectedInterests.includes("nature")){
+
+activity+=data.nature+" ";
+
+}
+
+if(selectedInterests.includes("adventure")){
+
+activity+=data.adventure+" ";
+
+}
+
+if(selectedInterests.includes("culture")){
+
+activity+=data.culture+" ";
+
+}
+
+if(selectedInterests.includes("relax")){
+
+activity+=data.relax+" ";
+
+}
+
+if(selectedInterests.includes("beach") &&
+destination==="Kovalam"){
+
+activity+="Enjoy the beautiful beach and sunset. ";
+
+}
+
+if(selectedInterests.includes("backwater") &&
+(destination==="Alappuzha" ||
+destination==="Multiple")){
+
+activity+="Enjoy a peaceful backwater experience. ";
+
+}
+
+if(!activity){
+
+activity="Sightseeing and exploring the destination.";
+
+}
+
+
+let title="Day "+i;
+
+if(i===1){
+
+title+=" – Arrival & Exploration";
+
+}else if(i===days){
+
+title+=" – Final Sightseeing & Departure";
+
+}else{
+
+title+=" – Kerala Experience";
+
+}
+
+
+itinerary+=`
+
+<div class="day">
+
+<h3>📅 ${title}</h3>
+
+<p>
+<strong>📍 Suggested Visit:</strong>
+${escapeHTML(mainPlace)}
+</p>
+
+<p>
+<strong>✨ Experience:</strong>
+${escapeHTML(activity)}
+</p>
+
+</div>
+
+`;
+
+}
+
+
+document.getElementById("itinerary")
+.innerHTML=itinerary;
+
+
+/* ================= COST ================= */
+
+let perPersonDay=0;
+
+if(budget==="budget"){
+
+perPersonDay=1800;
+
+}else if(budget==="standard"){
+
+perPersonDay=3000;
+
+}else{
+
+perPersonDay=5000;
+
+}
+
+
+let estimated=
+perPersonDay*days*travellers;
+
+
+if(destination==="Multiple"){
+
+estimated+=
+days*travellers*500;
+
+}
+
+
+document.getElementById("estimatedCost")
+.textContent=
+"₹"+estimated.toLocaleString("en-IN");
+
+
+/* ================= WHATSAPP ================= */
+
+const interestText=
+selectedInterests.length
+? selectedInterests.join(", ")
+: "General sightseeing";
+
+
+const message=
+
+`Hello Kerala Tourism,
+
+I created a trip using the Build My Kerala Trip planner.
+
+Destination: ${destination}
+
+Days: ${days}
+
+Travellers: ${travellers}
+
+Budget: ${budget}
+
+Interests: ${interestText}
+
+Estimated Cost: ₹${estimated.toLocaleString("en-IN")}
+
+Please help me with availability, exact package price and booking.
+
+Thank you.`;
+
+document.getElementById("whatsappPlan").href=
+"https://wa.me/917012296205?text="
++encodeURIComponent(message);
+
+
+/* ================= SHOW RESULT ================= */
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result")
+.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+
+/* ================= ESCAPE ================= */
+
+function escapeHTML(value){
+
+return String(value)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+</script>
+
+</body>
+</html>
